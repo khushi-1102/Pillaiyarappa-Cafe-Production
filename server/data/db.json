@@ -1,0 +1,2795 @@
+{
+  "categories": [
+    {
+      "id": "cat-dosa",
+      "name": "Dosa",
+      "slug": "dosa",
+      "description": "Crisp golden crepes made from fermented batter, served with hot sambar and fresh chutneys.",
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
+      "isActive": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "cat-paneer-dosa",
+      "name": "Paneer Dosa",
+      "slug": "paneer-dosa",
+      "description": "Crisp savory crepes filled with freshly seasoned cottage cheese and aromatic herbs.",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+      "isActive": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "cat-mysore-dosa",
+      "name": "Mysore Dosa",
+      "slug": "mysore-dosa",
+      "description": "Signature crepes layered with spicy red garlic-chutney paste, melted butter and fillings.",
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
+      "isActive": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "cat-rawa-dosa",
+      "name": "Rawa Dosa",
+      "slug": "rawa-dosa",
+      "description": "Lacy, extra-crispy semolina crepes tempered with crushed black pepper, cumin, ginger, and curry leaves.",
+      "image": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80",
+      "isActive": true,
+      "sortOrder": 4
+    },
+    {
+      "id": "cat-specials",
+      "name": "Pillaiyarappa Specials",
+      "slug": "pillaiyarappa-specials",
+      "description": "Chef signature Podi dosas, rich Ghee roasted varieties, traditional Upma, and soft Set Dosas.",
+      "image": "/images/about-south-indian-heritage.jpg",
+      "isActive": true,
+      "sortOrder": 5
+    },
+    {
+      "id": "cat-platter",
+      "name": "South Indian Platter",
+      "slug": "south-indian-platter",
+      "description": "The ultimate royal tasting platter with 1 Idli, 1 Vada, Mini Masala Dosa, and Mini Onion Uttappam.",
+      "image": "/uploads/menu/menu-South_Indian_Breakfast_Thali-1792874072538-703231.png",
+      "isActive": true,
+      "sortOrder": 6
+    },
+    {
+      "id": "cat-uttappam",
+      "name": "Uttappam",
+      "slug": "uttappam",
+      "description": "Thick, spongy fermented savory pancakes crowned with sweet onions, tomatoes, and fresh toppings.",
+      "image": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80",
+      "isActive": true,
+      "sortOrder": 7
+    },
+    {
+      "id": "cat-idli-vada",
+      "name": "Idli & Vada",
+      "slug": "idli-vada",
+      "description": "Pillow-soft steamed fermented rice cakes, crispy golden lentil vadas, dahi vadas, and dal vadas.",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+      "isActive": true,
+      "sortOrder": 8
+    },
+    {
+      "id": "cat-rice",
+      "name": "Rice",
+      "slug": "rice",
+      "description": "Traditional comforting rice meals: Sambar Rice, Lemon Rice, Tomato Rice, Coconut Rice, and Curd Rice.",
+      "image": "/images/about-south-indian-heritage.jpg",
+      "isActive": true,
+      "sortOrder": 9
+    },
+    {
+      "id": "cat-beverages",
+      "name": "Beverages",
+      "slug": "beverages",
+      "description": "Authentic decocted South Indian Filter Kaapi frothed with milk, cold drinks, and mineral water at MRP.",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+      "isActive": true,
+      "sortOrder": 10
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "item-plain-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Plain Dosa",
+      "slug": "plain-dosa",
+      "description": "Crisp golden crepe roasted on cast iron pan, served with piping hot sambar and fresh chutneys.",
+      "price": 120,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "image": "/uploads/menu/menu-Authentic_Plain_Dosa_Recipe___-1792869624197-649702.jpg",
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-gunpowder",
+        "addon-extra-sambar"
+      ]
+    },
+    {
+      "id": "item-masala-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Masala Dosa",
+      "slug": "masala-dosa",
+      "description": "Crispy fermented crepe stuffed with signature spiced potato mash, mustard seeds and curry leaves.",
+      "price": 130,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "image": "/uploads/menu/menu-Crispy_Masala_Dosa_Feast-1792874542573-823637.png",
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-gunpowder",
+        "addon-extra-sambar"
+      ]
+    },
+    {
+      "id": "item-onion-masala-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Onion Masala Dosa",
+      "slug": "onion-masala-dosa",
+      "description": "Golden dosa loaded with caramelized red onions and signature spiced aloo masala filling.",
+      "price": 150,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Masala_Dosa_Feast__1_-1792875364880-5135.png"
+    },
+    {
+      "id": "item-onion-plain-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Onion Plain Dosa",
+      "slug": "onion-plain-dosa",
+      "description": "Crispy crepe sprinkled with sweet finely chopped onions and green chillies before folding.",
+      "price": 140,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Onion_Dosa_on_Banana_Le-1792876320340-346828.png"
+    },
+    {
+      "id": "item-butter-plain-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Butter Plain Dosa",
+      "slug": "butter-plain-dosa",
+      "description": "Crisp golden crepe roasted generously with pure Amul Butter, served with sambar and chutneys.",
+      "price": 140,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 5,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Buttery_South_Indian_Dosa_Thal-1792876886374-234234.png"
+    },
+    {
+      "id": "item-butter-masala-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Butter Masala Dosa",
+      "slug": "butter-masala-dosa",
+      "description": "Rich crispy crepe smothered with Amul Butter, stuffed with seasoned aromatic potato aloo masala.",
+      "price": 150,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 6,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Buttery_Masala_Dosa_Feast-1792877311848-632273.png"
+    },
+    {
+      "id": "item-paper-plain-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Paper Plain Dosa",
+      "slug": "paper-plain-dosa",
+      "description": "Extra thin, jumbo size paper-crisp dosa roasted golden with authentic South Indian flavours.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 7,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Paper_Dosa_with_Chutney-1792877584639-444217.png"
+    },
+    {
+      "id": "item-paper-masala-dosa",
+      "categoryId": "cat-dosa",
+      "name": "Paper Masala Dosa",
+      "slug": "paper-masala-dosa",
+      "description": "Jumbo wafer-thin paper dosa filled with classic spiced potato masala, served with chutneys.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 8,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Masala_Dosa_Feast__3_-1792877763014-753849.png"
+    },
+    {
+      "id": "item-paneer-dosa",
+      "categoryId": "cat-paneer-dosa",
+      "name": "Paneer Dosa",
+      "slug": "paneer-dosa",
+      "description": "Golden roasted dosa stuffed with freshly grated cottage cheese seasoned with South Indian spices.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-paneer_cheese_dosa-1792872689724-706897.jpg"
+    },
+    {
+      "id": "item-butter-paneer-dosa",
+      "categoryId": "cat-paneer-dosa",
+      "name": "Butter Paneer Dosa",
+      "slug": "butter-paneer-dosa",
+      "description": "Crispy crepe roasted with pure Amul Butter, packed with succulent spiced paneer stuffing.",
+      "price": 190,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Butter_Paneer_Dosa_Feast-1792874593683-274996.png"
+    },
+    {
+      "id": "item-mysoor-paneer-dosa",
+      "categoryId": "cat-paneer-dosa",
+      "name": "Mysoor Paneer Dosa",
+      "slug": "mysoor-paneer-dosa",
+      "description": "Spicy Mysore red garlic chutney smeared dosa loaded with seasoned cottage cheese filling.",
+      "price": 200,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Mysore_Paneer_Dosa_Feast-1792875408964-414519.png"
+    },
+    {
+      "id": "item-rawa-paneer-dosa",
+      "categoryId": "cat-paneer-dosa",
+      "name": "Rawa Paneer Dosa",
+      "slug": "rawa-paneer-dosa",
+      "description": "Lacy semolina crepe embedded with crushed cumin, curry leaves, and seasoned paneer crumble.",
+      "price": 190,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Paneer-Filled_Dosa_on_B-1792876360206-549602.png"
+    },
+    {
+      "id": "item-rawa-mysoor-paneer-dosa",
+      "categoryId": "cat-paneer-dosa",
+      "name": "Rawa Mysoor Paneer Dosa",
+      "slug": "rawa-mysoor-paneer-dosa",
+      "description": "Deluxe lacy semolina crepe layered with fiery red Mysore paste and rich spiced cottage cheese.",
+      "price": 210,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 5,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Paneer_Masala_Dosa_Thal-1792876995201-293996.png"
+    },
+    {
+      "id": "item-mysoor-plain-dosa",
+      "categoryId": "cat-mysore-dosa",
+      "name": "Mysoor Plain Dosa",
+      "slug": "mysoor-plain-dosa",
+      "description": "Crisp dosa layered with fiery red garlic-chilli chutney paste, roasted golden with desi butter.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-delicious-indian-dosa-with-chu-1792872934721-12801.jpg"
+    },
+    {
+      "id": "item-mysoor-masala-dosa",
+      "categoryId": "cat-mysore-dosa",
+      "name": "Mysoor Masala Dosa",
+      "slug": "mysoor-masala-dosa",
+      "description": "Classic Mysore special: spicy red chutney spread over crisp crepe with seasoned potato aloo masala.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Mysore_Masala_Dosa_Feas-1792874707384-437755.png"
+    },
+    {
+      "id": "item-rawa-mysoor-plain-dosa",
+      "categoryId": "cat-mysore-dosa",
+      "name": "Rawa Mysoor Plain Dosa",
+      "slug": "rawa-mysoor-plain-dosa",
+      "description": "Lacy semolina crepe lined with tangy Mysore red paste, cooked to a delicate crunch.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Mysore_Rava_Dosa_Feast-1792875496231-90329.png"
+    },
+    {
+      "id": "item-rawa-mysoor-masala-dosa",
+      "categoryId": "cat-mysore-dosa",
+      "name": "Rawa Mysoor Masala Dosa",
+      "slug": "rawa-mysoor-masala-dosa",
+      "description": "Lacy semolina crepe brushed with spicy Mysore paste, filled with savory spiced potato mash.",
+      "price": 190,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Masala_Dosa_Feast__2_-1792876498796-895191.png"
+    },
+    {
+      "id": "item-rawa-plain-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Rawa Plain Dosa",
+      "slug": "rawa-plain-dosa",
+      "description": "Golden lacy semolina crepe infused with whole cumin, crushed black peppercorns and curry leaves.",
+      "price": 150,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Dosa_with_Green_Chutney-1792873407447-957945.png"
+    },
+    {
+      "id": "item-rawa-masala-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Rawa Masala Dosa",
+      "slug": "rawa-masala-dosa",
+      "description": "Lacy crisp semolina crepe stuffed with authentic spiced potato aloo masala.",
+      "price": 160,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Rawa_Masala_Dosa_Thali-1792874728748-87388.png"
+    },
+    {
+      "id": "item-rawa-onion-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Rawa Onion Dosa",
+      "slug": "rawa-onion-dosa",
+      "description": "Crunchy semolina crepe scattered with sweet diced onions and green chillies.",
+      "price": 160,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Rawa_Onion_Dosa_Feast-1792875530761-687210.png"
+    },
+    {
+      "id": "item-rawa-onion-masala-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Rawa Onion Masala Dosa",
+      "slug": "rawa-onion-masala-dosa",
+      "description": "Signature crispy rawa crepe studded with caramelized onions and filled with potato masala.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Rawa_Onion_Masala_Dosa-1792876629546-183252.png"
+    },
+    {
+      "id": "item-rawa-coconut-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Rawa Coconut Dosa",
+      "slug": "rawa-coconut-dosa",
+      "description": "Fragrant semolina crepe prepared with freshly grated coconut roasted golden.",
+      "price": 190,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 5,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Coconut_Dosa_with_Chutn-1792877032910-687518.png"
+    },
+    {
+      "id": "item-rawa-coconut-masala-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Rawa Coconut Masala Dosa",
+      "slug": "rawa-coconut-masala-dosa",
+      "description": "Lacy semolina crepe packed with fresh grated coconut and flavorful potato masala.",
+      "price": 200,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 6,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Coconut_Masala_Dosa_Tha-1792877376704-188250.png"
+    },
+    {
+      "id": "item-veg-rawa-plain-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Veg Rawa Plain Dosa",
+      "slug": "veg-rawa-plain-dosa",
+      "description": "Wholesome semolina crepe studded with finely diced carrots, bell peppers, ginger and chillies.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 7,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_South_Indian_Rava_Dosa_-1792877655614-954633.png"
+    },
+    {
+      "id": "item-veg-rawa-masala-dosa",
+      "categoryId": "cat-rawa-dosa",
+      "name": "Veg Rawa Masala Dosa",
+      "slug": "veg-rawa-masala-dosa",
+      "description": "Crisp vegetable semolina crepe loaded with spiced mixed veggies and potato mash.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 8,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Vegetable_Rawa_Masala_D-1792877825666-874732.png"
+    },
+    {
+      "id": "item-podi-plain-dosa",
+      "categoryId": "cat-specials",
+      "name": "Podi Plain Dosa",
+      "slug": "podi-plain-dosa",
+      "description": "Golden crepe roasted with aromatic South Indian spiced gunpowder (karam podi).",
+      "price": 140,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-f96b6bbed121a84da71d1e1a11869a-1792873500962-274092.jpg"
+    },
+    {
+      "id": "item-podi-masala-dosa",
+      "categoryId": "cat-specials",
+      "name": "Podi Masala Dosa",
+      "slug": "podi-masala-dosa",
+      "description": "Crispy dosa coated with spicy gun powder and stuffed with hearty spiced potato aloo masala.",
+      "price": 150,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Podi_Masala_Dosa_Feast-1792874758383-650452.png"
+    },
+    {
+      "id": "item-ghee-roasted-plain-dosa",
+      "categoryId": "cat-specials",
+      "name": "Ghee Roasted Plain Dosa",
+      "slug": "ghee-roasted-plain-dosa",
+      "description": "Slow-roasted on cast iron tawa with generous amounts of pure fragrant desi ghee.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-extra-sambar",
+        "addon-extra-chutney"
+      ],
+      "image": "/uploads/menu/menu-Ghee_Dosa_Feast_on_Banana_Leaf-1792875583840-98493.png"
+    },
+    {
+      "id": "item-ghee-roasted-masala-dosa",
+      "categoryId": "cat-specials",
+      "name": "Ghee Roasted Masala Dosa",
+      "slug": "ghee-roasted-masala-dosa",
+      "description": "Decadent pure ghee roasted crisp dosa stuffed with aromatic seasoned potato mash.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-extra-sambar",
+        "addon-extra-chutney"
+      ],
+      "image": "/uploads/menu/menu-Golden_Ghee-Roasted_Masala_Dos-1792876651816-978450.png"
+    },
+    {
+      "id": "item-upma",
+      "categoryId": "cat-specials",
+      "name": "Upma",
+      "slug": "upma",
+      "description": "Traditional roasted semolina porridge tempered with mustard seeds, ginger, curry leaves, and cashews.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 5,
+      "applicableAddonIds": [
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-South_Indian_Upma_with_Chutney-1792877102088-259429.png"
+    },
+    {
+      "id": "item-set-dosa",
+      "categoryId": "cat-specials",
+      "name": "Set Dosa",
+      "slug": "set-dosa",
+      "description": "Trio of ultra-soft, spongy, melt-in-the-mouth dosas served with spicy sagu/sambar and chutneys.",
+      "price": 160,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 6,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Fluffy_South_Indian_Breakfast_-1792877421560-202011.png"
+    },
+    {
+      "id": "item-platter-special",
+      "categoryId": "cat-platter",
+      "name": "1 Idli + 1 Vada + Mini Masala Dosa + Mini Onion Uttappam",
+      "slug": "south-indian-platter",
+      "description": "Royal tasting feast: 1 soft steamed idli, 1 crunchy medu vada, mini masala dosa, and mini onion uttapam.",
+      "price": 250,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-South_Indian_Breakfast_Thali-1792874072538-703231.png"
+    },
+    {
+      "id": "item-onion-uttappam",
+      "categoryId": "cat-uttappam",
+      "name": "Onion Uttappam",
+      "slug": "onion-uttappam",
+      "description": "Thick, fluffy fermented pancake crowned with sweet caramelized red onions and green coriander.",
+      "price": 160,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-gunpowder"
+      ],
+      "image": "/uploads/menu/menu-Rustic_Onion_Uttapam_with_Chut-1792874168490-330169.png"
+    },
+    {
+      "id": "item-onion-tomato-uttappam",
+      "categoryId": "cat-uttappam",
+      "name": "Onion Tomato Uttappam",
+      "slug": "onion-tomato-uttappam",
+      "description": "Soft and thick pancake generously loaded with sweet onions, juicy ripe tomatoes and fresh chillies.",
+      "price": 160,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-South_Indian_Uttapam_Platter_w-1792874867349-484152.png"
+    },
+    {
+      "id": "item-mix-veg-uttappam",
+      "categoryId": "cat-uttappam",
+      "name": "Mix Veg Uttappam",
+      "slug": "mix-veg-uttappam",
+      "description": "Savory thick pancake studded with grated carrots, bell peppers, tomatoes, and sweet onions.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee"
+      ],
+      "image": "/uploads/menu/menu-Colorful_Vegetable_Uttapam_Fea-1792875625878-351449.png"
+    },
+    {
+      "id": "item-coconut-uttappam",
+      "categoryId": "cat-uttappam",
+      "name": "Coconut Uttappam",
+      "slug": "coconut-uttappam",
+      "description": "Thick pancake generously topped with freshly grated coastal coconut and green chillies.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee"
+      ],
+      "image": "/uploads/menu/menu-Coconut-Topped_Uttapam_Feast-1792876732824-426889.png"
+    },
+    {
+      "id": "item-masala-uttappam",
+      "categoryId": "cat-uttappam",
+      "name": "Masala Uttappam",
+      "slug": "masala-uttappam",
+      "description": "Fluffy pancake topped with signature spiced potato aloo masala and coriander leaves.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 5,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee"
+      ],
+      "image": "/uploads/menu/menu-South_Indian_Uttapam_Feast-1792877183120-876224.png"
+    },
+    {
+      "id": "item-paneer-uttappam",
+      "categoryId": "cat-uttappam",
+      "name": "Paneer Uttappam",
+      "slug": "paneer-uttappam",
+      "description": "Plump savory pancake smothered with seasoned cottage cheese cubes and diced onions.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 6,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee"
+      ],
+      "image": "/uploads/menu/menu-Paneer-Topped_Uttapam_with_Sam-1792877470289-956490.png"
+    },
+    {
+      "id": "item-idli-sambar-2pcs",
+      "categoryId": "cat-idli-vada",
+      "name": "Idli Sambar (2 Pcs.)",
+      "slug": "idli-sambar-2pcs",
+      "description": "Two steaming hot fluffy fermented rice cakes served with aromatic lentil sambar and fresh chutney.",
+      "price": 90,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee",
+        "addon-gunpowder",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-South_Indian_Idli_Feast-1792874322433-553814.png"
+    },
+    {
+      "id": "item-ghee-podi-idli-2pcs",
+      "categoryId": "cat-idli-vada",
+      "name": "Ghee Podi Idli (2 Pcs.)",
+      "slug": "ghee-podi-idli-2pcs",
+      "description": "Two soft idlis generously tossed in aromatic pure desi ghee and spicy karam gunpowder podi.",
+      "price": 160,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-extra-sambar",
+        "addon-extra-chutney"
+      ],
+      "image": "/uploads/menu/menu-Ghee_Podi_Idlis_with_Sambar_an-1792874975952-88577.png"
+    },
+    {
+      "id": "item-fried-idli-3pcs",
+      "categoryId": "cat-idli-vada",
+      "name": "Fried Idli (3 Pcs.)",
+      "slug": "fried-idli-3pcs",
+      "description": "Crispy fried idli fingers seasoned with chaat spices, curry leaves and mustard seeds.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-extra-sambar",
+        "addon-extra-chutney"
+      ],
+      "image": "/uploads/menu/menu-Crispy_Fried_Idli_with_Sambar_-1792875678236-167734.png"
+    },
+    {
+      "id": "item-vada-sambar-2pcs",
+      "categoryId": "cat-idli-vada",
+      "name": "Vada Sambar (2 Pcs.)",
+      "slug": "vada-sambar-2pcs",
+      "description": "Two golden crunchy doughnut-shaped lentil fritters spiced with ginger and black peppercorns.",
+      "price": 100,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-extra-sambar",
+        "addon-extra-chutney"
+      ],
+      "image": "/images/medu-vada.jpg"
+    },
+    {
+      "id": "item-dahi-vada-2pcs",
+      "categoryId": "cat-idli-vada",
+      "name": "Dahi Vada (2 Pcs.)",
+      "slug": "dahi-vada-2pcs",
+      "description": "Two soft vadas immersed in sweet spiced yogurt, tempered with mustard seeds and curry leaves.",
+      "price": 170,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 5,
+      "applicableAddonIds": [],
+      "image": "/uploads/menu/menu-Vibrant_Dahi_Vada_with_Pomegra-1792877232588-608262.png"
+    },
+    {
+      "id": "item-dal-vada-4pcs",
+      "categoryId": "cat-idli-vada",
+      "name": "Dal Vada (4 Pcs.)",
+      "slug": "dal-vada-4pcs",
+      "description": "Four coarse chana dal patties, deep-fried to a golden crisp with onions, green chillies and curry leaves.",
+      "price": 120,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 6,
+      "applicableAddonIds": [
+        "addon-extra-sambar",
+        "addon-extra-chutney"
+      ],
+      "image": "/uploads/menu/menu-Golden_South_Indian_Vada_Platt-1792877506889-94927.png"
+    },
+    {
+      "id": "item-idli-vada-combo",
+      "categoryId": "cat-idli-vada",
+      "name": "Idli Vada Combo",
+      "slug": "idli-vada-combo",
+      "description": "One soft steamed idli and one crispy medu vada, the quintessential South Indian breakfast pair.",
+      "price": 100,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 7,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-South_Indian_Idli_Vada_Breakfa-1792877690190-658496.png"
+    },
+    {
+      "id": "item-idli-sambar-1pc",
+      "categoryId": "cat-idli-vada",
+      "name": "Idli Sambar (1 Pc.)",
+      "slug": "idli-sambar-1pc",
+      "description": "Single portion: One steamed fluffy rice idli served with hot sambar and fresh coconut chutney.",
+      "price": 50,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 8,
+      "applicableAddonIds": [
+        "addon-butter",
+        "addon-ghee"
+      ],
+      "image": "/uploads/menu/menu-Idli_Sambar_Chutney_on_Banana_-1792877963979-922576.png"
+    },
+    {
+      "id": "item-vada-sambar-1pc",
+      "categoryId": "cat-idli-vada",
+      "name": "Vada Sambar (1 Pc.)",
+      "slug": "vada-sambar-1pc",
+      "description": "Single portion: One golden crispy medu vada served with hot sambar and fresh coconut chutney.",
+      "price": 60,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 9,
+      "applicableAddonIds": [
+        "addon-extra-sambar"
+      ],
+      "image": "/images/medu-vada.jpg"
+    },
+    {
+      "id": "item-sambar-rice",
+      "categoryId": "cat-rice",
+      "name": "Sambar Rice",
+      "slug": "sambar-rice",
+      "description": "Slow-simmered rice infused with spiced dal sambar and seasonal vegetables, served with papad.",
+      "price": 120,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [
+        "addon-ghee"
+      ],
+      "image": "/uploads/menu/menu-Rustic_Sambar_Rice_Thali_on_Ba-1792874403369-310675.png"
+    },
+    {
+      "id": "item-lemon-rice",
+      "categoryId": "cat-rice",
+      "name": "Lemon Rice",
+      "slug": "lemon-rice",
+      "description": "Steamed rice tempered with fresh lemon juice, turmeric, crunchy roasted peanuts, and curry leaves.",
+      "price": 150,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Vibrant_South_Indian_Lemon_Ric-1792876147883-502560.png"
+    },
+    {
+      "id": "item-tomato-rice",
+      "categoryId": "cat-rice",
+      "name": "Tomato Rice",
+      "slug": "tomato-rice",
+      "description": "Aromatic basmati rice cooked with ripe tangy tomatoes, whole spices, mustard seeds, and cashews.",
+      "price": 150,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Vibrant_Tomato_Rice_Bowl-1792875849278-317535.png"
+    },
+    {
+      "id": "item-coconut-rice",
+      "categoryId": "cat-rice",
+      "name": "Coconut Rice",
+      "slug": "coconut-rice",
+      "description": "Mildly fragrant rice tossed with freshly grated coconut, cashews, mustard seeds, and dried chillies.",
+      "price": 180,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 4,
+      "applicableAddonIds": [
+        "addon-extra-sambar"
+      ],
+      "image": "/uploads/menu/menu-Rustic_South_Indian_Coconut_Ri-1792876851809-661049.png"
+    },
+    {
+      "id": "item-curd-rice",
+      "categoryId": "cat-rice",
+      "name": "Curd Rice",
+      "slug": "curd-rice",
+      "description": "Comforting cooked rice mixed with fresh curd, tempered with mustard seeds, curry leaves, and ginger.",
+      "price": 140,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 5,
+      "applicableAddonIds": [],
+      "image": "/uploads/menu/menu-South_Indian_Curd_Rice_Thali-1792877277211-760677.png"
+    },
+    {
+      "id": "item-filter-coffee",
+      "categoryId": "cat-beverages",
+      "name": "Filter Coffee",
+      "slug": "filter-coffee",
+      "description": "Freshly brewed traditional chicory blend South Indian Kaapi frothed with whole boiled milk.",
+      "price": 50,
+      "priceType": "fixed",
+      "isVeg": true,
+      "isBestseller": true,
+      "isAvailable": true,
+      "sortOrder": 1,
+      "applicableAddonIds": [],
+      "image": "/uploads/menu/menu-South_Indian_Filter_Coffee_Glo-1792874484049-164669.png"
+    },
+    {
+      "id": "item-cold-drink",
+      "categoryId": "cat-beverages",
+      "name": "Cold Drinks",
+      "slug": "cold-drink",
+      "description": "Assorted chilled carbonated soft beverages in can/bottle. Sold strictly at printed MRP.",
+      "price": 20,
+      "priceType": "mrp",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 2,
+      "applicableAddonIds": [],
+      "image": "/uploads/menu/menu-Chilled_Soda_Festival_on_Ice-1792875238499-200568.png"
+    },
+    {
+      "id": "item-water",
+      "categoryId": "cat-beverages",
+      "name": "Water",
+      "slug": "water",
+      "description": "Packaged premium drinking water. Sold strictly at printed MRP.",
+      "price": 20,
+      "priceType": "mrp",
+      "isVeg": true,
+      "isBestseller": false,
+      "isAvailable": true,
+      "sortOrder": 3,
+      "applicableAddonIds": [],
+      "image": "/uploads/menu/menu-Kinley_Bottled_Water_on_Wood-1792876112624-260151.png"
+    }
+  ],
+  "addons": [
+    {
+      "id": "addon-butter",
+      "name": "Amul Butter",
+      "price": 20,
+      "priceType": "fixed",
+      "isAvailable": false,
+      "applicableCategories": [
+        "all"
+      ],
+      "sortOrder": 1
+    },
+    {
+      "id": "addon-ghee",
+      "name": "Pure Desi Ghee Topping",
+      "price": 30,
+      "priceType": "fixed",
+      "isAvailable": true,
+      "applicableCategories": [
+        "all"
+      ],
+      "sortOrder": 2
+    },
+    {
+      "id": "addon-gunpowder",
+      "name": "Gunpowder (Podi) with Pure Ghee",
+      "price": 35,
+      "priceType": "fixed",
+      "isAvailable": true,
+      "applicableCategories": [
+        "all"
+      ],
+      "sortOrder": 3
+    },
+    {
+      "id": "addon-extra-sambar",
+      "name": "Extra Sambar (Large Bowl)",
+      "price": 40,
+      "priceType": "fixed",
+      "isAvailable": true,
+      "applicableCategories": [
+        "all"
+      ],
+      "sortOrder": 4
+    },
+    {
+      "id": "addon-extra-chutney",
+      "name": "Extra Coconut & Tomato Chutney",
+      "price": 30,
+      "priceType": "fixed",
+      "isAvailable": true,
+      "applicableCategories": [
+        "all"
+      ],
+      "sortOrder": 5
+    },
+    {
+      "name": "Amul Butter",
+      "price": 20,
+      "isAvailable": true,
+      "applicableCategories": [
+        "all"
+      ],
+      "sortOrder": 99,
+      "priceType": "fixed",
+      "id": "addon-1792247605183"
+    }
+  ],
+  "settings": {
+    "brandName": "Pillaiyarappa — South Indian Corner",
+    "tagline": "Authentic South Indian Flavours in Gurugram",
+    "phonePrimary": "9899101195",
+    "phoneSecondary": "9953919033",
+    "whatsappNumber": "919953919033",
+    "whatsappDefaultText": "Hello Pillaiyarappa! I would like to place an order / inquire about catering.",
+    "deliveryOfferText": "Direct Delivery within 3 km Radius • Min. Order ₹500 • Beyond 3 km on Zomato & Swiggy",
+    "deliveryMinOrder": 500,
+    "cateringLine": "Contact for Parties & Catering Orders",
+    "zomatoUrl": "https://zomato.onelink.me/xqzv/gj35mxzd",
+    "swiggyUrl": "https://www.swiggy.com/menu/759351?source=sharing",
+    "instagramUrl": "https://www.instagram.com/pillaiyarappa_southindian?utm_source=qr&exln=MWt5OHV2cXF2d25sdw==",
+    "facebookUrl": "https://facebook.com",
+    "contactEmail": "pillaiyarappasouthindiancorner@gmail.com",
+    "seoTitle": "Pillaiyarappa - South Indian Corner | Gurugram",
+    "seoDescription": "Authentic South Indian restaurant in Gurugram. Free Home Delivery on min order ₹500. Dosas, Idlis, Vadas, Uttapams. South City-1 & Sec-40 Huda Market.",
+    "announcementText": "✨ Special Festival Catering Available! Call 9899101195 for customized party menus.",
+    "announcementActive": true
+  },
+  "branches": [
+    {
+      "id": "branch-1",
+      "slug": "south-city-1",
+      "name": "Branch - 1",
+      "address": "Shop No. 3, Opp. Mayom Hospital, South City-1, Gurugram",
+      "phone": "9899101195",
+      "secondaryPhone": "9953919033",
+      "mapUrl": "https://maps.google.com/?q=Shop+No.+3+Opp+Mayom+Hospital+South+City-1+Gurugram",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      "openingHours": "10:00 AM – 10:00 PM (Everyday)",
+      "isActive": true,
+      "sortOrder": 1,
+      "zomatoUrl": "https://zomato.onelink.me/xqzv/gj35mxzd",
+      "swiggyUrl": "https://www.swiggy.com/menu/759351?source=sharing"
+    },
+    {
+      "id": "branch-2",
+      "slug": "sec-40-huda-market",
+      "name": "Branch - 2",
+      "address": "Shop No. 48, Sec-40, Huda Market, Gurugram",
+      "phone": "9953919033",
+      "secondaryPhone": "9899101195",
+      "mapUrl": "https://maps.google.com/?q=Shop+No.+48+Sec-40+Huda+Market+Gurugram",
+      "image": "/images/branch-2/branch2-storefront.jpg",
+      "openingHours": "10:00 AM – 10:00 PM (Everyday)",
+      "isActive": true,
+      "sortOrder": 2,
+      "zomatoUrl": "https://zomato.onelink.me/xqzv/eexteimj",
+      "gallery": [
+        {
+          "id": "b2-img-storefront",
+          "image": "/images/branch-2/branch2-storefront.jpg",
+          "title": "Storefront & Main Entrance",
+          "subtitle": "Shop No. 48, Sec-40, Huda Market, Gurugram",
+          "tag": "Storefront & Facade"
+        },
+        {
+          "id": "b2-img-dining",
+          "image": "/images/branch-2/branch2-dining-hall.jpg",
+          "title": "1st Floor Dine-In Seating Hall",
+          "subtitle": "Air-conditioned comfortable dining with marble interiors & warm lighting",
+          "tag": "Dine-In Space"
+        },
+        {
+          "id": "b2-img-filter-kaapi",
+          "image": "/images/branch-2/branch2-filter-kaapi.jpg",
+          "title": "Authentic South Indian Filter Kaapi",
+          "subtitle": "Traditional decoction frothed in stainless steel Davara-Tumbler",
+          "tag": "Heritage Kaapi"
+        }
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "offer-1",
+      "title": "Free In-House Delivery (Within 3 km)",
+      "description": "Enjoy piping hot delivery by our own in-house riders within a 3 km radius of our outlets. Minimum Order = ₹500/-. Beyond 3 km, order on Zomato or Swiggy.",
+      "badge": "3 KM DIRECT DELIVERY",
+      "isActive": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "offer-2",
+      "title": "Party & Bulk Catering Specials",
+      "description": "Customized authentic South Indian live counters and bulk thalis for birthdays, pujas, and corporate events.",
+      "badge": "CATERING",
+      "isActive": true,
+      "sortOrder": 2
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "title": "Signature Masala Dosa with Sambar & Chutneys",
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=80",
+      "category": "food",
+      "alt": "Golden crisp masala dosa served on banana leaf with chutneys"
+    },
+    {
+      "id": "gal-2",
+      "title": "Traditional Steamed Idlis",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1000&q=80",
+      "category": "food",
+      "alt": "Steamed fluffy white idlis with coconut chutney and sambar"
+    },
+    {
+      "id": "gal-3",
+      "title": "Crispy Medu Vadas",
+      "image": "/images/medu-vada.jpg",
+      "category": "food",
+      "alt": "Crispy golden Medu Vada dipped in hot aromatic sambar with coconut chutney"
+    },
+    {
+      "id": "gal-4",
+      "title": "Onion Tomato Uttapam",
+      "image": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=1000&q=80",
+      "category": "food",
+      "alt": "Savory uttapam with fresh diced tomatoes and onions"
+    }
+  ],
+  "enquiries": [],
+  "auditLogs": [
+    {
+      "id": "log-1792249201797-a3c7",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Paneer Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:00:01.797Z"
+    },
+    {
+      "id": "log-1792249201930-7dzr",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Paneer Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:01.930Z"
+    },
+    {
+      "id": "log-1792249202306-nhur",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:02.306Z"
+    },
+    {
+      "id": "log-1792249202522-fjaf",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:00:02.522Z"
+    },
+    {
+      "id": "log-1792249202652-1z0x",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:02.652Z"
+    },
+    {
+      "id": "log-1792249202817-hq37",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:00:02.817Z"
+    },
+    {
+      "id": "log-1792249202977-a3td",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:02.977Z"
+    },
+    {
+      "id": "log-1792249203130-v8kv",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:00:03.130Z"
+    },
+    {
+      "id": "log-1792249203779-kpfm",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:03.779Z"
+    },
+    {
+      "id": "log-1792249204615-ixem",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Paneer Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:00:04.615Z"
+    },
+    {
+      "id": "log-1792249205141-803h",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:00:05.141Z"
+    },
+    {
+      "id": "log-1792249206375-509c",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:06.375Z"
+    },
+    {
+      "id": "log-1792249206968-kjac",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Paneer Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:06.968Z"
+    },
+    {
+      "id": "log-1792249213330-566r",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:13.330Z"
+    },
+    {
+      "id": "log-1792249214303-r00p",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Paneer Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-17T15:00:14.304Z"
+    },
+    {
+      "id": "log-1792249298102-gp34",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Paneer Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:01:38.102Z"
+    },
+    {
+      "id": "log-1792249298896-ff80",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-17T15:01:38.896Z"
+    },
+    {
+      "id": "log-1792308946696-s7jx",
+      "actor": "Admin",
+      "action": "Login",
+      "details": "Admin user logged in: admin@pillaiyarappa.com",
+      "timestamp": "2026-10-18T07:35:46.696Z"
+    },
+    {
+      "id": "log-1792308946699-tef4",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T07:35:46.699Z"
+    },
+    {
+      "id": "log-1792308946943-foeh",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-18T07:35:46.943Z"
+    },
+    {
+      "id": "log-1792308946949-zch4",
+      "actor": "Admin",
+      "action": "Create Menu Item",
+      "details": "Created item: Special Test Dish 1792308946947 (₹199)",
+      "timestamp": "2026-10-18T07:35:46.949Z"
+    },
+    {
+      "id": "log-1792308946953-wuwy",
+      "actor": "Admin",
+      "action": "Delete Menu Item",
+      "details": "Deleted item: Special Test Dish 1792308946947",
+      "timestamp": "2026-10-18T07:35:46.953Z"
+    },
+    {
+      "id": "log-1792309863567-fg74",
+      "actor": "Admin",
+      "action": "Login",
+      "details": "Admin user logged in: admin@pillaiyarappa.com",
+      "timestamp": "2026-10-18T07:51:03.568Z"
+    },
+    {
+      "id": "log-1792309863574-e6im",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T07:51:03.574Z"
+    },
+    {
+      "id": "log-1792309863592-lgj9",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-18T07:51:03.592Z"
+    },
+    {
+      "id": "log-1792309863605-dsro",
+      "actor": "Admin",
+      "action": "Create Menu Item",
+      "details": "Created item: Special Test Dish 1792309863600 (₹199)",
+      "timestamp": "2026-10-18T07:51:03.605Z"
+    },
+    {
+      "id": "log-1792309863619-36g1",
+      "actor": "Admin",
+      "action": "Delete Menu Item",
+      "details": "Deleted item: Special Test Dish 1792309863600",
+      "timestamp": "2026-10-18T07:51:03.619Z"
+    },
+    {
+      "id": "log-1792310325992-5j4l",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Cold Drink: price=20, available=true",
+      "timestamp": "2026-10-18T07:58:45.992Z"
+    },
+    {
+      "id": "log-1792313332114-dln6",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by Test Foodie (9953919033) for 4 guests on 2026-10-20 at 19:30",
+      "timestamp": "2026-10-18T08:48:52.114Z"
+    },
+    {
+      "id": "log-1792313341862-pb5q",
+      "actor": "Admin",
+      "action": "Update Reservation",
+      "details": "Reservation res-1792313332114-fita for Test Foodie: status=confirmed",
+      "timestamp": "2026-10-18T08:49:01.862Z"
+    },
+    {
+      "id": "log-1792313654975-633g",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by Priya Sharma (9953919033) for 6 guests on 2026-10-22 at 20:00",
+      "timestamp": "2026-10-18T08:54:14.975Z"
+    },
+    {
+      "id": "log-1792313655004-29x0",
+      "actor": "Admin",
+      "action": "Update Reservation",
+      "details": "Reservation res-1792313654975-4thq for Priya Sharma: status=confirmed",
+      "timestamp": "2026-10-18T08:54:15.004Z"
+    },
+    {
+      "id": "log-1792313671194-com7",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by Arun Iyer (9953919033) for 2 guests on 2026-10-25 at 18:30",
+      "timestamp": "2026-10-18T08:54:31.194Z"
+    },
+    {
+      "id": "log-1792316906556-6kq9",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T09:48:26.557Z"
+    },
+    {
+      "id": "log-1792316942608-psq0",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-18T09:49:02.608Z"
+    },
+    {
+      "id": "log-1792316958981-mdbi",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T09:49:18.981Z"
+    },
+    {
+      "id": "log-1792316962093-qi19",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-18T09:49:22.093Z"
+    },
+    {
+      "id": "log-1792316996721-gtty",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:49:56.721Z"
+    },
+    {
+      "id": "log-1792316998185-rs28",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:49:58.185Z"
+    },
+    {
+      "id": "log-1792316998649-0gfb",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:49:58.649Z"
+    },
+    {
+      "id": "log-1792316999661-h8pe",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:49:59.661Z"
+    },
+    {
+      "id": "log-1792317000487-8qqz",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:50:00.487Z"
+    },
+    {
+      "id": "log-1792317002445-uo4w",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:50:02.445Z"
+    },
+    {
+      "id": "log-1792317011070-cti0",
+      "actor": "Admin",
+      "action": "Update Addon",
+      "details": "Updated add-on: Pure Desi Ghee Topping",
+      "timestamp": "2026-10-18T09:50:11.070Z"
+    },
+    {
+      "id": "log-1792317012566-p5n9",
+      "actor": "Admin",
+      "action": "Update Addon",
+      "details": "Updated add-on: Pure Desi Ghee Topping",
+      "timestamp": "2026-10-18T09:50:12.566Z"
+    },
+    {
+      "id": "log-1792317067749-q14q",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Tomato Rice\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T09:51:07.749Z"
+    },
+    {
+      "id": "log-1792317068773-jn97",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Tomato Rice\" marked as IN STOCK",
+      "timestamp": "2026-10-18T09:51:08.773Z"
+    },
+    {
+      "id": "log-1792317069401-x5qw",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Tomato Rice\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T09:51:09.401Z"
+    },
+    {
+      "id": "log-1792317069894-qjsa",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Tomato Rice\" marked as IN STOCK",
+      "timestamp": "2026-10-18T09:51:09.894Z"
+    },
+    {
+      "id": "log-1792317071007-onbi",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Fried Idli (3 Pcs.)\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T09:51:11.007Z"
+    },
+    {
+      "id": "log-1792317072059-wws5",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Mix Veg Uttappam\" marked as SOLD OUT",
+      "timestamp": "2026-10-18T09:51:12.059Z"
+    },
+    {
+      "id": "log-1792317072618-39nv",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Mix Veg Uttappam\" marked as IN STOCK",
+      "timestamp": "2026-10-18T09:51:12.618Z"
+    },
+    {
+      "id": "log-1792317073304-nejl",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Fried Idli (3 Pcs.)\" marked as IN STOCK",
+      "timestamp": "2026-10-18T09:51:13.304Z"
+    },
+    {
+      "id": "log-1792317083183-5wi2",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:51:23.184Z"
+    },
+    {
+      "id": "log-1792317085017-dqo0",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-18T09:51:25.017Z"
+    },
+    {
+      "id": "log-1792317087753-yjsi",
+      "actor": "Admin",
+      "action": "Update Addon",
+      "details": "Updated add-on: Pure Desi Ghee Topping",
+      "timestamp": "2026-10-18T09:51:27.753Z"
+    },
+    {
+      "id": "log-1792317088475-bq8t",
+      "actor": "Admin",
+      "action": "Update Addon",
+      "details": "Updated add-on: Pure Desi Ghee Topping",
+      "timestamp": "2026-10-18T09:51:28.475Z"
+    },
+    {
+      "id": "log-1792317190682-ra6e",
+      "actor": "Admin",
+      "action": "Update Reservation",
+      "details": "Reservation res-1792313671194-eseh for Arun Iyer: status=declined",
+      "timestamp": "2026-10-18T09:53:10.682Z"
+    },
+    {
+      "id": "log-1792317196154-ry7r",
+      "actor": "Admin",
+      "action": "Update Reservation",
+      "details": "Reservation res-1792313671194-eseh for Arun Iyer: status=pending",
+      "timestamp": "2026-10-18T09:53:16.154Z"
+    },
+    {
+      "id": "log-1792317199395-ichl",
+      "actor": "Admin",
+      "action": "Update Reservation",
+      "details": "Reservation res-1792313671194-eseh for Arun Iyer: status=confirmed",
+      "timestamp": "2026-10-18T09:53:19.395Z"
+    },
+    {
+      "id": "log-1792317364137-onxj",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by Saksham Agrawal (9628667424) for 2 guests on 2026-11-07 at 17:00",
+      "timestamp": "2026-10-18T09:56:04.137Z"
+    },
+    {
+      "id": "log-1792343532721-7el6",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by khushi (8800350820) for 2 guests on 2026-10-18 at 11:30",
+      "timestamp": "2026-10-18T17:12:12.721Z"
+    },
+    {
+      "id": "log-1792345779247-e9p1",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by Khushj (8800352805) for 2 guests on 2026-10-18 at 11:30",
+      "timestamp": "2026-10-18T17:49:39.247Z"
+    },
+    {
+      "id": "log-1792345889337-995w",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by G (8800350820) for 2 guests on 2026-10-18 at 11:30",
+      "timestamp": "2026-10-18T17:51:29.337Z"
+    },
+    {
+      "id": "log-1792347770892-k9jq",
+      "actor": "Public",
+      "action": "New Table Reservation",
+      "details": "Table reservation by Amar Singh (8800350820) for 2 guests on 2026-10-18 at 10:00",
+      "timestamp": "2026-10-18T18:22:50.892Z"
+    },
+    {
+      "id": "log-1792431586503-qih5",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-19T17:39:46.503Z"
+    },
+    {
+      "id": "log-1792431587808-7x7n",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-19T17:39:47.808Z"
+    },
+    {
+      "id": "log-1792431642617-9agu",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Mysore Dosa",
+      "timestamp": "2026-10-19T17:40:42.617Z"
+    },
+    {
+      "id": "log-1792431643465-aq4k",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Mysore Dosa",
+      "timestamp": "2026-10-19T17:40:43.465Z"
+    },
+    {
+      "id": "log-1792431644194-9avj",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Mysore Dosa",
+      "timestamp": "2026-10-19T17:40:44.194Z"
+    },
+    {
+      "id": "log-1792431644814-y70g",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Mysore Dosa",
+      "timestamp": "2026-10-19T17:40:44.814Z"
+    },
+    {
+      "id": "log-1792432196588-50ry",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-19T17:49:56.588Z"
+    },
+    {
+      "id": "log-1792432203286-f71w",
+      "actor": "Admin",
+      "action": "Update Category",
+      "details": "Updated category: Dosa",
+      "timestamp": "2026-10-19T17:50:03.286Z"
+    },
+    {
+      "id": "log-1792487869704-mi1n",
+      "actor": "Admin",
+      "action": "Update Addon",
+      "details": "Updated add-on: Pure Desi Ghee Topping",
+      "timestamp": "2026-10-20T09:17:49.704Z"
+    },
+    {
+      "id": "log-1792487870976-ud4f",
+      "actor": "Admin",
+      "action": "Update Addon",
+      "details": "Updated add-on: Pure Desi Ghee Topping",
+      "timestamp": "2026-10-20T09:17:50.976Z"
+    },
+    {
+      "id": "log-1792836039431-c5dk",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as SOLD OUT",
+      "timestamp": "2026-10-24T10:00:39.431Z"
+    },
+    {
+      "id": "log-1792836039539-4mnc",
+      "actor": "Admin",
+      "action": "Toggle Availability",
+      "details": "Item \"Plain Dosa\" marked as IN STOCK",
+      "timestamp": "2026-10-24T10:00:39.539Z"
+    },
+    {
+      "id": "log-1792836139271-ohpo",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-test-1792836139259-272406.png (0.1 KB)",
+      "timestamp": "2026-10-24T10:02:19.271Z"
+    },
+    {
+      "id": "log-1792836158156-bbod",
+      "actor": "Admin",
+      "action": "Delete Menu Photo",
+      "details": "Deleted file from disk: menu-test-1792836139259-272406.png",
+      "timestamp": "2026-10-24T10:02:38.156Z"
+    },
+    {
+      "id": "log-1792837070002-9s04",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Plain Dosa: price=120, available=true",
+      "timestamp": "2026-10-24T10:17:50.002Z"
+    },
+    {
+      "id": "log-1792838147766-75qq",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-conf3__1_-1792838147753-25504.webp (95.7 KB)",
+      "timestamp": "2026-10-24T10:35:47.766Z"
+    },
+    {
+      "id": "log-1792838152322-1kqy",
+      "actor": "Admin",
+      "action": "Delete Menu Photo",
+      "details": "Deleted file from disk: menu-conf3__1_-1792838147753-25504.webp",
+      "timestamp": "2026-10-24T10:35:52.322Z"
+    },
+    {
+      "id": "log-1792869624232-ie5j",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Authentic_Plain_Dosa_Recipe___-1792869624197-649702.jpg (170.4 KB)",
+      "timestamp": "2026-10-24T19:20:24.232Z"
+    },
+    {
+      "id": "log-1792869626640-wow4",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Plain Dosa: price=120, available=true",
+      "timestamp": "2026-10-24T19:20:26.640Z"
+    },
+    {
+      "id": "log-1792872600125-dzdl",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Authentic_Plain_Dosa_Recipe___-1792872600087-429761.jpg (170.4 KB)",
+      "timestamp": "2026-10-24T20:10:00.125Z"
+    },
+    {
+      "id": "log-1792872601554-lzyz",
+      "actor": "Admin",
+      "action": "Delete Menu Photo",
+      "details": "Deleted file from disk: menu-Authentic_Plain_Dosa_Recipe___-1792872600087-429761.jpg",
+      "timestamp": "2026-10-24T20:10:01.554Z"
+    },
+    {
+      "id": "log-1792872604739-n3f5",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Authentic_Plain_Dosa_Recipe___-1792872604722-355543.jpg (170.4 KB)",
+      "timestamp": "2026-10-24T20:10:04.739Z"
+    },
+    {
+      "id": "log-1792872607304-wh67",
+      "actor": "Admin",
+      "action": "Delete Menu Photo",
+      "details": "Deleted file from disk: menu-Authentic_Plain_Dosa_Recipe___-1792872604722-355543.jpg",
+      "timestamp": "2026-10-24T20:10:07.304Z"
+    },
+    {
+      "id": "log-1792872609720-vepx",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Masala Dosa: price=130, available=true",
+      "timestamp": "2026-10-24T20:10:09.720Z"
+    },
+    {
+      "id": "log-1792872689729-i3n0",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-paneer_cheese_dosa-1792872689724-706897.jpg (106.7 KB)",
+      "timestamp": "2026-10-24T20:11:29.729Z"
+    },
+    {
+      "id": "log-1792872691422-3bfq",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Paneer Dosa: price=180, available=true",
+      "timestamp": "2026-10-24T20:11:31.422Z"
+    },
+    {
+      "id": "log-1792872934735-pil6",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-delicious-indian-dosa-with-chu-1792872934721-12801.jpg (207.7 KB)",
+      "timestamp": "2026-10-24T20:15:34.735Z"
+    },
+    {
+      "id": "log-1792872955336-q5cs",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Mysoor Plain Dosa: price=170, available=true",
+      "timestamp": "2026-10-24T20:15:55.336Z"
+    },
+    {
+      "id": "log-1792873407496-s0ws",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Dosa_with_Green_Chutney-1792873407447-957945.png (3342.3 KB)",
+      "timestamp": "2026-10-24T20:23:27.496Z"
+    },
+    {
+      "id": "log-1792873409610-a22j",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Plain Dosa: price=150, available=true",
+      "timestamp": "2026-10-24T20:23:29.610Z"
+    },
+    {
+      "id": "log-1792873500965-di8n",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-f96b6bbed121a84da71d1e1a11869a-1792873500962-274092.jpg (34.1 KB)",
+      "timestamp": "2026-10-24T20:25:00.965Z"
+    },
+    {
+      "id": "log-1792873502293-edo1",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Podi Plain Dosa: price=140, available=true",
+      "timestamp": "2026-10-24T20:25:02.293Z"
+    },
+    {
+      "id": "log-1792874072570-aj6u",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Breakfast_Thali-1792874072538-703231.png (3151.8 KB)",
+      "timestamp": "2026-10-24T20:34:32.570Z"
+    },
+    {
+      "id": "log-1792874074103-zsrn",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item 1 Idli + 1 Vada + Mini Masala Dosa + Mini Onion Uttappam: price=250, available=true",
+      "timestamp": "2026-10-24T20:34:34.103Z"
+    },
+    {
+      "id": "log-1792874168520-id5o",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Rustic_Onion_Uttapam_with_Chut-1792874168490-330169.png (2794.8 KB)",
+      "timestamp": "2026-10-24T20:36:08.520Z"
+    },
+    {
+      "id": "log-1792874172019-pozt",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Onion Uttappam: price=160, available=true",
+      "timestamp": "2026-10-24T20:36:12.019Z"
+    },
+    {
+      "id": "log-1792874322484-fpn2",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Idli_Feast-1792874322433-553814.png (2713.4 KB)",
+      "timestamp": "2026-10-24T20:38:42.484Z"
+    },
+    {
+      "id": "log-1792874324480-c85s",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Idli Sambar (2 Pcs.): price=90, available=true",
+      "timestamp": "2026-10-24T20:38:44.480Z"
+    },
+    {
+      "id": "log-1792874403406-b134",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Rustic_Sambar_Rice_Thali_on_Ba-1792874403369-310675.png (2905.2 KB)",
+      "timestamp": "2026-10-24T20:40:03.406Z"
+    },
+    {
+      "id": "log-1792874405460-jnc7",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Sambar Rice: price=120, available=true",
+      "timestamp": "2026-10-24T20:40:05.460Z"
+    },
+    {
+      "id": "log-1792874484078-cgtt",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Filter_Coffee_Glo-1792874484049-164669.png (2492.6 KB)",
+      "timestamp": "2026-10-24T20:41:24.078Z"
+    },
+    {
+      "id": "log-1792874485647-7abp",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Filter Coffee: price=50, available=true",
+      "timestamp": "2026-10-24T20:41:25.647Z"
+    },
+    {
+      "id": "log-1792874542607-2snj",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Masala_Dosa_Feast-1792874542573-823637.png (3194.6 KB)",
+      "timestamp": "2026-10-24T20:42:22.607Z"
+    },
+    {
+      "id": "log-1792874545238-zdq6",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Masala Dosa: price=130, available=true",
+      "timestamp": "2026-10-24T20:42:25.238Z"
+    },
+    {
+      "id": "log-1792874593716-74ef",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Butter_Paneer_Dosa_Feast-1792874593683-274996.png (3129.2 KB)",
+      "timestamp": "2026-10-24T20:43:13.716Z"
+    },
+    {
+      "id": "log-1792874598101-0u6a",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Butter Paneer Dosa: price=190, available=true",
+      "timestamp": "2026-10-24T20:43:18.101Z"
+    },
+    {
+      "id": "log-1792874707409-0dkm",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Mysore_Masala_Dosa_Feas-1792874707384-437755.png (2955.2 KB)",
+      "timestamp": "2026-10-24T20:45:07.409Z"
+    },
+    {
+      "id": "log-1792874708718-uru5",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Mysoor Masala Dosa: price=180, available=true",
+      "timestamp": "2026-10-24T20:45:08.718Z"
+    },
+    {
+      "id": "log-1792874728776-eh0n",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Rawa_Masala_Dosa_Thali-1792874728748-87388.png (3069.8 KB)",
+      "timestamp": "2026-10-24T20:45:28.776Z"
+    },
+    {
+      "id": "log-1792874730172-s8nr",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Masala Dosa: price=160, available=true",
+      "timestamp": "2026-10-24T20:45:30.172Z"
+    },
+    {
+      "id": "log-1792874758410-sf83",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Podi_Masala_Dosa_Feast-1792874758383-650452.png (3045.7 KB)",
+      "timestamp": "2026-10-24T20:45:58.410Z"
+    },
+    {
+      "id": "log-1792874759632-gvq2",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Podi Masala Dosa: price=150, available=true",
+      "timestamp": "2026-10-24T20:45:59.633Z"
+    },
+    {
+      "id": "log-1792874867391-0hkw",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Uttapam_Platter_w-1792874867349-484152.png (2929.2 KB)",
+      "timestamp": "2026-10-24T20:47:47.391Z"
+    },
+    {
+      "id": "log-1792874869807-1o2z",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Onion Tomato Uttappam: price=160, available=true",
+      "timestamp": "2026-10-24T20:47:49.807Z"
+    },
+    {
+      "id": "log-1792874975974-5eiu",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Ghee_Podi_Idlis_with_Sambar_an-1792874975952-88577.png (2891.3 KB)",
+      "timestamp": "2026-10-24T20:49:35.974Z"
+    },
+    {
+      "id": "log-1792874977384-ncka",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Ghee Podi Idli (2 Pcs.): price=160, available=true",
+      "timestamp": "2026-10-24T20:49:37.384Z"
+    },
+    {
+      "id": "log-1792874984502-nkio",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Vibrant_South_Indian_Lemon_Ric-1792874984474-807199.png (2702.3 KB)",
+      "timestamp": "2026-10-24T20:49:44.502Z"
+    },
+    {
+      "id": "log-1792874985074-34tq",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Lemon Rice: price=150, available=true",
+      "timestamp": "2026-10-24T20:49:45.074Z"
+    },
+    {
+      "id": "log-1792875232308-gh51",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Cold Drink: price=20, available=true",
+      "timestamp": "2026-10-24T20:53:52.308Z"
+    },
+    {
+      "id": "log-1792875238547-6j7j",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Chilled_Soda_Festival_on_Ice-1792875238499-200568.png (3098.1 KB)",
+      "timestamp": "2026-10-24T20:53:58.548Z"
+    },
+    {
+      "id": "log-1792875240700-ngr4",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Cold Drinks: price=20, available=true",
+      "timestamp": "2026-10-24T20:54:00.700Z"
+    },
+    {
+      "id": "log-1792875364909-g4ir",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Masala_Dosa_Feast__1_-1792875364880-5135.png (2898.8 KB)",
+      "timestamp": "2026-10-24T20:56:04.909Z"
+    },
+    {
+      "id": "log-1792875367227-3g1x",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Onion Masala Dosa: price=150, available=true",
+      "timestamp": "2026-10-24T20:56:07.227Z"
+    },
+    {
+      "id": "log-1792875409005-20v7",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Mysore_Paneer_Dosa_Feast-1792875408964-414519.png (2862.4 KB)",
+      "timestamp": "2026-10-24T20:56:49.005Z"
+    },
+    {
+      "id": "log-1792875409977-2z7p",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Mysoor Paneer Dosa: price=200, available=true",
+      "timestamp": "2026-10-24T20:56:49.977Z"
+    },
+    {
+      "id": "log-1792875496259-214d",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Mysore_Rava_Dosa_Feast-1792875496231-90329.png (3116.9 KB)",
+      "timestamp": "2026-10-24T20:58:16.259Z"
+    },
+    {
+      "id": "log-1792875497677-8y6s",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Mysoor Plain Dosa: price=180, available=true",
+      "timestamp": "2026-10-24T20:58:17.677Z"
+    },
+    {
+      "id": "log-1792875530791-wqqi",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Rawa_Onion_Dosa_Feast-1792875530761-687210.png (3115.0 KB)",
+      "timestamp": "2026-10-24T20:58:50.791Z"
+    },
+    {
+      "id": "log-1792875539090-d3fv",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Onion Dosa: price=160, available=true",
+      "timestamp": "2026-10-24T20:58:59.090Z"
+    },
+    {
+      "id": "log-1792875583869-z7gn",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Ghee_Dosa_Feast_on_Banana_Leaf-1792875583840-98493.png (2845.1 KB)",
+      "timestamp": "2026-10-24T20:59:43.870Z"
+    },
+    {
+      "id": "log-1792875585154-i6j0",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Ghee Roasted Plain Dosa: price=170, available=true",
+      "timestamp": "2026-10-24T20:59:45.154Z"
+    },
+    {
+      "id": "log-1792875625907-7n8m",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Colorful_Vegetable_Uttapam_Fea-1792875625878-351449.png (2959.1 KB)",
+      "timestamp": "2026-10-24T21:00:25.907Z"
+    },
+    {
+      "id": "log-1792875627444-k2sw",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Mix Veg Uttappam: price=170, available=true",
+      "timestamp": "2026-10-24T21:00:27.444Z"
+    },
+    {
+      "id": "log-1792875678275-kz37",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Fried_Idli_with_Sambar_-1792875678236-167734.png (2854.4 KB)",
+      "timestamp": "2026-10-24T21:01:18.275Z"
+    },
+    {
+      "id": "log-1792875680681-bjkd",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Fried Idli (3 Pcs.): price=180, available=true",
+      "timestamp": "2026-10-24T21:01:20.681Z"
+    },
+    {
+      "id": "log-1792875849318-1vz0",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Vibrant_Tomato_Rice_Bowl-1792875849278-317535.png (2695.0 KB)",
+      "timestamp": "2026-10-24T21:04:09.319Z"
+    },
+    {
+      "id": "log-1792875851118-umyp",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Tomato Rice: price=150, available=true",
+      "timestamp": "2026-10-24T21:04:11.118Z"
+    },
+    {
+      "id": "log-1792876112670-n7ex",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Kinley_Bottled_Water_on_Wood-1792876112624-260151.png (2602.3 KB)",
+      "timestamp": "2026-10-24T21:08:32.670Z"
+    },
+    {
+      "id": "log-1792876115490-c3wm",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Water: price=20, available=true",
+      "timestamp": "2026-10-24T21:08:35.490Z"
+    },
+    {
+      "id": "log-1792876147929-n08q",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Vibrant_South_Indian_Lemon_Ric-1792876147883-502560.png (2534.7 KB)",
+      "timestamp": "2026-10-24T21:09:07.929Z"
+    },
+    {
+      "id": "log-1792876151331-15ct",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Lemon Rice: price=150, available=true",
+      "timestamp": "2026-10-24T21:09:11.331Z"
+    },
+    {
+      "id": "log-1792876320380-4y9t",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Onion_Dosa_on_Banana_Le-1792876320340-346828.png (2859.1 KB)",
+      "timestamp": "2026-10-24T21:12:00.380Z"
+    },
+    {
+      "id": "log-1792876321988-2jlc",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Onion Plain Dosa: price=140, available=true",
+      "timestamp": "2026-10-24T21:12:01.989Z"
+    },
+    {
+      "id": "log-1792876360231-bv4b",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Paneer-Filled_Dosa_on_B-1792876360206-549602.png (2910.4 KB)",
+      "timestamp": "2026-10-24T21:12:40.231Z"
+    },
+    {
+      "id": "log-1792876362226-fvom",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Paneer Dosa: price=190, available=true",
+      "timestamp": "2026-10-24T21:12:42.226Z"
+    },
+    {
+      "id": "log-1792876498825-2ryw",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Masala_Dosa_Feast__2_-1792876498796-895191.png (2749.0 KB)",
+      "timestamp": "2026-10-24T21:14:58.825Z"
+    },
+    {
+      "id": "log-1792876500080-j3ia",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Mysoor Masala Dosa: price=190, available=true",
+      "timestamp": "2026-10-24T21:15:00.080Z"
+    },
+    {
+      "id": "log-1792876629587-k80c",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Rawa_Onion_Masala_Dosa-1792876629546-183252.png (2900.5 KB)",
+      "timestamp": "2026-10-24T21:17:09.587Z"
+    },
+    {
+      "id": "log-1792876630257-mi3c",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Onion Masala Dosa: price=170, available=true",
+      "timestamp": "2026-10-24T21:17:10.257Z"
+    },
+    {
+      "id": "log-1792876651846-8lnn",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Golden_Ghee-Roasted_Masala_Dos-1792876651816-978450.png (2833.3 KB)",
+      "timestamp": "2026-10-24T21:17:31.846Z"
+    },
+    {
+      "id": "log-1792876654314-eq45",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Ghee Roasted Masala Dosa: price=180, available=true",
+      "timestamp": "2026-10-24T21:17:34.314Z"
+    },
+    {
+      "id": "log-1792876732846-me6n",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Coconut-Topped_Uttapam_Feast-1792876732824-426889.png (2754.2 KB)",
+      "timestamp": "2026-10-24T21:18:52.846Z"
+    },
+    {
+      "id": "log-1792876734859-vboo",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Coconut Uttappam: price=180, available=true",
+      "timestamp": "2026-10-24T21:18:54.859Z"
+    },
+    {
+      "id": "log-1792876806420-mtmm",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Vada_Feast_on_Ban-1792876806402-228739.png (2573.8 KB)",
+      "timestamp": "2026-10-24T21:20:06.420Z"
+    },
+    {
+      "id": "log-1792876812470-w7db",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Vada Sambar (2 Pcs.): price=100, available=true",
+      "timestamp": "2026-10-24T21:20:12.470Z"
+    },
+    {
+      "id": "log-1792876851842-s06p",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Rustic_South_Indian_Coconut_Ri-1792876851809-661049.png (2620.1 KB)",
+      "timestamp": "2026-10-24T21:20:51.842Z"
+    },
+    {
+      "id": "log-1792876856281-wuih",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Coconut Rice: price=180, available=true",
+      "timestamp": "2026-10-24T21:20:56.281Z"
+    },
+    {
+      "id": "log-1792876886404-44eh",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Buttery_South_Indian_Dosa_Thal-1792876886374-234234.png (2778.8 KB)",
+      "timestamp": "2026-10-24T21:21:26.404Z"
+    },
+    {
+      "id": "log-1792876888459-q3hz",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Butter Plain Dosa: price=140, available=true",
+      "timestamp": "2026-10-24T21:21:28.459Z"
+    },
+    {
+      "id": "log-1792876995237-ce41",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Paneer_Masala_Dosa_Thal-1792876995201-293996.png (2981.2 KB)",
+      "timestamp": "2026-10-24T21:23:15.237Z"
+    },
+    {
+      "id": "log-1792876997405-1d11",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Mysoor Paneer Dosa: price=210, available=true",
+      "timestamp": "2026-10-24T21:23:17.405Z"
+    },
+    {
+      "id": "log-1792877032947-t69e",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Coconut_Dosa_with_Chutn-1792877032910-687518.png (2809.8 KB)",
+      "timestamp": "2026-10-24T21:23:52.947Z"
+    },
+    {
+      "id": "log-1792877036263-5f01",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Coconut Dosa: price=190, available=true",
+      "timestamp": "2026-10-24T21:23:56.263Z"
+    },
+    {
+      "id": "log-1792877102116-zu3v",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Upma_with_Chutney-1792877102088-259429.png (2509.4 KB)",
+      "timestamp": "2026-10-24T21:25:02.116Z"
+    },
+    {
+      "id": "log-1792877104059-67aj",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Upma: price=170, available=true",
+      "timestamp": "2026-10-24T21:25:04.059Z"
+    },
+    {
+      "id": "log-1792877183169-niln",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Uttapam_Feast-1792877183120-876224.png (2686.2 KB)",
+      "timestamp": "2026-10-24T21:26:23.169Z"
+    },
+    {
+      "id": "log-1792877189300-upiv",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Masala Uttappam: price=170, available=true",
+      "timestamp": "2026-10-24T21:26:29.300Z"
+    },
+    {
+      "id": "log-1792877232613-r5fw",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Vibrant_Dahi_Vada_with_Pomegra-1792877232588-608262.png (2661.7 KB)",
+      "timestamp": "2026-10-24T21:27:12.613Z"
+    },
+    {
+      "id": "log-1792877233766-8wjd",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Dahi Vada (2 Pcs.): price=170, available=true",
+      "timestamp": "2026-10-24T21:27:13.766Z"
+    },
+    {
+      "id": "log-1792877277235-h3ju",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Curd_Rice_Thali-1792877277211-760677.png (2500.8 KB)",
+      "timestamp": "2026-10-24T21:27:57.235Z"
+    },
+    {
+      "id": "log-1792877278541-13kl",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Curd Rice: price=140, available=true",
+      "timestamp": "2026-10-24T21:27:58.541Z"
+    },
+    {
+      "id": "log-1792877311875-ppy9",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Buttery_Masala_Dosa_Feast-1792877311848-632273.png (2738.7 KB)",
+      "timestamp": "2026-10-24T21:28:31.875Z"
+    },
+    {
+      "id": "log-1792877314544-ed53",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Butter Masala Dosa: price=150, available=true",
+      "timestamp": "2026-10-24T21:28:34.544Z"
+    },
+    {
+      "id": "log-1792877376729-5c3d",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Coconut_Masala_Dosa_Tha-1792877376704-188250.png (2880.3 KB)",
+      "timestamp": "2026-10-24T21:29:36.729Z"
+    },
+    {
+      "id": "log-1792877378746-n5mm",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Rawa Coconut Masala Dosa: price=200, available=true",
+      "timestamp": "2026-10-24T21:29:38.746Z"
+    },
+    {
+      "id": "log-1792877421582-8ld1",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Fluffy_South_Indian_Breakfast_-1792877421560-202011.png (2609.9 KB)",
+      "timestamp": "2026-10-24T21:30:21.582Z"
+    },
+    {
+      "id": "log-1792877422916-2utn",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Set Dosa: price=160, available=true",
+      "timestamp": "2026-10-24T21:30:22.916Z"
+    },
+    {
+      "id": "log-1792877470320-le1u",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Paneer-Topped_Uttapam_with_Sam-1792877470289-956490.png (2852.7 KB)",
+      "timestamp": "2026-10-24T21:31:10.320Z"
+    },
+    {
+      "id": "log-1792877471174-xlid",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Paneer Uttappam: price=180, available=true",
+      "timestamp": "2026-10-24T21:31:11.174Z"
+    },
+    {
+      "id": "log-1792877506911-pw31",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Golden_South_Indian_Vada_Platt-1792877506889-94927.png (2566.7 KB)",
+      "timestamp": "2026-10-24T21:31:46.911Z"
+    },
+    {
+      "id": "log-1792877507941-cdz9",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Dal Vada (4 Pcs.): price=120, available=true",
+      "timestamp": "2026-10-24T21:31:47.941Z"
+    },
+    {
+      "id": "log-1792877584666-bqfa",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Paper_Dosa_with_Chutney-1792877584639-444217.png (2876.8 KB)",
+      "timestamp": "2026-10-24T21:33:04.666Z"
+    },
+    {
+      "id": "log-1792877587090-u3k6",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Paper Plain Dosa: price=170, available=true",
+      "timestamp": "2026-10-24T21:33:07.090Z"
+    },
+    {
+      "id": "log-1792877655639-8o2o",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_South_Indian_Rava_Dosa_-1792877655614-954633.png (2871.4 KB)",
+      "timestamp": "2026-10-24T21:34:15.639Z"
+    },
+    {
+      "id": "log-1792877658281-f2my",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Veg Rawa Plain Dosa: price=170, available=true",
+      "timestamp": "2026-10-24T21:34:18.281Z"
+    },
+    {
+      "id": "log-1792877690214-vjsc",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Idli_Vada_Breakfa-1792877690190-658496.png (2488.7 KB)",
+      "timestamp": "2026-10-24T21:34:50.214Z"
+    },
+    {
+      "id": "log-1792877691209-vhgb",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Idli Vada Combo: price=100, available=true",
+      "timestamp": "2026-10-24T21:34:51.209Z"
+    },
+    {
+      "id": "log-1792877763037-3bq4",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Masala_Dosa_Feast__3_-1792877763014-753849.png (2789.1 KB)",
+      "timestamp": "2026-10-24T21:36:03.037Z"
+    },
+    {
+      "id": "log-1792877766365-gv4u",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Paper Masala Dosa: price=180, available=true",
+      "timestamp": "2026-10-24T21:36:06.365Z"
+    },
+    {
+      "id": "log-1792877825688-toiu",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Crispy_Vegetable_Rawa_Masala_D-1792877825666-874732.png (2930.9 KB)",
+      "timestamp": "2026-10-24T21:37:05.688Z"
+    },
+    {
+      "id": "log-1792877826782-1fvm",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Veg Rawa Masala Dosa: price=180, available=true",
+      "timestamp": "2026-10-24T21:37:06.782Z"
+    },
+    {
+      "id": "log-1792877964003-v64m",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-Idli_Sambar_Chutney_on_Banana_-1792877963979-922576.png (2340.6 KB)",
+      "timestamp": "2026-10-24T21:39:24.003Z"
+    },
+    {
+      "id": "log-1792877966236-tgnr",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Idli Sambar (1 Pc.): price=50, available=true",
+      "timestamp": "2026-10-24T21:39:26.236Z"
+    },
+    {
+      "id": "log-1792877983273-9vz2",
+      "actor": "Admin",
+      "action": "Upload Menu Photo",
+      "details": "Uploaded photo: menu-South_Indian_Vada_Thali_Feast-1792877983248-722809.png (2371.5 KB)",
+      "timestamp": "2026-10-24T21:39:43.273Z"
+    },
+    {
+      "id": "log-1792877984352-140n",
+      "actor": "Admin",
+      "action": "Update Menu Item",
+      "details": "Updated item Vada Sambar (1 Pc.): price=60, available=true",
+      "timestamp": "2026-10-24T21:39:44.352Z"
+    }
+  ],
+  "meta": {
+    "version": 2,
+    "lastUpdated": "2026-10-24T21:39:44.352Z"
+  },
+  "tableReservations": [
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "Amar Singh",
+      "phone": "8800350820",
+      "email": "amarkhushisingh58@gmail.com",
+      "guests": 2,
+      "date": "2026-10-18",
+      "time": "10:00",
+      "id": "res-1792347770892-aegn",
+      "status": "pending",
+      "createdAt": "2026-10-18T18:22:50.892Z"
+    },
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "G",
+      "phone": "8800350820",
+      "guests": 2,
+      "date": "2026-10-18",
+      "time": "11:30",
+      "id": "res-1792345889337-2sj7",
+      "status": "pending",
+      "createdAt": "2026-10-18T17:51:29.337Z"
+    },
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "Khushj",
+      "phone": "8800352805",
+      "email": "khushisokaria@gmail.com",
+      "guests": 2,
+      "date": "2026-10-18",
+      "time": "11:30",
+      "id": "res-1792345779247-eszb",
+      "status": "pending",
+      "createdAt": "2026-10-18T17:49:39.247Z"
+    },
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "khushi",
+      "phone": "8800350820",
+      "email": "khushisokaria@gmail.com",
+      "guests": 2,
+      "date": "2026-10-18",
+      "time": "11:30",
+      "id": "res-1792343532721-msp8",
+      "status": "pending",
+      "createdAt": "2026-10-18T17:12:12.721Z"
+    },
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "Saksham Agrawal",
+      "phone": "9628667424",
+      "email": "skwebofficials@gmail.com",
+      "guests": 2,
+      "date": "2026-11-07",
+      "time": "17:00",
+      "specialRequests": "I want some toppings extra",
+      "id": "res-1792317364137-8qmf",
+      "status": "pending",
+      "createdAt": "2026-10-18T09:56:04.137Z"
+    },
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "Arun Iyer",
+      "phone": "9953919033",
+      "guests": 2,
+      "date": "2026-10-25",
+      "time": "18:30",
+      "specialRequests": "Crispy ghee podi dosa",
+      "id": "res-1792313671194-eseh",
+      "status": "confirmed",
+      "createdAt": "2026-10-18T08:54:31.194Z",
+      "updatedAt": "2026-10-18T09:53:19.395Z"
+    },
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "Priya Sharma",
+      "phone": "9953919033",
+      "guests": 6,
+      "date": "2026-10-22",
+      "time": "20:00",
+      "specialRequests": "Family dinner celebration, high chair needed",
+      "id": "res-1792313654975-4thq",
+      "status": "confirmed",
+      "createdAt": "2026-10-18T08:54:14.975Z",
+      "adminNotes": "Table #5 assigned, high chair reserved",
+      "updatedAt": "2026-10-18T08:54:15.004Z"
+    },
+    {
+      "branchId": "branch-2",
+      "branchSlug": "sec-40-huda-market",
+      "name": "Test Foodie",
+      "phone": "9953919033",
+      "guests": 4,
+      "date": "2026-10-20",
+      "time": "19:30",
+      "specialRequests": "Quiet corner table please",
+      "id": "res-1792313332114-fita",
+      "status": "confirmed",
+      "createdAt": "2026-10-18T08:48:52.114Z",
+      "adminNotes": "Table 4 reserved",
+      "updatedAt": "2026-10-18T08:49:01.862Z"
+    }
+  ]
+}

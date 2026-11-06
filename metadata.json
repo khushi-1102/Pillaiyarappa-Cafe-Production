@@ -1,0 +1,6 @@
+{
+  "name": "Pillaiyarappa - South Indian Corner",
+  "description": "Authentic South Indian Corner in Gurugram. Free Home Delivery minimum order ₹500. Order on Zomato & Swiggy, catering and party orders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

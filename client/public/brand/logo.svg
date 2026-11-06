@@ -1,0 +1,363 @@
+<svg width="280" height="92" viewBox="0 0 280 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Soft authentic shadow -->
+    <filter id="logo-drop-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="#000000" floodOpacity="0.75" />
+    </filter>
+    <filter id="text-drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.6" />
+    </filter>
+
+    <!-- Yellow banner sunny gradient matching poster -->
+    <linearGradient id="banner-yellow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF842" />
+      <stop offset="40%" stop-color="#FFDD00" />
+      <stop offset="100%" stop-color="#F2BE00" />
+    </linearGradient>
+
+    <!-- Deity golden arch gradient -->
+    <linearGradient id="deity-gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF275" />
+      <stop offset="45%" stop-color="#FFCC1A" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+
+    <!-- Sanctum dark background -->
+    <radialGradient id="sanctum-bg" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#220206" />
+      <stop offset="70%" stop-color="#120104" />
+      <stop offset="100%" stop-color="#050002" />
+    </radialGradient>
+
+    <!-- Lord Ganesha black granite gradient -->
+    <linearGradient id="black-stone-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A3A3A" />
+      <stop offset="50%" stop-color="#1A1A1A" />
+      <stop offset="100%" stop-color="#080808" />
+    </linearGradient>
+
+    <!-- Garland crimson gradient -->
+    <linearGradient id="garland-red-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D81B60" />
+      <stop offset="60%" stop-color="#AD1457" />
+      <stop offset="100%" stop-color="#70052A" />
+    </linearGradient>
+
+    <!-- Cutlery base soft glow overlapping yellow banner -->
+    <radialGradient id="cutlery-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- ========================================================
+       1. WHITE CUTLERY (SPOON & FORK) - TOP RIGHT
+       Placed upright above the right curve of the banner
+  ======================================================== -->
+  <g id="cutlery-group" filter="url(#logo-drop-shadow)">
+    <!-- Base Glows into Yellow Banner -->
+    <circle cx="227" cy="36" r="8" fill="url(#cutlery-glow)" />
+    <circle cx="251" cy="35" r="8" fill="url(#cutlery-glow)" />
+
+    <!-- SPOON (Left) -->
+    <g id="cutlery-spoon">
+      <!-- Oval Bowl -->
+      <ellipse cx="227" cy="12.5" rx="6" ry="7.2" fill="#FFFFFF" />
+      <!-- Stem and tear-drop handle base -->
+      <path
+        d="M 225.6 18.5
+           L 225.6 30
+           C 225.6 32.5 223.8 34.5 223.8 37
+           C 223.8 39.5 225.2 41 227 41
+           C 228.8 41 230.2 39.5 230.2 37
+           C 230.2 34.5 228.4 32.5 228.4 30
+           L 228.4 18.5
+           Z"
+        fill="#FFFFFF"
+      />
+    </g>
+
+    <!-- FORK (Right) -->
+    <g id="cutlery-fork">
+      <!-- 4 Vertical Tines -->
+      <line x1="247" y1="5.5" x2="247" y2="15" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="249.6" y1="5.5" x2="249.6" y2="15" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="252.4" y1="5.5" x2="252.4" y2="15" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="255" y1="5.5" x2="255" y2="15" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+      <!-- Fork base scoop -->
+      <path
+        d="M 245.8 14
+           C 245.8 18.5 256.2 18.5 256.2 14
+           L 256.2 17
+           C 256.2 19 252.5 19.5 252.5 21
+           L 252.5 30
+           C 252.5 32.5 254.2 34.5 254.2 37
+           C 254.2 39.5 252.8 41 251 41
+           C 249.2 41 247.8 39.5 247.8 37
+           C 247.8 34.5 249.5 32.5 249.5 30
+           L 249.5 21
+           C 249.5 19.5 245.8 19 245.8 17
+           Z"
+        fill="#FFFFFF"
+      />
+    </g>
+  </g>
+
+  <!-- ========================================================
+       2. YELLOW BANNER / RIBBON
+       Sweeping curved ribbon matching authentic poster contour
+  ======================================================== -->
+  <g id="yellow-banner" filter="url(#logo-drop-shadow)">
+    <!-- Main Yellow Ribbon Path -->
+    <path
+      d="M 7 38
+         C 12 36 22 36.5 36 38
+         C 65 41 98 42.5 135 43
+         C 175 43.5 215 39.5 245 35
+         C 260 32.5 268 30 274 27.5
+         L 259 44
+         L 252 59
+         C 245 58 235 58.5 220 57.5
+         C 178 55.5 140 55.5 102 56.5
+         C 65 57.5 40 59.5 22 62
+         C 16 62.5 13 58 12 53
+         C 11 47 7 42.5 7 38
+         Z"
+      fill="url(#banner-yellow-grad)"
+    />
+
+    <!-- Subtle bottom edge rim shadow -->
+    <path
+      d="M 22 62 C 65 57.5 140 55.5 220 57.5 C 235 58.5 245 58 252 59"
+      stroke="#D6A400"
+      stroke-width="1.2"
+      fill="none"
+      opacity="0.85"
+    />
+    <!-- Subtle top highlight rim -->
+    <path
+      d="M 7 38 C 22 36.5 98 42.5 135 43 C 175 43.5 215 39.5 245 35 C 260 32.5 268 30 274 27.5"
+      stroke="#FFFDC2"
+      stroke-width="1.1"
+      fill="none"
+      opacity="0.9"
+    />
+  </g>
+
+  <!-- ========================================================
+       3. GREEN BRAND WORDMARK: "PILLAIYARAPPA"
+       Bold, vibrant green uppercase sans-serif
+  ======================================================== -->
+  <text
+    x="142"
+    y="53"
+    fill="#009E38"
+    text-anchor="middle"
+    font-family="'Baloo 2', 'Fredoka', 'Arial Rounded MT Bold', 'Montserrat', sans-serif"
+    font-weight="900"
+    font-size="22px"
+    letter-spacing="0.04em"
+    filter="url(#text-drop-shadow)"
+  >
+    PILLAIYARAPPA
+  </text>
+
+  <!-- ========================================================
+       4. SACRED DEITY EMBLEM: LORD PILLAIYAR (GANESHA)
+       Authentic temple shrine bell/arch, draped red/white garland,
+       gold wings and black stone Vigraha with white "J" trunk
+  ======================================================== -->
+  <g id="deity-emblem" filter="url(#logo-drop-shadow)">
+    <!-- Dark Sanctum Arch Interior -->
+    <path
+      d="M 51 5.5
+         C 40 5.5 35 14 35 24
+         C 35 32 33 37 34 42
+         L 67 42
+         C 68 37 66 32 66 24
+         C 66 14 62 5.5 51 5.5
+         Z"
+      fill="url(#sanctum-bg)"
+    />
+
+    <!-- Golden Prabhavali / Bell Arch Frame -->
+    <!-- Top pinnacle finial -->
+    <circle cx="51" cy="3" r="1.6" fill="#FFE600" />
+    <path d="M 49.8 4.8 L 51 1.8 L 52.2 4.8 Z" fill="#FFD700" />
+    <path
+      d="M 51 5
+         C 40 5 34.5 13 33.5 23
+         C 32.5 30 26 33 25 37.5
+         C 24.5 40 28 41 31.5 39
+         C 33 37.5 34 33.5 34.5 28.5
+         C 35 19 40 9.5 51 9.5
+         C 62 9.5 67 19 67.5 28.5
+         C 68 33.5 69 37.5 70.5 39
+         C 74 41 77.5 40 77 37.5
+         C 76 33 69.5 30 68.5 23
+         C 67.5 13 62 5 51 5
+         Z"
+      fill="url(#deity-gold-grad)"
+      stroke="#966905"
+      stroke-width="0.4"
+    />
+
+    <!-- Golden side wing flourishes -->
+    <path
+      d="M 33.5 25
+         C 27 26 23 31 24 36.5
+         C 25 39 28.5 39.5 30.5 37.5
+         C 32 35 33 31 33.5 25
+         Z"
+      fill="url(#deity-gold-grad)"
+      stroke="#8B6508"
+      stroke-width="0.3"
+    />
+    <path
+      d="M 68.5 25
+         C 75 26 79 31 78 36.5
+         C 77 39 73.5 39.5 71.5 37.5
+         C 70 35 69 31 68.5 25
+         Z"
+      fill="url(#deity-gold-grad)"
+      stroke="#8B6508"
+      stroke-width="0.3"
+    />
+
+    <!-- Outer yellow floral tassels -->
+    <path d="M 24 37 L 22.5 42 L 25.5 42 Z" fill="#FFE033" stroke="#B8860B" stroke-width="0.3" />
+    <path d="M 78 37 L 79.5 42 L 76.5 42 Z" fill="#FFE033" stroke="#B8860B" stroke-width="0.3" />
+
+    <!-- Two Draped Crimson & White Garlands (Malas) -->
+    <!-- Left Mala -->
+    <path d="M 39.5 13 L 38 41.5" stroke="url(#garland-red-grad)" stroke-width="3" stroke-linecap="round" />
+    <path d="M 39.5 13 L 38 41.5" stroke="#FFA726" stroke-width="0.5" stroke-dasharray="1 3" fill="none" />
+    <!-- 4 White Jasmine Flower Rosettes on Left Mala -->
+    <circle cx="39.5" cy="15" r="1.6" fill="#FFFFFF" />
+    <circle cx="39.5" cy="15" r="0.5" fill="#E91E63" />
+    <circle cx="39" cy="22.5" r="1.6" fill="#FFFFFF" />
+    <circle cx="39" cy="22.5" r="0.5" fill="#E91E63" />
+    <circle cx="38.5" cy="30" r="1.6" fill="#FFFFFF" />
+    <circle cx="38.5" cy="30" r="0.5" fill="#E91E63" />
+    <circle cx="38" cy="37.5" r="1.6" fill="#FFFFFF" />
+    <circle cx="38" cy="37.5" r="0.5" fill="#E91E63" />
+    <!-- Bottom Left Garland Rosette -->
+    <circle cx="37.5" cy="41.5" r="2.3" fill="#D81B60" stroke="#FFE600" stroke-width="0.5" />
+
+    <!-- Right Mala -->
+    <path d="M 62.5 13 L 64 41.5" stroke="url(#garland-red-grad)" stroke-width="3" stroke-linecap="round" />
+    <path d="M 62.5 13 L 64 41.5" stroke="#FFA726" stroke-width="0.5" stroke-dasharray="1 3" fill="none" />
+    <!-- 4 White Jasmine Flower Rosettes on Right Mala -->
+    <circle cx="62.5" cy="15" r="1.6" fill="#FFFFFF" />
+    <circle cx="62.5" cy="15" r="0.5" fill="#E91E63" />
+    <circle cx="63" cy="22.5" r="1.6" fill="#FFFFFF" />
+    <circle cx="63" cy="22.5" r="0.5" fill="#E91E63" />
+    <circle cx="63.5" cy="30" r="1.6" fill="#FFFFFF" />
+    <circle cx="63.5" cy="30" r="0.5" fill="#E91E63" />
+    <circle cx="64" cy="37.5" r="1.6" fill="#FFFFFF" />
+    <circle cx="64" cy="37.5" r="0.5" fill="#E91E63" />
+    <!-- Bottom Right Garland Rosette -->
+    <circle cx="64.5" cy="41.5" r="2.3" fill="#D81B60" stroke="#FFE600" stroke-width="0.5" />
+
+    <!-- Lord Pillaiyar (Sacred Black Stone Vigraha) -->
+    <!-- Seated Base Peedam -->
+    <path
+      d="M 36.5 41
+         C 42 38.5 60 38.5 65.5 41
+         L 65 43
+         C 58 41.5 44 41.5 37 43
+         Z"
+      fill="url(#black-stone-grad)"
+      stroke="#555555"
+      stroke-width="0.4"
+    />
+    <path d="M 38 41.6 C 43 40 59 40 64 41.6" stroke="#FFD700" stroke-width="0.8" fill="none" />
+
+    <!-- Golden Crown (Kireedam) -->
+    <path d="M 47.5 13.5 L 51 8 L 54.5 13.5 L 53.5 15 L 48.5 15 Z" fill="url(#deity-gold-grad)" stroke="#8B6508" stroke-width="0.4" />
+    <circle cx="51" cy="11.8" r="0.9" fill="#E50914" />
+
+    <!-- Black Granite Head & Torso -->
+    <ellipse cx="51" cy="18" rx="5.5" ry="4.8" fill="url(#black-stone-grad)" />
+    <!-- Big Fan Ears -->
+    <path d="M 46 15 C 42 15 42 20 46 21 Z" fill="url(#black-stone-grad)" stroke="#383838" stroke-width="0.4" />
+    <path d="M 56 15 C 60 15 60 20 56 21 Z" fill="url(#black-stone-grad)" stroke="#383838" stroke-width="0.4" />
+
+    <!-- Sacred White Vibhuti (3 Holy Ash Lines on Forehead) -->
+    <path d="M 48.2 15.6 L 53.8 15.6" stroke="#FFFFFF" stroke-width="0.8" stroke-linecap="round" />
+    <path d="M 48.6 16.7 L 53.4 16.7" stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="round" />
+    <path d="M 49.0 17.8 L 53.0 17.8" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round" />
+    <!-- Sacred Red Kumkum / Sindoor Bindi in Center -->
+    <circle cx="51" cy="16.7" r="0.75" fill="#E50914" />
+
+    <!-- Signature Curved Elephant Trunk ("J" hook shape) -->
+    <!-- Dark stone trunk base -->
+    <path
+      d="M 51 19.5
+         L 51 29
+         C 51 31.8 48.8 34.2 46 34.2
+         C 43.8 34.2 43.2 32 44.2 30.2
+         C 44.8 29.4 45.8 29.4 46.2 30.2"
+      stroke="#181818"
+      stroke-width="3"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <!-- Crisp Light Grey/White Trunk Highlight -->
+    <path
+      d="M 51 19.5
+         L 51 29
+         C 51 31.8 48.8 34.2 46 34.2
+         C 43.8 34.2 43.2 32 44.2 30.2
+         C 44.8 29.4 45.8 29.4 46.2 30.2"
+      stroke="#EAEAEA"
+      stroke-width="1.3"
+      stroke-linecap="round"
+      fill="none"
+    />
+
+    <!-- White Single Tusk (Ekadanta) -->
+    <path d="M 53.4 20.8 L 54.8 22.4 L 53.2 22 Z" fill="#FFFFFF" />
+
+    <!-- Golden Modak (Sweet) -->
+    <circle cx="44" cy="30" r="1.4" fill="#FFE600" stroke="#B8860B" stroke-width="0.3" />
+
+    <!-- Gold Necklace / Mala across Chest -->
+    <path d="M 45.5 25.5 C 47.5 28.5 54.5 28.5 56.5 25.5" stroke="#FFD700" stroke-width="0.8" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- ========================================================
+       5. SUPPORTING TEXT: "South Indian Corner" & PURE VEG MARK
+       Crisp white bold text directly below banner
+  ======================================================== -->
+  <g id="supporting-title" filter="url(#text-drop-shadow)">
+    <!-- White Text: South Indian Corner -->
+    <text
+      x="24"
+      y="80"
+      fill="#FFFFFF"
+      font-family="'Poppins', 'Montserrat', 'Inter', -apple-system, sans-serif"
+      font-weight="800"
+      font-size="19px"
+      letter-spacing="0.02em"
+    >
+      South Indian Corner
+    </text>
+
+    <!-- Indian Pure Veg Symbol (Green Dot inside White Square with Green Border) -->
+    <g transform="translate(250, 66.5)">
+      <rect
+        x="0"
+        y="0"
+        width="16"
+        height="16"
+        rx="2.5"
+        fill="#FFFFFF"
+        stroke="#009E38"
+        stroke-width="1.6"
+      />
+      <circle cx="8" cy="8" r="4.2" fill="#009E38" />
+    </g>
+  </g>
+</svg>

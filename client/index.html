@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Pillaiyarappa - South Indian Corner | Gurugram</title>
+    <meta name="description" content="Authentic South Indian Corner in Gurugram. Serving Crispy Dosas, Fluffy Idlis, Medu Vadas, and Uttapams. Free Home Delivery minimum order ₹500. Order on Zomato & Swiggy." />
+    
+    <!-- OpenGraph / Social Meta Tags -->
+    <meta property="og:title" content="Pillaiyarappa - South Indian Corner | Gurugram" />
+    <meta property="og:description" content="Authentic South Indian Flavours. Free Home Delivery (Min Order ₹500). Shop No. 3 South City-1 & Shop No. 48 Sec-40 Huda Market, Gurugram. Call 9899101195 / 9953919033." />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:image" content="/brand/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pillaiyarappa - South Indian Corner" />
+    <meta name="twitter:description" content="Pure-veg authentic South Indian cuisine in Gurugram. Available on Zomato & Swiggy." />
+
+    <!-- Theme & PWA -->
+    <meta name="theme-color" content="#090909" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Pillaiyarappa" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/brand/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Preconnect to Google Fonts for Display & Body fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- LocalBusiness Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Pillaiyarappa South Indian Corner",
+      "image": "/brand/logo.png",
+      "servesCuisine": "South Indian",
+      "telephone": ["+919899101195", "+919953919033"],
+      "priceRange": "₹",
+      "acceptsReservations": "False",
+      "hasMenu": "#menu",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No. 3, Opp. Mayom Hospital, South City-1",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "addressCountry": "IN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No. 48, Sec-40, Huda Market",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "addressCountry": "IN"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#0A0A0A] text-white antialiased selection:bg-[#FFE600] selection:text-black min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker for offline functionality
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then((reg) => {
+            console.log('PWA ServiceWorker registered successfully');
+          }).catch((err) => {
+            console.log('PWA ServiceWorker registration failed:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
+

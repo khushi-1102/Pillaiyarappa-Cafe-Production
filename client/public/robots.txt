@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Pillaiyarappa - South Indian Corner, Gurugram
+# 100% Pure Vegetarian Restaurant

@@ -1,0 +1,455 @@
+@import "tailwindcss";
+
+/* ─── Override Tailwind v4 emerald palette to #168B4F-based luxury brand green ─── */
+@theme {
+  --color-emerald-50:  #E8F6EE;
+  --color-emerald-100: #C5E9D5;
+  --color-emerald-200: #93D5B1;
+  --color-emerald-300: #57BC85;
+  --color-emerald-400: #29A464;
+  --color-emerald-500: #168B4F;
+  --color-emerald-600: #127742;
+  --color-emerald-700: #0E5E35;
+  --color-emerald-800: #0B4527;
+  --color-emerald-900: #07311C;
+  --color-emerald-950: #041B0F;
+}
+
+:root {
+  --bg: #090909;
+  --surface: #1B1B1B;
+  --surface-raised: #222222;
+  --brand-accent: #168B4F;
+  --brand-accent-glow: #29A464;
+  --brand-accent-dark: #127742;
+  --brand-green: #168B4F;
+  --brand-red: #E23744;
+  --brand-orange: #FC8019;
+  --text-white: #F5F5F0;
+  --text-muted: #A8A8A8;
+  --border-color: #2A2A2A;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+}
+
+/* ─── Ultra-Premium Glassmorphism Design System ─── */
+.glass-panel {
+  background: rgba(27, 27, 27, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-elevated {
+  background: rgba(30, 30, 30, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 48px -8px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(27, 27, 27, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(22, 139, 79, 0.45);
+  background: rgba(32, 32, 32, 0.75);
+  box-shadow: 0 16px 40px -10px rgba(22, 139, 79, 0.22), 0 0 20px -5px rgba(22, 139, 79, 0.15);
+}
+
+.glass-header {
+  background: rgba(9, 9, 9, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.glass-pill-active {
+  background: rgba(22, 139, 79, 0.28) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-color: rgba(31, 160, 90, 0.6) !important;
+  box-shadow: 0 0 24px -2px rgba(22, 139, 79, 0.45);
+}
+
+.glass-input {
+  background: rgba(22, 22, 22, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+}
+
+.glass-input:focus {
+  background: rgba(26, 26, 26, 0.9);
+  border-color: var(--brand-accent-glow);
+  box-shadow: 0 0 0 3px rgba(22, 139, 79, 0.2), 0 0 20px -5px rgba(22, 139, 79, 0.3);
+}
+
+.glass-badge {
+  background: rgba(22, 139, 79, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(31, 160, 90, 0.35);
+  color: #F5F5F0;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12), 0 4px 16px -2px rgba(22, 139, 79, 0.2);
+}
+/* ─── Ultra-Smooth Interactivity & Micro-Animations ─── */
+.interactive-press {
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  will-change: transform;
+}
+
+.interactive-press:active {
+  transform: scale(0.95);
+}
+
+/* Premium laptop hover lift with mobile touch resilience */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.hover-lift:active {
+  transform: scale(0.97);
+}
+
+/* ─── Ultra-Smooth Shimmer & Sheen Effect for CTA Buttons ─── */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.22) 25%,
+    transparent 30%
+  );
+  transform: rotate(25deg) translateX(-150%);
+  animation: btn-shine 4s infinite cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+@keyframes btn-shine {
+  0% {
+    transform: rotate(25deg) translateX(-150%);
+  }
+  28%, 100% {
+    transform: rotate(25deg) translateX(150%);
+  }
+}
+
+/* ─── Ambient Glow Pulse ─── */
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.32;
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: slowSpin 16s linear infinite;
+}
+
+@keyframes orbDrift1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.06);
+  }
+  66% {
+    transform: translate(-30px, 20px) scale(0.96);
+  }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-50px, 35px) scale(0.94);
+  }
+  66% {
+    transform: translate(35px, -25px) scale(1.08);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: ambientGlow 5s ease-in-out infinite;
+}
+
+.animate-orb-1 {
+  animation: orbDrift1 22s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: orbDrift2 26s ease-in-out infinite;
+}
+
+/* Accessible focus ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Sleek Luxury scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #168B4F;
+}
+
+/* ─── Ultra-Premium Mobile & Modal Animations ─── */
+@keyframes drawerSlideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes drawerFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+@keyframes drawerItemSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(14px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.01) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes dockSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sheetSlideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseHalo {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(22, 139, 79, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(22, 139, 79, 0);
+  }
+}
+
+.animate-drawer-slide {
+  animation: drawerSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-drawer-backdrop {
+  animation: drawerFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, backdrop-filter;
+}
+
+.animate-drawer-item {
+  animation: drawerItemSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.animate-modal-pop {
+  animation: modalScaleIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-dock-up {
+  animation: dockSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-sheet-up {
+  animation: sheetSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-pulse-halo {
+  animation: pulseHalo 3s infinite ease-in-out;
+}
+
+/* ─── Continuous Marquee Ticker for Top Offer Banner ─── */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.animate-marquee:active {
+  animation-play-state: paused;
+}
+
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation-duration: 24s;
+  }
+}
+

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#0A0A0A"/>
+  
+  <!-- Sacred Temple Arch / Bell Shrine -->
+  <path d="M 19 8 C 14 8 11 13 11 19 C 11 23 8 25 8 27 C 9 29 12 28 13 25 C 13.5 19 16 12 19 12 C 22 12 24.5 19 25 25 C 26 28 29 29 30 27 C 30 25 27 23 27 19 C 27 13 24 8 19 8 Z" fill="#FFD700"/>
+  <circle cx="19" cy="6.5" r="1.5" fill="#FFE600"/>
+  
+  <!-- Red Garlands -->
+  <line x1="14" y1="13" x2="13" y2="28" stroke="#D81B60" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="24" y1="13" x2="25" y2="28" stroke="#D81B60" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="14" cy="15" r="0.9" fill="#FFFFFF"/>
+  <circle cx="13.5" cy="20" r="0.9" fill="#FFFFFF"/>
+  <circle cx="13" cy="25" r="0.9" fill="#FFFFFF"/>
+  <circle cx="24" cy="15" r="0.9" fill="#FFFFFF"/>
+  <circle cx="24.5" cy="20" r="0.9" fill="#FFFFFF"/>
+  <circle cx="25" cy="25" r="0.9" fill="#FFFFFF"/>
+
+  <!-- Lord Pillaiyar (Black Stone Idol) -->
+  <ellipse cx="19" cy="18" rx="4.5" ry="4" fill="#1A1A1A"/>
+  <path d="M 16.5 14 L 19 10 L 21.5 14 Z" fill="#FFD700"/>
+  <!-- White Vibhuti & Red Tilak -->
+  <line x1="17.2" y1="16" x2="20.8" y2="16" stroke="#FFFFFF" stroke-width="0.8"/>
+  <line x1="17.4" y1="16.9" x2="20.6" y2="16.9" stroke="#FFFFFF" stroke-width="0.7"/>
+  <circle cx="19" cy="16.9" r="0.6" fill="#E50914"/>
+  <!-- White Curved "J" Trunk -->
+  <path d="M 19 18.5 L 19 23.5 C 19 25 17.5 26 16.5 25.5" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- Cutlery: Spoon & Fork -->
+  <g fill="#FFFFFF">
+    <!-- Spoon -->
+    <ellipse cx="45" cy="12" rx="2.5" ry="3.2"/>
+    <path d="M 44.5 15 L 44.5 23 C 44.5 25 43.5 26 45 26 C 46.5 26 45.5 25 45.5 23 L 45.5 15 Z"/>
+    <!-- Fork -->
+    <line x1="51" y1="9" x2="51" y2="14" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round"/>
+    <line x1="52.6" y1="9" x2="52.6" y2="14" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round"/>
+    <line x1="54.2" y1="9" x2="54.2" y2="14" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round"/>
+    <line x1="55.8" y1="9" x2="55.8" y2="14" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round"/>
+    <path d="M 50.5 13.5 C 50.5 16 56.3 16 56.3 13.5 L 56.3 15 L 54.2 17 L 54.2 23 C 54.2 25 55.2 26 53.4 26 C 51.6 26 52.6 25 52.6 23 L 52.6 17 L 50.5 15 Z"/>
+  </g>
+
+  <!-- Yellow Banner -->
+  <path d="M 3 31 C 12 29.5 26 30 38 31 C 48 32 55 30 61 27 L 56 36 L 54 44 C 44 43 32 43 20 44 C 12 44.5 5 45.5 2 46 C 4 41 2 35 3 31 Z" fill="#FFDE00"/>
+  
+  <!-- "PILLAIYARAPPA" Wordmark -->
+  <text x="33" y="39.5" font-family="'Baloo 2', 'Fredoka', 'Nunito', sans-serif" font-weight="900" font-size="6.8" fill="#009E38" text-anchor="middle" letter-spacing="0.3">PILLAIYARAPPA</text>
+
+  <!-- Subtitle & Veg Mark -->
+  <text x="3" y="53.5" font-family="'Poppins', sans-serif" font-weight="800" font-size="5.2" fill="#FFFFFF">South Indian Corner</text>
+  <rect x="52" y="47.5" width="8" height="8" rx="1.5" fill="#FFFFFF" stroke="#009E38" stroke-width="0.8"/>
+  <circle cx="56" cy="51.5" r="2.1" fill="#009E38"/>
+</svg>
