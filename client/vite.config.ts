@@ -2,13 +2,19 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig, Plugin } from 'vite';
-import apiApp from '../server/api/index';
 
 function expressApiPlugin(): Plugin {
   return {
     name: 'express-api-plugin',
-    configureServer(server) {
-      server.middlewares.use(apiApp);
+    async configureServer(server) {
+      if (process.env.NODE_ENV === 'production' || process.env.VERCEL) return;
+      try {
+        const apiPath = '../server/api/index.js';
+        const { default: apiApp } = await import(/* @vite-ignore */ apiPath);
+        server.middlewares.use(apiApp);
+      } catch (err) {
+        console.warn('[Vite Dev Server] Express API middleware skipped in lightweight mode');
+      }
     },
   };
 }
