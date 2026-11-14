@@ -436,10 +436,14 @@ export const appStore = {
       const isBranch2 = b.id === 'branch-2' || b.slug === 'sec-40-huda-market';
       return {
         ...b,
-        image: isBranch2 && (!b.image || b.image.includes('unsplash')) ? (initial?.image || '/images/branch-2/branch2-storefront.jpg') : b.image,
-        gallery: isBranch2
-          ? (initial?.gallery || []).filter((item) => !item.image?.includes('onion-uttapam') && !item.image?.includes('rava-dosa') && item.id !== 'b2-img-rava-dosa')
-          : b.gallery,
+        image: isSouthCity && (!b.image || b.image.includes('unsplash'))
+          ? (initial?.image || '/images/branch-1/branch1-storefront.jpg')
+          : (isBranch2 && (!b.image || b.image.includes('unsplash')) ? (initial?.image || '/images/branch-2/branch2-storefront.jpg') : b.image),
+        gallery: isSouthCity
+          ? (b.gallery && b.gallery.length > 0 && !b.gallery[0].image.includes('unsplash') ? b.gallery : initial?.gallery)
+          : (isBranch2
+            ? (initial?.gallery || []).filter((item) => !item.image?.includes('onion-uttapam') && !item.image?.includes('rava-dosa') && item.id !== 'b2-img-rava-dosa')
+            : b.gallery),
         openingHours: '10:00 AM – 10:00 PM (All 7 Days)',
         zomatoUrl: b.zomatoUrl || initial?.zomatoUrl || 'https://zomato.onelink.me/xqzv/gj35mxzd',
         swiggyUrl: isSouthCity ? (b.swiggyUrl || initial?.swiggyUrl) : undefined,

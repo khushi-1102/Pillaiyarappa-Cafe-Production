@@ -146,7 +146,7 @@ export const BranchGalleryCarousel: React.FC<BranchGalleryCarouselProps> = ({
                 <img
                   src={item.image}
                   alt={`${branchName} - ${item.title}`}
-                  className="w-full h-full object-cover object-center group-hover/carousel:scale-105 transition-transform duration-700 ease-out"
+                  className={`w-full h-full object-cover ${item.objectPosition || 'object-center'} group-hover/carousel:scale-105 transition-transform duration-700 ease-out`}
                   loading={index === 0 ? 'eager' : 'lazy'}
                 />
               </div>

@@ -40,6 +40,7 @@ export interface BranchGalleryItem {
   title: string;
   subtitle?: string;
   tag?: string;
+  objectPosition?: string;
 }
 
 export interface Branch {

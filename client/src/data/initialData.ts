@@ -970,12 +970,22 @@ export const INITIAL_BRANCHES: Branch[] = [
     phone: '9899101195',
     secondaryPhone: '9953919033',
     mapUrl: 'https://maps.google.com/?q=Shop+No.+3+Opp+Mayom+Hospital+South+City-1+Gurugram',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/branch-1/branch1-storefront.jpg',
     openingHours: '10:00 AM – 10:00 PM (Everyday)',
     isActive: true,
     sortOrder: 1,
     zomatoUrl: 'https://zomato.onelink.me/xqzv/gj35mxzd',
     swiggyUrl: 'https://www.swiggy.com/menu/759351?source=sharing',
+    gallery: [
+      {
+        id: 'b1-img-delivery-hub',
+        image: '/images/branch-1/branch1-storefront.jpg',
+        title: 'South City-1 Delivery Hub & Kitchen',
+        subtitle: 'Shop No. 3, Opp. Mayom Hospital, South City-1, Gurugram • Direct 3 km In-House Fast Delivery',
+        tag: 'Outlet & Delivery Hub',
+        objectPosition: 'object-[center_32%]',
+      },
+    ],
   },
   {
     id: 'branch-2',
