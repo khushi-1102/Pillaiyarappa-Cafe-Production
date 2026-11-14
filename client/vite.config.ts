@@ -9,9 +9,9 @@ function expressApiPlugin(): Plugin {
     async configureServer(server) {
       if (process.env.NODE_ENV === 'production' || process.env.VERCEL) return;
       try {
-        const apiPath = '../server/api/index.js';
-        const { default: apiApp } = await import(/* @vite-ignore */ apiPath);
+        const { default: apiApp } = await server.ssrLoadModule('../server/api/index.ts');
         server.middlewares.use(apiApp);
+        console.log('[Vite Dev Server] Express API middleware mounted successfully');
       } catch (err) {
         console.warn('[Vite Dev Server] Express API middleware skipped in lightweight mode');
       }

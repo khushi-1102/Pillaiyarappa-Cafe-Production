@@ -242,10 +242,15 @@ export const appStore = {
     const stored = getStored<MenuCategory[]>(STORAGE_KEYS.CATEGORIES, INITIAL_CATEGORIES);
     const list = Array.isArray(stored) && stored.length >= 10 ? stored : INITIAL_CATEGORIES;
     return list.map((cat) => {
-      if (cat.id === 'cat-platter' && cat.image?.includes('1626777552726')) {
-        return { ...cat, image: '/uploads/menu/menu-South_Indian_Breakfast_Thali-1792874072538-703231.png' };
+      const initial = INITIAL_CATEGORIES.find((ic) => ic.id === cat.id);
+      let image = cat.image || initial?.image || '';
+      if ((!image || image.includes('unsplash')) && initial && initial.image && !initial.image.includes('unsplash')) {
+        image = initial.image;
       }
-      return cat;
+      if (cat.id === 'cat-platter' && image?.includes('1626777552726')) {
+        image = '/uploads/menu/menu-South_Indian_Breakfast_Thali-1792874072538-703231.png';
+      }
+      return { ...cat, image };
     });
   },
   async saveCategory(category: MenuCategory, actorName = 'Admin'): Promise<void> {
@@ -311,7 +316,14 @@ export const appStore = {
     const stored = getStored<MenuItem[]>(STORAGE_KEYS.MENU_ITEMS, INITIAL_MENU_ITEMS);
     const list = Array.isArray(stored) && stored.length > 0 ? stored : INITIAL_MENU_ITEMS;
     return list.map((item) => {
+      const initial = INITIAL_MENU_ITEMS.find((im) => im.id === item.id);
       let image = typeof item.image === 'string' ? item.image : '';
+
+      // If stored item still has old unsplash URL or empty image, but initial has authentic custom upload, use initial:
+      if ((!image || image.includes('unsplash')) && initial && initial.image && initial.image.includes('/uploads/')) {
+        image = initial.image;
+      }
+
       if (item.id === 'item-vada-sambar-2pcs' || item.id === 'item-vada-sambar-1pc') {
         image = '/images/medu-vada.jpg';
       } else if (image.includes('1626777552726')) {
