@@ -2,7 +2,7 @@
 import express2 from "express";
 import path4 from "path";
 import fs4 from "fs";
-import { fileURLToPath as fileURLToPath2 } from "url";
+import { fileURLToPath as fileURLToPath4 } from "url";
 
 // api/index.ts
 import express from "express";
@@ -16,10 +16,10 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 var __filename = fileURLToPath(import.meta.url);
-var __dirname2 = path.dirname(__filename);
+var __dirname = path.dirname(__filename);
 var possibleDataDirs = [
-  path.resolve(__dirname2, "data"),
-  path.resolve(__dirname2, "../data"),
+  path.resolve(__dirname, "data"),
+  path.resolve(__dirname, "../data"),
   path.resolve(process.cwd(), "server/data")
 ];
 var DATA_DIR = possibleDataDirs.find((dir) => fs.existsSync(path.join(dir, "db.json"))) || possibleDataDirs[0];
@@ -1561,13 +1561,16 @@ import { Router as Router2 } from "express";
 import multer from "multer";
 import path2 from "path";
 import fs2 from "fs";
+import { fileURLToPath as fileURLToPath2 } from "url";
+var __filename2 = fileURLToPath2(import.meta.url);
+var __dirname2 = path2.dirname(__filename2);
 var router2 = Router2();
 var resolveUploadsDir = () => {
   const candidates = [
     path2.resolve(process.cwd(), "client/public/uploads/menu"),
     path2.resolve(process.cwd(), "public/uploads/menu"),
-    path2.resolve(__dirname, "../../client/public/uploads/menu"),
-    path2.resolve(__dirname, "../uploads/menu")
+    path2.resolve(__dirname2, "../../client/public/uploads/menu"),
+    path2.resolve(__dirname2, "../uploads/menu")
   ];
   for (const dir of candidates) {
     if (fs2.existsSync(path2.dirname(dir))) {
@@ -1938,14 +1941,17 @@ var admin_default = router2;
 // api/index.ts
 import path3 from "path";
 import fs3 from "fs";
+import { fileURLToPath as fileURLToPath3 } from "url";
+var __filename3 = fileURLToPath3(import.meta.url);
+var __dirname3 = path3.dirname(__filename3);
 var app = express();
 app.use(cors());
 app.use(express.json());
 var uploadsStaticPath = [
   path3.resolve(process.cwd(), "client/public/uploads"),
   path3.resolve(process.cwd(), "public/uploads"),
-  path3.resolve(__dirname, "../../client/public/uploads"),
-  path3.resolve(__dirname, "../uploads")
+  path3.resolve(__dirname3, "../../client/public/uploads"),
+  path3.resolve(__dirname3, "../uploads")
 ].find((p) => fs3.existsSync(p)) || path3.resolve(process.cwd(), "public/uploads");
 app.use("/uploads", express.static(uploadsStaticPath));
 app.use("/api/menu", menu_default);
@@ -1960,15 +1966,15 @@ app.get("/api/health", (_req, res) => {
 var api_default = app;
 
 // index.ts
-var __filename2 = fileURLToPath2(import.meta.url);
-var __dirname3 = path4.dirname(__filename2);
+var __filename4 = fileURLToPath4(import.meta.url);
+var __dirname4 = path4.dirname(__filename4);
 var app2 = express2();
 var PORT = process.env.PORT || 5e3;
 app2.use(api_default);
 var possibleDistPaths = [
-  path4.resolve(__dirname3, "../dist"),
-  path4.resolve(__dirname3, "../../dist"),
-  path4.resolve(__dirname3, "../client/dist"),
+  path4.resolve(__dirname4, "../dist"),
+  path4.resolve(__dirname4, "../../dist"),
+  path4.resolve(__dirname4, "../client/dist"),
   path4.resolve(process.cwd(), "dist")
 ];
 var distPath = possibleDistPaths.find((p) => fs4.existsSync(path4.join(p, "index.html")));
