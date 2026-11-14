@@ -522,6 +522,13 @@ export const appStore = {
             alt: 'Crispy golden Medu Vada dipped in hot aromatic sambar with coconut chutney',
           };
         }
+        if (item.id === 'gal-4') {
+          return {
+            ...item,
+            image: '/images/uttapam.jpg',
+            alt: 'Savory authentic Onion Uttapam on banana leaf with sambar and fresh coconut & tomato chutneys',
+          };
+        }
         return item;
       });
     // Ensure all fresh initial items (such as the real Branch 2 photos) are available

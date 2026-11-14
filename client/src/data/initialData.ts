@@ -54,7 +54,7 @@ export const INITIAL_CATEGORIES: MenuCategory[] = [
     "name": "Rawa Dosa",
     "slug": "rawa-dosa",
     "description": "Lacy, extra-crispy semolina crepes tempered with crushed black pepper, cumin, ginger, and curry leaves.",
-    "image": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/branch-2/branch2-rava-dosa.jpg",
     "isActive": true,
     "sortOrder": 4
   },
@@ -81,7 +81,7 @@ export const INITIAL_CATEGORIES: MenuCategory[] = [
     "name": "Uttappam",
     "slug": "uttappam",
     "description": "Thick, spongy fermented savory pancakes crowned with sweet onions, tomatoes, and fresh toppings.",
-    "image": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/uttapam.jpg",
     "isActive": true,
     "sortOrder": 7
   },
@@ -725,7 +725,7 @@ export const INITIAL_MENU_ITEMS: MenuItem[] = [
       "addon-ghee",
       "addon-gunpowder"
     ],
-    "image": "/uploads/menu/menu-Rustic_Onion_Uttapam_with_Chut-1792874168490-330169.png"
+    "image": "/images/uttapam.jpg"
   },
   {
     "id": "item-onion-tomato-uttappam",
@@ -1217,7 +1217,7 @@ export const INITIAL_GALLERY: GalleryItem[] = [
   {
     "id": "gal-4",
     "title": "Onion Tomato Uttapam",
-    "image": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=1000&q=80",
+    "image": "/images/uttapam.jpg",
     "category": "food",
     "alt": "Savory uttapam with fresh diced tomatoes and onions"
   }
