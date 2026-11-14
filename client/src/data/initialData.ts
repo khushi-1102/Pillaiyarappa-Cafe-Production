@@ -27,7 +27,7 @@ export const INITIAL_CATEGORIES: MenuCategory[] = [
     "name": "Dosa",
     "slug": "dosa",
     "description": "Crisp golden crepes made from fermented batter, served with hot sambar and fresh chutneys.",
-    "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/mysore-masala-dosa-gallery.jpg",
     "isActive": true,
     "sortOrder": 1
   },
@@ -45,7 +45,7 @@ export const INITIAL_CATEGORIES: MenuCategory[] = [
     "name": "Mysore Dosa",
     "slug": "mysore-dosa",
     "description": "Signature crepes layered with spicy red garlic-chutney paste, melted butter and fillings.",
-    "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
+    "image": "/images/mysore-masala-dosa-gallery.jpg",
     "isActive": true,
     "sortOrder": 3
   },
@@ -1195,10 +1195,10 @@ export const INITIAL_OFFERS: Offer[] = [
 export const INITIAL_GALLERY: GalleryItem[] = [
   {
     "id": "gal-1",
-    "title": "Signature Masala Dosa with Sambar & Chutneys",
-    "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=80",
+    "title": "Crispy Mysore Masala Dosa",
+    "image": "/images/mysore-masala-dosa-gallery.jpg",
     "category": "food",
-    "alt": "Golden crisp masala dosa served on banana leaf with chutneys"
+    "alt": "Signature crispy triangular Mysore Masala Dosa with sambar, coconut chutney, and South Indian filter coffee"
   },
   {
     "id": "gal-2",

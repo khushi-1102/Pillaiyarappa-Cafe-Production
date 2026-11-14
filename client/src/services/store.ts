@@ -515,6 +515,14 @@ export const appStore = {
           !item.image?.includes('rava-dosa')
       )
       .map((item) => {
+        if (item.id === 'gal-1' || item.image?.includes('1668236543090-82eba5ee5976')) {
+          return {
+            ...item,
+            title: 'Crispy Mysore Masala Dosa',
+            image: '/images/mysore-masala-dosa-gallery.jpg',
+            alt: 'Signature crispy triangular Mysore Masala Dosa with sambar, coconut chutney, and South Indian filter coffee',
+          };
+        }
         if (item.id === 'gal-3') {
           return {
             ...item,
