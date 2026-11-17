@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
+Sitemap: https://pillaiyarappasouth.in/sitemap.xml
+
 # Pillaiyarappa - South Indian Corner, Gurugram
-# 100% Pure Vegetarian Restaurant
+# 100% Pure Vegetarian Authentic South Indian Restaurant
+# Website: https://pillaiyarappasouth.in
