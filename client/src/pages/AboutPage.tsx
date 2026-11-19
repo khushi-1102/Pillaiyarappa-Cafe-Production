@@ -1,7 +1,9 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { SiteSettings, Branch } from '../types';
 import { VineDivider } from '../components/brand/VineDivider';
 import { ShieldCheck, Heart, Sparkles, MapPin, Phone, Award, Clock, Calendar, CheckCircle2 } from 'lucide-react';
+import { fadeUp, fadeLeft, fadeRight, scaleIn, staggerContainer, staggerFast, viewportOnce } from '../utils/animations';
 
 interface AboutPageProps {
   settings: SiteSettings;
@@ -21,55 +23,55 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center space-y-3 mb-8">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge text-emerald-300">
+        <motion.div
+          className="text-center space-y-3 mb-8"
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+        >
+          <motion.span variants={fadeUp} className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge text-emerald-300">
             <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
             <span>ESTABLISHED 2014 • OVER A DECADE OF TRUST</span>
-          </span>
-          <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+          </motion.span>
+          <motion.h1 variants={fadeUp} className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
             Serving Gurugram Since 2014
-          </h1>
-          <p className="text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          </motion.h1>
+          <motion.p variants={fadeUp} className="text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Welcome to <strong className="text-white">Pillaiyarappa — South Indian Corner</strong>. For more than 12 years, we have been crafting heartfelt, authentic, pure vegetarian culinary traditions for food lovers across Gurugram.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <VineDivider className="mb-10" />
 
         {/* Milestone Stats Ribbon */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
-          <div className="p-5 sm:p-6 rounded-2xl glass-card text-center space-y-1 border border-emerald-500/20">
-            <div className="text-2xl sm:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
-              2014
-            </div>
-            <p className="text-xs font-bold text-white uppercase tracking-wider">Year Founded</p>
-            <p className="text-[11px] text-gray-400">Pioneering taste in Gurugram</p>
-          </div>
-
-          <div className="p-5 sm:p-6 rounded-2xl glass-card text-center space-y-1 border border-emerald-500/20">
-            <div className="text-2xl sm:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
-              12+ Years
-            </div>
-            <p className="text-xs font-bold text-white uppercase tracking-wider">Culinary Legacy</p>
-            <p className="text-[11px] text-gray-400">Serving authentic recipes</p>
-          </div>
-
-          <div className="p-5 sm:p-6 rounded-2xl glass-card text-center space-y-1 border border-emerald-500/20">
-            <div className="text-2xl sm:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
-              10AM – 10PM
-            </div>
-            <p className="text-xs font-bold text-white uppercase tracking-wider">Open Everyday</p>
-            <p className="text-[11px] text-gray-400">All 7 days a week</p>
-          </div>
-
-          <div className="p-5 sm:p-6 rounded-2xl glass-card text-center space-y-1 border border-emerald-500/20">
-            <div className="text-2xl sm:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
-              100% Pure
-            </div>
-            <p className="text-xs font-bold text-white uppercase tracking-wider">Vegetarian</p>
-            <p className="text-[11px] text-gray-400">No soda • No artificial colors</p>
-          </div>
-        </div>
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerFast}
+        >
+          {[
+            { val: '2014', label: 'Year Founded', sub: 'Pioneering taste in Gurugram' },
+            { val: '12+ Years', label: 'Culinary Legacy', sub: 'Serving authentic recipes' },
+            { val: '10AM – 10PM', label: 'Open Everyday', sub: 'All 7 days a week' },
+            { val: '100% Pure', label: 'Vegetarian', sub: 'No soda • No artificial colors' },
+          ].map((stat) => (
+            <motion.div
+              key={stat.label}
+              variants={scaleIn}
+              whileHover={{ y: -4, scale: 1.03 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="p-5 sm:p-6 rounded-2xl glass-card text-center space-y-1 border border-emerald-500/20"
+            >
+              <div className="text-2xl sm:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
+                {stat.val}
+              </div>
+              <p className="text-xs font-bold text-white uppercase tracking-wider">{stat.label}</p>
+              <p className="text-[11px] text-gray-400">{stat.sub}</p>
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* Story Section with Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16">

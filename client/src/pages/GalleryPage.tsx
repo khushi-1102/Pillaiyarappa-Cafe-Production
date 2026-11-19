@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { GalleryItem } from '../types';
 import { VineDivider } from '../components/brand/VineDivider';
 import { X, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
+import { fadeUp, scaleIn, staggerFast, viewportOnce } from '../utils/animations';
 
 interface GalleryPageProps {
   gallery: GalleryItem[];
@@ -86,10 +88,19 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ gallery }) => {
         </div>
 
         {/* Photos Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerFast}
+        >
           {filteredItems.map((item, idx) => (
-            <div
+            <motion.div
               key={item.id}
+              variants={scaleIn}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               onClick={() => setActiveIndex(idx)}
               role="button"
               tabIndex={0}
@@ -120,9 +131,9 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ gallery }) => {
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Lightbox Modal with Keyboard accessibility */}
         {activeIndex !== null && filteredItems[activeIndex] && (

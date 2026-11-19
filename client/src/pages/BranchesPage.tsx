@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { Branch, SiteSettings } from '../types';
 import { VineDivider } from '../components/brand/VineDivider';
 import { MapPin, Phone, Clock, Navigation, ExternalLink, ShieldCheck, MessageCircle, CalendarDays, ArrowRight, Camera } from 'lucide-react';
 import { getSmartWhatsAppUrl, handleWhatsAppLinkClick, isMobileDevice } from '../utils/whatsapp';
 import { ReserveTableModal } from '../components/common/ReserveTableModal';
 import { BranchGalleryCarousel } from '../components/common/BranchGalleryCarousel';
+import { fadeUp, fadeLeft, fadeRight, scaleIn, staggerContainer, staggerFast, viewportOnce } from '../utils/animations';
 
 interface BranchesPageProps {
   branches: Branch[];
@@ -35,29 +37,43 @@ export const BranchesPage: React.FC<BranchesPageProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
-          <div className="text-center space-y-3 mb-8">
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge">
+          <motion.div
+            className="text-center space-y-3 mb-8"
+            initial="hidden"
+            animate="visible"
+            variants={staggerFast}
+          >
+            <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge">
               Gurugram, Haryana
-            </span>
-            <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+            </motion.span>
+            <motion.h1 variants={fadeUp} className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
               Our Branches
-            </h1>
-            <p className="text-sm text-gray-300 max-w-xl mx-auto leading-relaxed">
+            </motion.h1>
+            <motion.p variants={fadeUp} className="text-sm text-gray-300 max-w-xl mx-auto leading-relaxed">
               Visit our two bustling South Indian corners in Gurugram for dine-in, takeaway, or fast home delivery.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           <VineDivider className="mb-10" />
 
           {/* Both Branches Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {branches.map((branch) => {
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={staggerContainer}
+          >
+            {branches.map((branch, branchIdx) => {
               const isMapOpen = activeEmbedBranch === branch.id;
               const hasDineIn = branch.slug === DINE_IN_BRANCH_SLUG;
 
               return (
-                <div
+                <motion.div
                   key={branch.id}
+                  variants={branchIdx === 0 ? fadeLeft : fadeRight}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   className="rounded-3xl overflow-hidden glass-panel-elevated hover:border-emerald-500/50 transition-all duration-300 shadow-2xl flex flex-col justify-between group"
                 >
                   {/* Storefront Image or Interactive Gallery Carousel */}
@@ -227,10 +243,10 @@ export const BranchesPage: React.FC<BranchesPageProps> = ({
                       </div>
                     )}
                   </div>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
 
           {/* Branch - 2 Dedicated Photo Tour & Gallery Showcase */}
           {(() => {
@@ -238,7 +254,13 @@ export const BranchesPage: React.FC<BranchesPageProps> = ({
             if (!branch2 || !branch2.gallery || branch2.gallery.length === 0) return null;
 
             return (
-              <div className="mb-14 glass-panel-elevated rounded-3xl p-6 sm:p-8 border border-white/10 relative overflow-hidden">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportOnce}
+                variants={fadeUp}
+                className="mb-14 glass-panel-elevated rounded-3xl p-6 sm:p-8 border border-white/10 relative overflow-hidden"
+              >
                 <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 relative">
@@ -277,12 +299,18 @@ export const BranchesPage: React.FC<BranchesPageProps> = ({
                     showThumbnails={true}
                   />
                 </div>
-              </div>
+              </motion.div>
             );
           })()}
 
           {/* Delivery callout */}
-          <div className="glass-panel-elevated rounded-3xl p-8 sm:p-10 text-center space-y-4 relative overflow-hidden">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={scaleIn}
+            className="glass-panel-elevated rounded-3xl p-8 sm:p-10 text-center space-y-4 relative overflow-hidden"
+          >
             <div className="absolute -top-20 -left-20 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
             
             <h3 className="font-display font-black text-xl sm:text-2xl text-white uppercase tracking-tight relative">
@@ -299,7 +327,7 @@ export const BranchesPage: React.FC<BranchesPageProps> = ({
                 Order on Zomato &amp; Swiggy
               </button>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

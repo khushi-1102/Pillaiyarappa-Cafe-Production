@@ -154,15 +154,15 @@ export const ReserveTableModal: React.FC<ReserveTableModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/80 backdrop-blur-md"
         onClick={handleClose}
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-lg max-h-[92vh] bg-[#1B1B1B] border border-[#2A2A2A] rounded-3xl shadow-2xl overflow-hidden flex flex-col z-10 animate-[slideUp_0.3s_ease-out]">
+      <div className="animate-modal-pop relative w-full max-w-lg max-h-[92vh] bg-[#1B1B1B] border border-white/15 rounded-3xl shadow-2xl overflow-hidden flex flex-col z-10">
         {/* Header */}
         <div className="relative p-6 pb-4 border-b border-white/10 bg-gradient-to-br from-emerald-950/60 via-[#1B1B1B] to-[#1B1B1B]">
           <button

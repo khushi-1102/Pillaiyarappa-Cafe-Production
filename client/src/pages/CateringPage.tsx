@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { SiteSettings, Branch } from '../types';
 import { CateringForm } from '../components/forms/CateringForm';
 import { VineDivider } from '../components/brand/VineDivider';
@@ -9,6 +10,7 @@ import {
   DEFAULT_WHATSAPP_MESSAGES,
   isMobileDevice,
 } from '../utils/whatsapp';
+import { fadeUp, fadeLeft, fadeRight, scaleIn, staggerContainer, staggerFast, viewportOnce } from '../utils/animations';
 
 interface CateringPageProps {
   settings: SiteSettings;
@@ -24,23 +26,34 @@ export const CateringPage: React.FC<CateringPageProps> = ({ settings, branches }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center space-y-3 mb-8">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge">
+        <motion.div
+          className="text-center space-y-3 mb-8"
+          initial="hidden"
+          animate="visible"
+          variants={staggerFast}
+        >
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge">
             Parties • Pujas • Corporate Events
-          </span>
-          <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+          </motion.span>
+          <motion.h1 variants={fadeUp} className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
             Parties &amp; Catering Orders
-          </h1>
-          <p className="text-sm text-gray-300 max-w-xl mx-auto leading-relaxed">
+          </motion.h1>
+          <motion.p variants={fadeUp} className="text-sm text-gray-300 max-w-xl mx-auto leading-relaxed">
             Bring the authentic taste of South India to your special occasions across Gurugram and Delhi NCR.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <VineDivider className="mb-10" />
 
         {/* 4 Feature Highlights */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          <div className="glass-card p-5 rounded-2xl space-y-3 group">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerFast}
+        >
+          <motion.div variants={fadeUp} whileHover={{ y: -4, scale: 1.02 }} className="glass-card p-5 rounded-2xl space-y-3 group">
             <div className="w-11 h-11 rounded-xl glass-badge flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform duration-300">
               <Utensils className="w-5 h-5" />
             </div>
@@ -50,9 +63,9 @@ export const CateringPage: React.FC<CateringPageProps> = ({ settings, branches }
             <p className="text-xs text-gray-300 leading-relaxed">
               Chef cooking fresh, piping hot plain, masala, and Mysore dosas right before your guests.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="glass-card p-5 rounded-2xl space-y-3 group">
+          <motion.div variants={fadeUp} whileHover={{ y: -4, scale: 1.02 }} className="glass-card p-5 rounded-2xl space-y-3 group">
             <div className="w-11 h-11 rounded-xl glass-badge flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform duration-300">
               <Coffee className="w-5 h-5" />
             </div>
@@ -62,9 +75,9 @@ export const CateringPage: React.FC<CateringPageProps> = ({ settings, branches }
             <p className="text-xs text-gray-300 leading-relaxed">
               Traditional decoction filter coffee frothed hot in authentic dabarah tumblers.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="glass-card p-5 rounded-2xl space-y-3 group">
+          <motion.div variants={fadeUp} whileHover={{ y: -4, scale: 1.02 }} className="glass-card p-5 rounded-2xl space-y-3 group">
             <div className="w-11 h-11 rounded-xl glass-badge flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform duration-300">
               <Users className="w-5 h-5" />
             </div>
@@ -74,9 +87,9 @@ export const CateringPage: React.FC<CateringPageProps> = ({ settings, branches }
             <p className="text-xs text-gray-300 leading-relaxed">
               Pure vegetarian sathvik preparations for housewarmings (griha pravesh), birthdays and festivals.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="glass-card p-5 rounded-2xl space-y-3 group">
+          <motion.div variants={fadeUp} whileHover={{ y: -4, scale: 1.02 }} className="glass-card p-5 rounded-2xl space-y-3 group">
             <div className="w-11 h-11 rounded-xl glass-badge flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform duration-300">
               <Sparkles className="w-5 h-5" />
             </div>
@@ -86,14 +99,19 @@ export const CateringPage: React.FC<CateringPageProps> = ({ settings, branches }
             <p className="text-xs text-gray-300 leading-relaxed">
               Hygienic, leak-proof meal boxes for office conferences and team lunch celebrations.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Main 2-Column: Left Info & Fast Call, Right Catering Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerContainer}
+        >
           {/* Left Column: Direct Call & Highlights */}
-          <div className="lg:col-span-5 space-y-6">
+          <motion.div variants={fadeLeft} className="lg:col-span-5 space-y-6">
             <div className="glass-panel-elevated rounded-3xl p-6 sm:p-7 space-y-4 relative overflow-hidden">
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -172,10 +190,10 @@ export const CateringPage: React.FC<CateringPageProps> = ({ settings, branches }
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Catering Enquiry Form */}
-          <div className="lg:col-span-7">
+          <motion.div variants={fadeRight} className="lg:col-span-7">
             <div className="glass-panel-elevated rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
               <div className="mb-6 pb-4 border-b border-white/10">
                 <h2 className="font-display font-black text-2xl text-white uppercase tracking-tight">
@@ -188,9 +206,9 @@ export const CateringPage: React.FC<CateringPageProps> = ({ settings, branches }
 
               <CateringForm branches={branches} settings={settings} />
             </div>
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
 
       </div>
     </div>

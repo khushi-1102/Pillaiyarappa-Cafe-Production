@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { SiteSettings, Branch } from '../types';
 import { appStore } from '../services/store';
 import { VineDivider } from '../components/brand/VineDivider';
@@ -9,6 +10,7 @@ import {
   DEFAULT_WHATSAPP_MESSAGES,
   isMobileDevice,
 } from '../utils/whatsapp';
+import { fadeUp, fadeLeft, fadeRight, staggerContainer, staggerFast, viewportOnce } from '../utils/animations';
 
 interface ContactPageProps {
   settings: SiteSettings;
@@ -55,24 +57,35 @@ export const ContactPage: React.FC<ContactPageProps> = ({ settings, branches }) 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center space-y-3 mb-8">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge">
+        <motion.div
+          className="text-center space-y-3 mb-8"
+          initial="hidden"
+          animate="visible"
+          variants={staggerFast}
+        >
+          <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge">
             Get In Touch
-          </span>
-          <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+          </motion.span>
+          <motion.h1 variants={fadeUp} className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
             Contact Pillaiyarappa
-          </h1>
-          <p className="text-sm text-gray-300 max-w-xl mx-auto leading-relaxed">
+          </motion.h1>
+          <motion.p variants={fadeUp} className="text-sm text-gray-300 max-w-xl mx-auto leading-relaxed">
             We are always here to serve you. Call us for deliveries, catering consultations, or visit our branches.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <VineDivider className="mb-10" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerContainer}
+        >
           
           {/* Left Column: Direct Phone & WhatsApp Cards */}
-          <div className="lg:col-span-5 space-y-4">
+          <motion.div variants={fadeLeft} className="lg:col-span-5 space-y-4">
             
             {/* Primary Phone */}
             <div className="p-5 sm:p-6 rounded-2xl glass-card space-y-2">
@@ -164,10 +177,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ settings, branches }) 
               <span className="text-xs font-bold text-pink-400 group-hover:translate-x-1 transition-transform">Follow →</span>
             </a>
 
-          </div>
+          </motion.div>
 
           {/* Right Column: Callback Request Form */}
-          <div className="lg:col-span-7">
+          <motion.div variants={fadeRight} className="lg:col-span-7">
             <div className="rounded-3xl glass-panel-elevated p-6 sm:p-8 shadow-2xl relative overflow-hidden">
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -259,9 +272,9 @@ export const ContactPage: React.FC<ContactPageProps> = ({ settings, branches }) 
                 </form>
               )}
             </div>
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
 
       </div>
     </div>

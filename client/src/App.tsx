@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { appStore, subscribeToStore } from './services/store';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
@@ -139,73 +140,83 @@ export default function App() {
 
         {/* Main Content Area */}
         <main id="main-content" className="flex-1 pb-32 sm:pb-0" role="main" tabIndex={-1}>
-          {cleanRoute === '/' && (
-            <HomePage
-              settings={settings}
-              categories={categories}
-              items={menuItems}
-              branches={branches}
-              gallery={gallery}
-              offers={offers}
-              onNavigate={navigate}
-              onOpenOrderModal={() => setIsOrderModalOpen(true)}
-            />
-          )}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={cleanRoute}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -14 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {cleanRoute === '/' && (
+                <HomePage
+                  settings={settings}
+                  categories={categories}
+                  items={menuItems}
+                  branches={branches}
+                  gallery={gallery}
+                  offers={offers}
+                  onNavigate={navigate}
+                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                />
+              )}
 
-        {cleanRoute === '/menu' && (
-          <MenuPage
-            categories={categories}
-            items={menuItems}
-            addons={addons}
-            settings={settings}
-            onOpenOrderModal={() => setIsOrderModalOpen(true)}
-            initialCategorySlug={hashSlug}
-          />
-        )}
+              {cleanRoute === '/menu' && (
+                <MenuPage
+                  categories={categories}
+                  items={menuItems}
+                  addons={addons}
+                  settings={settings}
+                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                  initialCategorySlug={hashSlug}
+                />
+              )}
 
-        {cleanRoute === '/about' && (
-          <AboutPage
-            settings={settings}
-            branches={branches}
-            onNavigate={navigate}
-            onOpenOrderModal={() => setIsOrderModalOpen(true)}
-          />
-        )}
+              {cleanRoute === '/about' && (
+                <AboutPage
+                  settings={settings}
+                  branches={branches}
+                  onNavigate={navigate}
+                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                />
+              )}
 
-        {cleanRoute === '/catering' && (
-          <CateringPage settings={settings} branches={branches} />
-        )}
+              {cleanRoute === '/catering' && (
+                <CateringPage settings={settings} branches={branches} />
+              )}
 
-        {cleanRoute === '/branches' && (
-          <BranchesPage
-            branches={branches}
-            settings={settings}
-            onOpenOrderModal={() => setIsOrderModalOpen(true)}
-          />
-        )}
+              {cleanRoute === '/branches' && (
+                <BranchesPage
+                  branches={branches}
+                  settings={settings}
+                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                />
+              )}
 
-        {cleanRoute === '/contact' && (
-          <ContactPage settings={settings} branches={branches} />
-        )}
+              {cleanRoute === '/contact' && (
+                <ContactPage settings={settings} branches={branches} />
+              )}
 
-        {cleanRoute === '/gallery' && <GalleryPage gallery={gallery} />}
+              {cleanRoute === '/gallery' && <GalleryPage gallery={gallery} />}
 
-        {cleanRoute === '/privacy' && <PrivacyPage />}
+              {cleanRoute === '/privacy' && <PrivacyPage />}
 
-        {cleanRoute === '/terms' && <TermsPage />}
+              {cleanRoute === '/terms' && <TermsPage />}
 
-        {cleanRoute === '/admin' && (
-          <AdminPage
-            settings={settings}
-            categories={categories}
-            menuItems={menuItems}
-            addons={addons}
-            branches={branches}
-            offers={offers}
-            onNavigateHome={() => navigate('/')}
-          />
-        )}
-      </main>
+              {cleanRoute === '/admin' && (
+                <AdminPage
+                  settings={settings}
+                  categories={categories}
+                  menuItems={menuItems}
+                  addons={addons}
+                  branches={branches}
+                  offers={offers}
+                  onNavigateHome={() => navigate('/')}
+                />
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </main>
 
       {/* Global Footer (Hidden on Admin page) */}
       {!isAdminRoute && (

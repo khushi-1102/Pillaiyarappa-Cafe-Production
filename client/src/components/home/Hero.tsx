@@ -1,6 +1,8 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { SiteSettings } from '../../types';
 import { ArrowRight, Utensils, Leaf, ChefHat, MapPin, Users } from 'lucide-react';
+import { fadeUp, scaleIn, staggerFast } from '../../utils/animations';
 
 interface HeroProps {
   settings: SiteSettings;
@@ -45,52 +47,72 @@ export const Hero: React.FC<HeroProps> = ({ settings: _settings, onOpenOrderModa
         {/* ─── Main Hero Content Area (Overlaid on Background) ─── */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 sm:pt-12 lg:pt-12 pb-4 sm:pb-6 flex-1 flex flex-col justify-between">
 
-          {/* Top Text & Action Buttons */}
-          <div className="max-w-xl space-y-2.5 sm:space-y-5 pt-0.5 sm:pt-0">
+          {/* Top Text & Action Buttons with Staggered Entrance */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerFast}
+            className="max-w-xl space-y-2.5 sm:space-y-5 pt-0.5 sm:pt-0"
+          >
             {/* 100% Pure Veg • Gurugram Tag */}
-            <div className="flex items-center gap-2">
+            <motion.div variants={fadeUp} className="flex items-center gap-2">
               <span className="text-[11px] sm:text-sm font-bold tracking-widest uppercase text-[#B2C8A8] drop-shadow-sm flex items-center gap-1.5">
                 <span>100% PURE VEG</span>
                 <span className="text-emerald-400/60">•</span>
                 <span>GURUGRAM</span>
                 <Leaf className="w-3.5 h-3.5 text-emerald-400 shrink-0 fill-emerald-400/30" />
               </span>
-            </div>
+            </motion.div>
 
             {/* Signature Luxury Serif Headline */}
-            <h1 className="font-serif-luxury text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-lg">
+            <motion.h1
+              variants={fadeUp}
+              className="font-serif-luxury text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-lg"
+            >
               Authentic <br />
               <span className="text-[#DEAC5D] italic font-serif-luxury font-normal">South Indian</span> <br />
               Flavours
-            </h1>
+            </motion.h1>
 
             {/* Subtitle / Paragraph */}
-            <p className="text-gray-200/90 text-xs sm:text-base lg:text-lg max-w-md sm:max-w-lg leading-relaxed drop-shadow-md font-normal">
+            <motion.p
+              variants={fadeUp}
+              className="text-gray-200/90 text-xs sm:text-base lg:text-lg max-w-md sm:max-w-lg leading-relaxed drop-shadow-md font-normal"
+            >
               Crispy dosas, soft idlis, flavourful uttapams and more — served with love since 2014 in Gurugram.
-            </p>
+            </motion.p>
 
             {/* Action Buttons: Solid Green Explore Menu + Outlined Order Online */}
-            <div className="flex flex-row flex-wrap items-center gap-2.5 sm:gap-4 pt-1 sm:pt-4">
-              <button
+            <motion.div variants={fadeUp} className="flex flex-row flex-wrap items-center gap-2.5 sm:gap-4 pt-1 sm:pt-4">
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => onNavigate('/menu')}
                 className="btn-shimmer interactive-press inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#168B4F] via-[#1aa05b] to-[#127742] text-white font-bold text-xs sm:text-base px-5 sm:px-7 py-2.5 sm:py-3 transition shadow-[0_8px_24px_rgba(22,139,79,0.45)] hover:shadow-[0_12px_32px_rgba(22,139,79,0.6)] cursor-pointer"
               >
                 <Utensils className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                 <span>Explore Menu</span>
-              </button>
+              </motion.button>
 
-              <button
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={onOpenOrderModal}
                 className="interactive-press inline-flex items-center gap-2 rounded-full border border-white/50 hover:border-emerald-400 bg-black/40 hover:bg-emerald-950/30 text-white font-bold text-xs sm:text-base px-5 sm:px-7 py-2.5 sm:py-3 transition backdrop-blur-md cursor-pointer shadow-lg hover:shadow-[0_0_20px_rgba(22,139,79,0.3)]"
               >
                 <span>Order Online</span>
                 <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
-              </button>
-            </div>
-          </div>
+              </motion.button>
+            </motion.div>
+          </motion.div>
 
           {/* ─── Bottom Floating Feature Bar (The 4 Badge Items) ─── */}
-          <div className="w-full mt-4 sm:mt-10 lg:mt-14 pb-2 sm:pb-3">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full mt-4 sm:mt-10 lg:mt-14 pb-2 sm:pb-3"
+          >
             <div className="rounded-2xl lg:rounded-full bg-[#14100D]/85 backdrop-blur-md border border-white/15 px-4 sm:px-8 py-4 sm:py-3.5 shadow-2xl">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
 
@@ -140,7 +162,7 @@ export const Hero: React.FC<HeroProps> = ({ settings: _settings, onOpenOrderModa
 
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

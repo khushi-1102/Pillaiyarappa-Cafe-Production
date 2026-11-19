@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { ChevronRight, Users, Phone, MessageCircle } from 'lucide-react';
 import { SiteSettings } from '../../types';
 import {
@@ -7,6 +8,7 @@ import {
   DEFAULT_WHATSAPP_MESSAGES,
   isMobileDevice,
 } from '../../utils/whatsapp';
+import { fadeUp, staggerFast, viewportOnce } from '../../utils/animations';
 
 interface ActionTilesProps {
   settings: SiteSettings;
@@ -26,9 +28,15 @@ export const ActionTiles: React.FC<ActionTilesProps> = ({
     <section className="py-4 sm:py-6 bg-[#090909]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile View: Signature Call/WhatsApp Card from reference mockup + Catering */}
-        <div className="sm:hidden space-y-3">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerFast}
+          className="sm:hidden space-y-3"
+        >
           {/* Signature Combined Call / WhatsApp Card */}
-          <div className="flex items-center justify-between p-4 rounded-2xl glass-card border border-white/10 shadow-lg">
+          <motion.div variants={fadeUp} className="flex items-center justify-between p-4 rounded-2xl glass-card border border-white/10 shadow-lg">
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2 shrink-0">
                 <a
@@ -66,10 +74,12 @@ export const ActionTiles: React.FC<ActionTilesProps> = ({
             >
               <ChevronRight className="w-5 h-5 stroke-[3]" />
             </a>
-          </div>
+          </motion.div>
 
           {/* Catering & Party Orders Card on Mobile */}
-          <button
+          <motion.button
+            variants={fadeUp}
+            whileTap={{ scale: 0.98 }}
             onClick={() => onNavigate('/catering')}
             className="w-full text-left flex items-center justify-between p-4 rounded-2xl glass-card border border-white/10 shadow-lg active:scale-[0.99] transition"
             aria-label="Enquire about Catering Orders"
@@ -88,14 +98,22 @@ export const ActionTiles: React.FC<ActionTilesProps> = ({
             <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(22,139,79,0.3)]">
               <ChevronRight className="w-5 h-5 stroke-[3]" />
             </div>
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
-        {/* Desktop View: 4-Column Grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-          
+        {/* Desktop View: 4-Column Grid with Staggered Entrance */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerFast}
+          className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4"
+        >
           {/* Tile 1: Order on Zomato */}
-          <button
+          <motion.button
+            variants={fadeUp}
+            whileHover={{ y: -4, scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
             onClick={onOpenOrderModal}
             className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl glass-card border border-white/10 hover:border-[#E23744]/70 hover:shadow-[0_12px_30px_-5px_rgba(226,55,68,0.25)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer text-left"
             aria-label="Order food on Zomato (Choose Branch)"
@@ -116,10 +134,13 @@ export const ActionTiles: React.FC<ActionTilesProps> = ({
             <div className="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 group-hover:scale-115 group-hover:translate-x-0.5 transition-all shadow-[0_0_10px_rgba(22,139,79,0.3)]">
               <ChevronRight className="w-4 h-4 stroke-[3]" />
             </div>
-          </button>
+          </motion.button>
 
           {/* Tile 2: Order on Swiggy */}
-          <a
+          <motion.a
+            variants={fadeUp}
+            whileHover={{ y: -4, scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
             href={settings.swiggyUrl || '#'}
             onClick={(e) => {
               if (!settings.swiggyUrl) {
@@ -148,10 +169,13 @@ export const ActionTiles: React.FC<ActionTilesProps> = ({
             <div className="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 group-hover:scale-115 group-hover:translate-x-0.5 transition-all shadow-[0_0_10px_rgba(22,139,79,0.3)]">
               <ChevronRight className="w-4 h-4 stroke-[3]" />
             </div>
-          </a>
+          </motion.a>
 
           {/* Tile 3: Contact for Catering Orders */}
-          <button
+          <motion.button
+            variants={fadeUp}
+            whileHover={{ y: -4, scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => onNavigate('/catering')}
             className="group text-left flex items-center justify-between p-3.5 sm:p-4 rounded-2xl glass-card border border-white/10 hover:border-emerald-500/70 hover:shadow-[0_12px_30px_-5px_rgba(22,139,79,0.3)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
             aria-label="Enquire about Party and Catering Orders"
@@ -170,10 +194,14 @@ export const ActionTiles: React.FC<ActionTilesProps> = ({
             <div className="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 group-hover:scale-115 group-hover:translate-x-0.5 transition-all shadow-[0_0_10px_rgba(22,139,79,0.3)]">
               <ChevronRight className="w-4 h-4 stroke-[3]" />
             </div>
-          </button>
+          </motion.button>
 
           {/* Tile 4: Call / WhatsApp M. 9899101195 / 9953919033 */}
-          <div className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl glass-card border border-white/10 hover:border-emerald-500/70 hover:shadow-[0_12px_30px_-5px_rgba(22,139,79,0.25)] transition-all duration-300">
+          <motion.div
+            variants={fadeUp}
+            whileHover={{ y: -4, scale: 1.02 }}
+            className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl glass-card border border-white/10 hover:border-emerald-500/70 hover:shadow-[0_12px_30px_-5px_rgba(22,139,79,0.25)] transition-all duration-300"
+          >
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
                 <a
@@ -210,8 +238,8 @@ export const ActionTiles: React.FC<ActionTilesProps> = ({
             >
               <ChevronRight className="w-4 h-4 stroke-[3]" />
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

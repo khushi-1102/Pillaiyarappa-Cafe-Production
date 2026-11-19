@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { Branch, SiteSettings } from '../../types';
 import { MapPin, ChevronDown, ArrowRight, Phone, Navigation, CalendarDays } from 'lucide-react';
 import { ReserveTableModal } from '../common/ReserveTableModal';
 import { triggerHaptic } from '../../utils/haptics';
 import { BranchGalleryCarousel } from '../common/BranchGalleryCarousel';
+import { fadeUp, fadeLeft, fadeRight, staggerFast, viewportOnce } from '../../utils/animations';
 
 interface BranchSectionProps {
   branches: Branch[];
@@ -63,7 +65,13 @@ export const BranchSection: React.FC<BranchSectionProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Title: Our Branches —— */}
-          <div className="flex items-center justify-between mb-6 sm:mb-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={fadeUp}
+            className="flex items-center justify-between mb-6 sm:mb-8"
+          >
             <div className="flex items-center gap-3">
               <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
                 Our Branches
@@ -80,16 +88,25 @@ export const BranchSection: React.FC<BranchSectionProps> = ({
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             )}
-          </div>
+          </motion.div>
 
           {/* Desktop View: Two Branch Cards with Storefront Photos */}
-          <div className="hidden sm:grid sm:grid-cols-2 gap-6">
-            {branches.map((branch) => {
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={staggerFast}
+            className="hidden sm:grid sm:grid-cols-2 gap-6"
+          >
+            {branches.map((branch, bIdx) => {
               const hasDineIn = branch.slug === DINE_IN_BRANCH_SLUG;
 
               return (
-                <div
+                <motion.div
                   key={branch.id}
+                  variants={bIdx === 0 ? fadeLeft : fadeRight}
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                   className="rounded-3xl overflow-hidden glass-card border border-white/10 hover:border-emerald-500/70 hover:shadow-[0_20px_45px_-10px_rgba(22,139,79,0.3)] transition-all duration-300 flex flex-col justify-between group"
                 >
                   {/* Branch Storefront Image or Gallery Carousel */}
@@ -214,10 +231,10 @@ export const BranchSection: React.FC<BranchSectionProps> = ({
                       )}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
 
           {/* Mobile View: Smooth Multi-Expand Accordion Rows (Both branches open together by default) */}
           <div className="sm:hidden space-y-3">
