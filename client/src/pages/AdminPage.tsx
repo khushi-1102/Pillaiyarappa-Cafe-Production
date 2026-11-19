@@ -115,8 +115,8 @@ export const AdminPage: React.FC<AdminPageProps> = ({
   };
 
   // Login form state
-  const [email, setEmail] = useState('admin@pillaiyarappa.com');
-  const [password, setPassword] = useState('Pillaiyarappa@2026');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
 
   // Enquiries search & filter
@@ -217,7 +217,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
       setCurrentUser(user);
       setLoginError('');
     } else {
-      setLoginError('Invalid credentials. Use admin@pillaiyarappa.com / Pillaiyarappa@2026');
+      setLoginError('Invalid credentials. Please check your email and password.');
     }
   };
 
@@ -675,6 +675,8 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter admin email"
+                autoComplete="off"
                 className="w-full rounded-xl bg-[#222222] border border-[#333333] px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
@@ -688,6 +690,8 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter password"
+                autoComplete="new-password"
                 className="w-full rounded-xl bg-[#222222] border border-[#333333] px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
