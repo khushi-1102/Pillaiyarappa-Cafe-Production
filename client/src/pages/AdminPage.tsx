@@ -692,12 +692,6 @@ export const AdminPage: React.FC<AdminPageProps> = ({
               />
             </div>
 
-            <div className="rounded-xl bg-neutral-900 border border-neutral-800 p-3 text-[11px] text-gray-400 space-y-1">
-              <span className="font-bold text-emerald-400 block">Default Admin Credentials:</span>
-              <p>Email: <code className="text-gray-300">admin@pillaiyarappa.com</code></p>
-              <p>Password: <code className="text-gray-300">Pillaiyarappa@2026</code></p>
-            </div>
-
             <button
               type="submit"
               className="w-full py-3 rounded-xl bg-emerald-500 font-display font-black text-xs uppercase tracking-wider text-white hover:bg-emerald-400 transition shadow-lg"
