@@ -213,6 +213,19 @@ export const Header: React.FC<HeaderProps> = ({
               })}
             </nav>
 
+            {/* Admin Link - Desktop only, subtle */}
+            <button
+              onClick={() => onNavigate('/admin')}
+              className={`hidden lg:inline-flex text-xs font-semibold transition-all duration-200 px-3 py-1.5 rounded-full border border-dashed focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer ${
+                currentPath === '/admin'
+                  ? 'border-emerald-500/60 text-emerald-400 bg-emerald-500/10'
+                  : 'border-white/10 text-gray-500 hover:text-gray-300 hover:border-white/20 hover:bg-white/5'
+              }`}
+              aria-label="Admin Panel"
+            >
+              Admin
+            </button>
+
             {/* Right Actions: Phone + Order Online + PWA Install (Desktop & Tablet) */}
             <div className="hidden sm:flex items-center gap-4">
               <PWAInstallButton compact />
@@ -405,6 +418,19 @@ export const Header: React.FC<HeaderProps> = ({
                   <ChevronRight className="w-4 h-4 opacity-50" />
                 </button>
               </nav>
+
+            {/* Admin Link - Desktop only, subtle */}
+            <button
+              onClick={() => onNavigate('/admin')}
+              className={`hidden lg:inline-flex text-xs font-semibold transition-all duration-200 px-3 py-1.5 rounded-full border border-dashed focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer ${
+                currentPath === '/admin'
+                  ? 'border-emerald-500/60 text-emerald-400 bg-emerald-500/10'
+                  : 'border-white/10 text-gray-500 hover:text-gray-300 hover:border-white/20 hover:bg-white/5'
+              }`}
+              aria-label="Admin Panel"
+            >
+              Admin
+            </button>
 
               {/* Install PWA inside drawer */}
               <div
