@@ -6,7 +6,7 @@ import { CategoryCards } from '../components/home/CategoryCards';
 import { ActionTiles } from '../components/home/ActionTiles';
 import { BranchSection } from '../components/home/BranchSection';
 import { SiteSettings, MenuCategory, Branch, GalleryItem, Offer, MenuItem } from '../types';
-import { Star, ShieldCheck, Heart, Sparkles, ArrowRight, ChevronRight, X } from 'lucide-react';
+import { Star, ShieldCheck, Heart, Sparkles, ArrowRight, ChevronRight, X, Eye } from 'lucide-react';
 import { fadeUp, fadeLeft, fadeRight, scaleIn, staggerContainer, staggerFast, viewportOnce } from '../utils/animations';
 
 interface HomePageProps {
@@ -77,51 +77,68 @@ export const HomePage: React.FC<HomePageProps> = ({
         viewport={viewportOnce}
         variants={staggerContainer}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeUp} className="flex items-center justify-between mb-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <motion.div variants={fadeUp} className="flex items-center justify-between mb-6 sm:mb-8">
             <div className="space-y-1">
-              <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-widest block">
+              <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-widest block flex items-center gap-1.5">
+                <Sparkles className="w-3 h-3 text-[#DEAC5D]" />
                 Visual Feast
               </span>
               <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
-                Food &amp; Dining Gallery
+                <span className="gold-gradient-text">Food &amp; Dining Gallery</span>
               </h2>
             </div>
             <button
               onClick={() => onNavigate('/gallery')}
-              className="glass-pill interactive-press text-xs font-bold text-white hover:text-emerald-300 px-4 py-2 rounded-full flex items-center gap-1.5 transition"
+              className="glass-pill interactive-press text-xs font-bold text-white hover:text-[#DEAC5D] px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full flex items-center gap-1.5 border border-white/10 hover:border-[#DEAC5D]/40 transition"
             >
               <span>View Full Gallery</span>
-              <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#DEAC5D]" />
             </button>
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3.5"
             variants={staggerFast}
           >
             {gallery.slice(0, 6).map((item) => (
               <motion.div
                 key={item.id}
                 variants={scaleIn}
-                whileHover={{ scale: 1.04, y: -4 }}
+                whileHover={{ scale: 1.03, y: -3 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 onClick={() => setSelectedGalleryImg(item)}
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => e.key === 'Enter' && setSelectedGalleryImg(item)}
                 aria-label={`View photo: ${item.title}`}
-                className="relative rounded-2xl overflow-hidden aspect-square cursor-pointer group glass-card"
+                className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-square cursor-pointer group luxury-card border border-white/10 hover:border-[#DEAC5D]/70 transition-all duration-500 shadow-[0_4px_16px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_28px_rgba(222,172,93,0.22)] bg-[#121212]"
               >
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out transform-gpu"
+                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out transform-gpu"
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-3 text-center">
-                  <span className="text-xs font-bold text-emerald-300 drop-shadow-md">
+
+                {/* Category micro badge */}
+                <div className="absolute top-2 left-2 z-10 pointer-events-none">
+                  <span className="px-1.5 py-0.5 rounded-full bg-black/65 backdrop-blur-md border border-white/15 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-[#DEAC5D]">
+                    {item.category === 'food' ? 'Pure Veg' : 'Branch'}
+                  </span>
+                </div>
+
+                {/* Center eye icon on hover */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+                  <div className="w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-[#DEAC5D]/60 flex items-center justify-center text-[#DEAC5D] shadow-[0_0_15px_rgba(222,172,93,0.35)] scale-75 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300">
+                    <Eye className="w-4 h-4" />
+                  </div>
+                </div>
+
+                {/* Bottom luxury gradient overlay */}
+                <div className="absolute inset-x-0 bottom-0 pt-6 pb-2 px-2.5 bg-gradient-to-t from-black/95 via-black/50 to-transparent flex flex-col justify-end pointer-events-none z-10">
+                  <span className="text-[11px] sm:text-xs font-display font-bold text-white group-hover:text-[#DEAC5D] truncate transition-colors drop-shadow-md">
                     {item.title}
                   </span>
                 </div>
@@ -228,16 +245,16 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-xl animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-3 sm:p-4 backdrop-blur-xl animate-fade-in"
           onClick={() => setSelectedGalleryImg(null)}
         >
           <div
-            className="relative max-w-3xl w-full rounded-3xl overflow-hidden glass-panel-elevated shadow-2xl"
+            className="relative max-w-3xl w-full rounded-2xl sm:rounded-3xl overflow-hidden glass-panel-elevated shadow-2xl border border-white/15"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedGalleryImg(null)}
-              className="absolute top-4 right-4 z-10 p-2.5 rounded-full glass-pill text-white hover:text-emerald-400 interactive-press transition"
+              className="absolute top-4 right-4 z-10 p-2.5 rounded-full glass-pill text-white hover:text-[#DEAC5D] border border-white/15 interactive-press transition"
               aria-label="Close image preview"
             >
               <X className="w-5 h-5" />
@@ -245,11 +262,16 @@ export const HomePage: React.FC<HomePageProps> = ({
             <img
               src={selectedGalleryImg.image}
               alt={selectedGalleryImg.alt}
-              className="w-full max-h-[80vh] object-contain bg-black/70"
+              className="w-full max-h-[75vh] object-contain bg-black/80"
             />
-            <div className="p-4 sm:p-5 bg-black/50 border-t border-white/10 flex items-center justify-between">
-              <p className="font-bold text-sm text-emerald-400">{selectedGalleryImg.title}</p>
-              <span className="text-[11px] text-gray-400 uppercase font-semibold">Pillaiyarappa Special</span>
+            <div className="p-3.5 sm:p-4 bg-black/60 border-t border-white/10 flex items-center justify-between">
+              <div>
+                <p className="font-display font-bold text-sm sm:text-base text-[#DEAC5D]">{selectedGalleryImg.title}</p>
+                <p className="text-[11px] sm:text-xs text-gray-300 mt-0.5">{selectedGalleryImg.alt}</p>
+              </div>
+              <span className="text-[10px] sm:text-[11px] text-[#DEAC5D] uppercase font-bold px-3 py-1 rounded-full gold-badge">
+                Pillaiyarappa Special
+              </span>
             </div>
           </div>
         </div>
