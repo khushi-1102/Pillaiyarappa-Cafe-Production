@@ -111,26 +111,26 @@ export const FoodCard: React.FC<FoodCardProps> = ({
 
         {/* Top Badges Row */}
         <div className="absolute top-2 left-2 right-2 flex items-center justify-between pointer-events-none z-10">
-          {/* Pure Veg Green Dot Badge */}
+          {/* Pure Veg Green Dot Badge with Gold Rim */}
           <div
-            className="w-4 h-4 rounded-xs border border-white/90 bg-black/70 backdrop-blur-md flex items-center justify-center shadow-md"
+            className="w-4.5 h-4.5 rounded-xs border border-emerald-400/80 bg-black/85 flex items-center justify-center shadow-[0_0_8px_rgba(22,139,79,0.4)] ring-1 ring-[#DEAC5D]/40"
             title="100% Pure Vegetarian"
           >
-            <div className="w-1.5 h-1.5 rounded-full bg-[#168B4F] shadow-[0_0_5px_#168B4F]" />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#168B4F] shadow-[0_0_6px_#168B4F]" />
           </div>
 
           <div className="flex items-center gap-1">
-            {/* Bestseller Badge */}
+            {/* Royal Gold Bestseller Badge */}
             {item.isBestseller && (
-              <span className="inline-flex items-center gap-0.5 rounded-full bg-gradient-to-r from-red-600 to-rose-600 px-1.5 py-0.5 text-[8.5px] font-black uppercase text-white tracking-wider shadow-md">
-                <Flame className="w-2.5 h-2.5 fill-white" />
+              <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500/30 via-amber-400/25 to-amber-600/30 border border-amber-400/60 px-2 py-0.5 text-[8.5px] font-black uppercase text-amber-200 tracking-wider shadow-[0_2px_10px_rgba(222,172,93,0.35)] backdrop-blur-xs">
+                <Sparkles className="w-2.5 h-2.5 text-amber-300 fill-amber-300" />
                 <span>Bestseller</span>
               </span>
             )}
 
             {/* Price MRP Tag */}
             {item.priceType === 'mrp' && (
-              <span className="rounded-md bg-black/75 backdrop-blur-md px-1 py-0.5 text-[7.5px] font-bold text-gray-300 uppercase tracking-widest border border-white/10">
+              <span className="rounded-md bg-black/85 px-1.5 py-0.5 text-[7.5px] font-bold text-gray-300 uppercase tracking-widest border border-white/15">
                 MRP
               </span>
             )}

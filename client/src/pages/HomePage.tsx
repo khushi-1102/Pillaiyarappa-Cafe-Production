@@ -141,18 +141,18 @@ export const HomePage: React.FC<HomePageProps> = ({
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={fadeUp} className="text-center space-y-2 mb-10">
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge">
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider gold-badge">
               Pure Vegetarian Promise
             </span>
             <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
-              Why Gurugram Loves Pillaiyarappa
+              Why Gurugram Loves <span className="gold-gradient-text">Pillaiyarappa</span>
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: Sparkles, title: 'Authentic Traditional Recipes', desc: 'Naturally fermented batters, freshly ground spice blends, and authentic coconut chutneys made fresh every morning.' },
-              { icon: ShieldCheck, title: '100% Pure Vegetarian', desc: 'Dedicated pure vegetarian kitchen adhering to the highest standards of hygiene and authentic South Indian culinary purity.' },
+              { icon: Sparkles, title: 'Authentic Traditional Recipes', desc: 'Naturally fermented stone-ground batters, freshly roasted spice blends, and authentic coconut chutneys made fresh every single morning.' },
+              { icon: ShieldCheck, title: '100% Pure Vegetarian Kitchen', desc: 'Dedicated pure vegetarian kitchen adhering to the highest standards of hygiene and authentic South Indian culinary purity.' },
               { icon: Heart, title: 'Two Gurugram Locations', desc: 'Proudly serving South City-1 (Opp. Mayom Hospital) and Sector-40 Huda Market with lightning-fast local delivery.' },
             ].map((card, i) => (
               <motion.div
@@ -161,9 +161,9 @@ export const HomePage: React.FC<HomePageProps> = ({
                 custom={i}
                 whileHover={{ y: -6, scale: 1.02 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="p-6 sm:p-7 rounded-3xl glass-card flex items-start gap-4 group"
+                className="p-6 sm:p-7 rounded-3xl luxury-card flex items-start gap-4 group"
               >
-                <div className="w-12 h-12 rounded-2xl glass-badge text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_15px_rgba(22,139,79,0.2)]">
                   <card.icon className="w-6 h-6" />
                 </div>
                 <div className="space-y-1.5">
@@ -194,11 +194,11 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Ambient decorative glow */}
             <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
 
-            <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider glass-badge relative">
-              Parties &amp; Bulk Orders
+            <motion.span variants={fadeUp} className="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider gold-badge relative">
+              Parties &amp; Royal Catering
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight relative">
-              Planning an Event, Puja, or Office Gathering?
+            <motion.h2 variants={fadeUp} className="font-display font-black text-2xl sm:text-4xl text-white tracking-tight relative">
+              Planning an Event, Puja, or <span className="gold-gradient-text">Celebration?</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-sm text-gray-300 max-w-xl mx-auto leading-relaxed relative">
               From live crispy Dosa counters to authentic South Indian thalis and piping hot Filter Kaapi setups, Pillaiyarappa caters for all party sizes across Gurugram.
@@ -208,15 +208,15 @@ export const HomePage: React.FC<HomePageProps> = ({
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => onNavigate('/catering')}
-                className="btn-shimmer interactive-press rounded-full bg-emerald-500 px-8 py-3.5 font-display font-black text-xs uppercase tracking-wider text-white hover:bg-emerald-400 transition shadow-[0_8px_28px_rgba(22,139,79,0.4)]"
+                className="btn-shimmer interactive-press rounded-full bg-gradient-to-r from-[#168B4F] via-[#1aa05b] to-[#127742] border border-emerald-400/50 px-8 py-3.5 font-display font-black text-xs uppercase tracking-wider text-white hover:brightness-110 transition shadow-[0_8px_28px_rgba(22,139,79,0.5),inset_0_1px_0_0_rgba(255,255,255,0.25)] cursor-pointer"
               >
-                Get Catering Quote Now
+                Get Royal Catering Quote
               </motion.button>
               <a
                 href={`tel:+91${settings.phonePrimary}`}
                 className="glass-pill interactive-press rounded-full px-7 py-3.5 font-bold text-xs uppercase tracking-wider text-white hover:text-emerald-300 transition"
               >
-                Call 9899101195
+                Call {settings.phonePrimary}
               </a>
             </motion.div>
           </motion.div>

@@ -257,9 +257,12 @@ export const Header: React.FC<HeaderProps> = ({
               {/* Emerald Order Online Pill Button with Phone Icon matching reference */}
               <button
                 onClick={onOpenOrderModal}
-                className="btn-shimmer inline-flex items-center gap-2 rounded-full bg-[#168B4F] hover:bg-[#127742] px-4.5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white hover:shadow-[0_4px_24px_rgba(22,139,79,0.45)] transition active:scale-95 shadow-md cursor-pointer"
+                className="btn-shimmer inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#168B4F] via-[#1aa05b] to-[#127742] hover:brightness-110 px-5 py-2.5 text-xs font-black uppercase tracking-wider text-white hover:shadow-[0_4px_24px_rgba(22,139,79,0.55)] border border-emerald-400/50 transition active:scale-95 shadow-[0_2px_12px_rgba(22,139,79,0.35)] cursor-pointer"
               >
-                <Phone className="w-3.5 h-3.5 fill-current" />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+                </span>
                 <span>Order Online</span>
               </button>
 

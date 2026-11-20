@@ -56,30 +56,32 @@ export const Hero: React.FC<HeroProps> = ({ settings: _settings, onOpenOrderModa
           >
             {/* 100% Pure Veg • Gurugram Tag */}
             <motion.div variants={fadeUp} className="flex items-center gap-2">
-              <span className="text-[11px] sm:text-sm font-bold tracking-widest uppercase text-[#B2C8A8] drop-shadow-sm flex items-center gap-1.5">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/50 text-[11px] sm:text-xs font-black tracking-widest uppercase text-emerald-300 shadow-[0_0_16px_rgba(22,139,79,0.3)]">
+                <Leaf className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400/40" />
                 <span>100% PURE VEG</span>
-                <span className="text-emerald-400/60">•</span>
-                <span>GURUGRAM</span>
-                <Leaf className="w-3.5 h-3.5 text-emerald-400 shrink-0 fill-emerald-400/30" />
+                <span className="text-emerald-500/60">•</span>
+                <span>ESTD. 2014 GURUGRAM</span>
               </span>
             </motion.div>
 
-            {/* Signature Luxury Serif Headline */}
+            {/* Signature Luxury Serif Headline with Royal Gold Metallic Shimmer */}
             <motion.h1
               variants={fadeUp}
-              className="font-serif-luxury text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-lg"
+              className="font-serif-luxury text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-xl"
             >
               Authentic <br />
-              <span className="text-[#DEAC5D] italic font-serif-luxury font-normal">South Indian</span> <br />
+              <span className="gold-gradient-text italic font-serif-luxury font-normal">
+                South Indian
+              </span> <br />
               Flavours
             </motion.h1>
 
             {/* Subtitle / Paragraph */}
             <motion.p
               variants={fadeUp}
-              className="text-gray-200/90 text-xs sm:text-base lg:text-lg max-w-md sm:max-w-lg leading-relaxed drop-shadow-md font-normal"
+              className="text-gray-200/95 text-xs sm:text-base lg:text-lg max-w-md sm:max-w-lg leading-relaxed drop-shadow-md font-normal"
             >
-              Crispy dosas, soft idlis, flavourful uttapams and more — served with love since 2014 in Gurugram.
+              Crispy golden dosas roasted in pure desi ghee, steamed fluffy idlis, and slow-brewed Mysore filter coffee — crafted with sacred recipes since 2014 in Gurugram.
             </motion.p>
 
             {/* Action Buttons: Solid Green Explore Menu + Outlined Order Online */}
@@ -88,9 +90,9 @@ export const Hero: React.FC<HeroProps> = ({ settings: _settings, onOpenOrderModa
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onNavigate('/menu')}
-                className="btn-shimmer interactive-press inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#168B4F] via-[#1aa05b] to-[#127742] text-white font-bold text-xs sm:text-base px-5 sm:px-7 py-2.5 sm:py-3 transition shadow-[0_8px_24px_rgba(22,139,79,0.45)] hover:shadow-[0_12px_32px_rgba(22,139,79,0.6)] cursor-pointer"
+                className="btn-shimmer interactive-press inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#168B4F] via-[#1aa05b] to-[#127742] text-white font-extrabold text-xs sm:text-base px-6 sm:px-8 py-2.5 sm:py-3.5 transition shadow-[0_8px_24px_rgba(22,139,79,0.5),inset_0_1px_0_0_rgba(255,255,255,0.3)] border border-emerald-400/50 cursor-pointer"
               >
-                <Utensils className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
+                <Utensils className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-emerald-200" />
                 <span>Explore Menu</span>
               </motion.button>
 
@@ -98,10 +100,10 @@ export const Hero: React.FC<HeroProps> = ({ settings: _settings, onOpenOrderModa
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={onOpenOrderModal}
-                className="interactive-press inline-flex items-center gap-2 rounded-full border border-white/50 hover:border-emerald-400 bg-black/40 hover:bg-emerald-950/30 text-white font-bold text-xs sm:text-base px-5 sm:px-7 py-2.5 sm:py-3 transition backdrop-blur-md cursor-pointer shadow-lg hover:shadow-[0_0_20px_rgba(22,139,79,0.3)]"
+                className="interactive-press inline-flex items-center gap-2 rounded-full border border-[#DEAC5D]/50 hover:border-[#DEAC5D] bg-black/60 hover:bg-[#14100D]/80 text-white font-bold text-xs sm:text-base px-6 sm:px-8 py-2.5 sm:py-3.5 transition backdrop-blur-md cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_24px_rgba(222,172,93,0.3)]"
               >
-                <span>Order Online</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
+                <span className="gold-gradient-text font-black">Order Online</span>
+                <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#DEAC5D]" />
               </motion.button>
             </motion.div>
           </motion.div>
@@ -113,50 +115,50 @@ export const Hero: React.FC<HeroProps> = ({ settings: _settings, onOpenOrderModa
             transition={{ delay: 0.35, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="w-full mt-4 sm:mt-10 lg:mt-14 pb-2 sm:pb-3"
           >
-            <div className="rounded-2xl lg:rounded-full bg-[#14100D]/85 backdrop-blur-md border border-white/15 px-4 sm:px-8 py-4 sm:py-3.5 shadow-2xl">
+            <div className="rounded-2xl lg:rounded-full bg-[#130E0B]/90 backdrop-blur-md border border-[#DEAC5D]/25 px-4 sm:px-8 py-4 sm:py-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.7),inset_0_1px_0_0_rgba(222,172,93,0.15)]">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
 
                 {/* 1. 100% Pure Veg */}
                 <div className="flex items-center gap-3 pt-2 lg:pt-0">
-                  <div className="w-9 h-9 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center shrink-0">
-                    <Leaf className="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
+                  <div className="w-9 h-9 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(22,139,79,0.3)]">
+                    <Leaf className="w-4 h-4 text-emerald-400 fill-emerald-400/30" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-xs sm:text-sm text-white tracking-wide">100% Pure Veg</h2>
+                    <h2 className="font-extrabold text-xs sm:text-sm text-white tracking-wide">100% Pure Veg</h2>
                     <p className="text-[10px] sm:text-xs text-gray-400 leading-tight">No Onion No Garlic (on request)</p>
                   </div>
                 </div>
 
                 {/* 2. Authentic Recipes */}
                 <div className="flex items-center gap-3 pt-2 lg:pt-0 lg:pl-6">
-                  <div className="w-9 h-9 rounded-full bg-[#DEAC5D]/15 border border-[#DEAC5D]/30 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-full bg-[#DEAC5D]/20 border border-[#DEAC5D]/40 flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(222,172,93,0.3)]">
                     <ChefHat className="w-4 h-4 text-[#DEAC5D]" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-xs sm:text-sm text-white tracking-wide">Authentic Recipes</h2>
-                    <p className="text-[10px] sm:text-xs text-gray-400 leading-tight">Traditional South Indian Taste</p>
+                    <h2 className="font-extrabold text-xs sm:text-sm text-white tracking-wide">Pure Desi Ghee</h2>
+                    <p className="text-[10px] sm:text-xs text-gray-400 leading-tight">Stone-Ground Fresh Batters</p>
                   </div>
                 </div>
 
                 {/* 3. Serving Since 2014 */}
                 <div className="flex items-center gap-3 pt-2 lg:pt-0 lg:pl-6">
-                  <div className="w-9 h-9 rounded-full bg-[#DEAC5D]/15 border border-[#DEAC5D]/30 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-full bg-[#DEAC5D]/20 border border-[#DEAC5D]/40 flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(222,172,93,0.3)]">
                     <MapPin className="w-4 h-4 text-[#DEAC5D]" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-xs sm:text-sm text-white tracking-wide">Serving Since 2014</h2>
-                    <p className="text-[10px] sm:text-xs text-gray-400 leading-tight">Gurugram</p>
+                    <h2 className="font-extrabold text-xs sm:text-sm text-white tracking-wide">Serving Since 2014</h2>
+                    <p className="text-[10px] sm:text-xs text-gray-400 leading-tight">12+ Yrs Heritage • 2 Outlets</p>
                   </div>
                 </div>
 
                 {/* 4. Parties & Catering */}
                 <div className="flex items-center gap-3 pt-2 lg:pt-0 lg:pl-6">
-                  <div className="w-9 h-9 rounded-full bg-[#DEAC5D]/15 border border-[#DEAC5D]/30 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-full bg-[#DEAC5D]/20 border border-[#DEAC5D]/40 flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(222,172,93,0.3)]">
                     <Users className="w-4 h-4 text-[#DEAC5D]" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-xs sm:text-sm text-white tracking-wide">Parties &amp; Catering</h2>
-                    <p className="text-[10px] sm:text-xs text-gray-400 leading-tight">Contact for Bulk Orders</p>
+                    <h2 className="font-extrabold text-xs sm:text-sm text-white tracking-wide">Royal Catering</h2>
+                    <p className="text-[10px] sm:text-xs text-gray-400 leading-tight">Live Counter Buffets Available</p>
                   </div>
                 </div>
 

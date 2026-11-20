@@ -153,10 +153,10 @@ export const CategoryCards: React.FC<CategoryCardsProps> = ({
             <button
               type="button"
               onClick={() => handleCategoryChange('all')}
-              className={`interactive-press px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-[13px] font-extrabold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+              className={`interactive-press px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-[13px] font-black uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 selectedCategorySlug === 'all'
-                  ? 'bg-[#168B4F] text-white shadow-[0_4px_16px_rgba(22,139,79,0.45)] border border-emerald-400/30 scale-[1.02]'
-                  : 'bg-[#141414] text-gray-300 hover:text-white border border-white/10 hover:border-white/20'
+                  ? 'bg-gradient-to-r from-[#168B4F] via-[#1aa05b] to-[#127742] text-white shadow-[0_4px_20px_rgba(22,139,79,0.5),inset_0_1px_0_0_rgba(255,255,255,0.25)] border border-emerald-400/50 scale-[1.02]'
+                  : 'bg-[#151515] text-gray-300 hover:text-white border border-white/10 hover:border-white/25 hover:bg-[#1c1c1c]'
               }`}
             >
               All Items ({allItems.length})
@@ -171,10 +171,10 @@ export const CategoryCards: React.FC<CategoryCardsProps> = ({
                   key={cat.id}
                   type="button"
                   onClick={() => handleCategoryChange(cat.slug)}
-                  className={`interactive-press px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-[13px] font-extrabold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
+                  className={`interactive-press px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-[13px] font-black uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? 'bg-[#168B4F] text-white shadow-[0_4px_16px_rgba(22,139,79,0.45)] border border-emerald-400/30 scale-[1.02]'
-                      : 'bg-[#141414] text-gray-300 hover:text-white border border-white/10 hover:border-white/20'
+                      ? 'bg-gradient-to-r from-[#168B4F] via-[#1aa05b] to-[#127742] text-white shadow-[0_4px_20px_rgba(22,139,79,0.5),inset_0_1px_0_0_rgba(255,255,255,0.25)] border border-emerald-400/50 scale-[1.02]'
+                      : 'bg-[#151515] text-gray-300 hover:text-white border border-white/10 hover:border-white/25 hover:bg-[#1c1c1c]'
                   }`}
                 >
                   {cat.name} ({count})

@@ -32,11 +32,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, settings, branches }
             <p className="text-xs text-gray-300 leading-relaxed">
               Authentic South Indian corner serving traditional crispy dosas, steaming soft idlis, crunchy vadas, and flavorful uttapams in Gurugram since 2014.
             </p>
-            <div className="rounded-2xl glass-panel p-3.5 text-xs space-y-1">
-              <span className="text-emerald-400 font-bold block">
+            <div className="rounded-2xl luxury-card p-3.5 text-xs space-y-1.5 border border-[#DEAC5D]/25 shadow-lg">
+              <span className="gold-gradient-text font-black block text-xs sm:text-sm">
                 {settings.deliveryOfferText}
               </span>
-              <span className="text-gray-300 block text-[11px]">
+              <span className="text-gray-300 block text-[11px] leading-relaxed">
                 {settings.cateringLine}
               </span>
             </div>
