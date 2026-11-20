@@ -65,6 +65,16 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ settings }) => {
   const [permissionDeniedHelp, setPermissionDeniedHelp] = useState(false);
   const [allowSelfPickup, setAllowSelfPickup] = useState(false);
 
+  // Close Cart Drawer on Escape key
+  useEffect(() => {
+    if (!isCartDrawerOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeCartDrawer();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isCartDrawerOpen, closeCartDrawer]);
+
   // Sync address changes to delivery radius check
   const handleAddressChange = (val: string) => {
     setAddress(val);

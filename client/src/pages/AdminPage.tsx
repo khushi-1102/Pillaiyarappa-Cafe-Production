@@ -201,6 +201,31 @@ export const AdminPage: React.FC<AdminPageProps> = ({
     setAuditLogs(appStore.getAuditLogs());
   }, []);
 
+  // Close any open Admin modal on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (editingItem) setEditingItem(null);
+        if (isNewItemModalOpen) setIsNewItemModalOpen(false);
+        if (editingCategory) setEditingCategory(null);
+        if (isNewCategoryModalOpen) setIsNewCategoryModalOpen(false);
+        if (editingAddon) setEditingAddon(null);
+        if (isNewAddonModalOpen) setIsNewAddonModalOpen(false);
+        if (selectedReservation) setSelectedReservation(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [
+    editingItem,
+    isNewItemModalOpen,
+    editingCategory,
+    isNewCategoryModalOpen,
+    editingAddon,
+    isNewAddonModalOpen,
+    selectedReservation,
+  ]);
+
   const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -2294,7 +2319,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
       {/* Modal: Edit Menu Item */}
       {editingItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setEditingItem(null);
+          }}
+        >
           <div className="w-full max-w-md rounded-2xl bg-[#1B1B1B] border border-[#333333] p-6 text-white space-y-4 shadow-2xl">
             <h3 className="font-display font-bold text-lg text-emerald-400">Edit Menu Item</h3>
             <form onSubmit={handleSaveItemEdit} className="space-y-3">
@@ -2489,7 +2519,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
       {/* Modal: Add New Menu Item */}
       {isNewItemModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setIsNewItemModalOpen(false);
+          }}
+        >
           <div className="w-full max-w-md rounded-2xl bg-[#1B1B1B] border border-[#333333] p-6 text-white space-y-4 shadow-2xl">
             <h3 className="font-display font-bold text-lg text-emerald-400">Add New Menu Item</h3>
             <form onSubmit={handleAddNewItem} className="space-y-3">
@@ -2676,7 +2711,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
       {/* Modal: Edit Category */}
       {editingCategory && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setEditingCategory(null);
+          }}
+        >
           <div className="w-full max-w-md rounded-2xl bg-[#1B1B1B] border border-[#333333] p-5 sm:p-6 text-white space-y-4 shadow-2xl max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-[#2A2A2A] pb-3">
               <h3 className="font-display font-bold text-lg text-emerald-400">Edit Category</h3>
@@ -2755,7 +2795,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
       {/* Modal: Add New Category */}
       {isNewCategoryModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setIsNewCategoryModalOpen(false);
+          }}
+        >
           <div className="w-full max-w-md rounded-2xl bg-[#1B1B1B] border border-[#333333] p-5 sm:p-6 text-white space-y-4 shadow-2xl max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-[#2A2A2A] pb-3">
               <h3 className="font-display font-bold text-lg text-emerald-400">Add New Category</h3>
@@ -2836,7 +2881,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
       {/* Modal: Edit Addon */}
       {editingAddon && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setEditingAddon(null);
+          }}
+        >
           <div className="w-full max-w-md rounded-2xl bg-[#1B1B1B] border border-[#333333] p-6 text-white space-y-4 shadow-2xl">
             <h3 className="font-display font-bold text-lg text-emerald-400">Edit Add-on</h3>
             <form onSubmit={handleSaveAddon} className="space-y-3">
@@ -2884,7 +2934,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
       {/* Modal: Add New Addon */}
       {isNewAddonModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setIsNewAddonModalOpen(false);
+          }}
+        >
           <div className="w-full max-w-md rounded-2xl bg-[#1B1B1B] border border-[#333333] p-6 text-white space-y-4 shadow-2xl">
             <h3 className="font-display font-bold text-lg text-emerald-400">Add New Add-on</h3>
             <form onSubmit={handleAddNewAddon} className="space-y-3">
@@ -2933,7 +2988,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
       {/* Modal: Reservation Details & Internal Notes */}
       {selectedReservation && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setSelectedReservation(null);
+          }}
+        >
           <div className="w-full max-w-lg rounded-2xl bg-[#1B1B1B] border border-[#333333] p-6 text-white space-y-4 shadow-2xl animate-in fade-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between border-b border-[#282828] pb-3">
               <div>

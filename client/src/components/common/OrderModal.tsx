@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Phone, ExternalLink, Sparkles, MapPin, MessageCircle } from 'lucide-react';
 import { SiteSettings, Branch } from '../../types';
 import {
@@ -21,6 +21,16 @@ export const OrderModal: React.FC<OrderModalProps> = ({
   settings,
   branches = [],
 }) => {
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   // Branch-specific Zomato fallbacks matching verified links

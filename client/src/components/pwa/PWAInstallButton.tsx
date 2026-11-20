@@ -15,6 +15,16 @@ export const PWAInstallButton: React.FC<{ className?: string; compact?: boolean 
   const [isIOS, setIsIOS] = useState(false);
   const [showIOSModal, setShowIOSModal] = useState(false);
 
+  // Close iOS modal on Escape key
+  useEffect(() => {
+    if (!showIOSModal) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setShowIOSModal(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [showIOSModal]);
+
   useEffect(() => {
     // Detect if already installed / standalone
     const isStandalone =

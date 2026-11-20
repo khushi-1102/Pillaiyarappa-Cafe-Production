@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, CalendarDays, Clock, Users, User, Phone, Mail, MessageSquare, Check, Loader2, Utensils } from 'lucide-react';
 import { appStore } from '../../services/store';
 import {
@@ -48,6 +48,16 @@ export const ReserveTableModal: React.FC<ReserveTableModalProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   // Get today's date in YYYY-MM-DD format for min date
   const today = new Date().toISOString().split('T')[0];

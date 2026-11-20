@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Hero } from '../components/home/Hero';
 import { VineDivider } from '../components/brand/VineDivider';
@@ -31,6 +31,16 @@ export const HomePage: React.FC<HomePageProps> = ({
   onOpenOrderModal,
 }) => {
   const [selectedGalleryImg, setSelectedGalleryImg] = useState<GalleryItem | null>(null);
+
+  // Close gallery preview lightbox on Escape key
+  useEffect(() => {
+    if (!selectedGalleryImg) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedGalleryImg(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedGalleryImg]);
 
   const handleSelectCategory = (slug: string) => {
     onNavigate(`/menu#${slug}`);
