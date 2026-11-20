@@ -1568,12 +1568,15 @@ var router2 = Router2();
 var resolveUploadsDir = () => {
   const candidates = [
     path2.resolve(process.cwd(), "client/public/uploads/menu"),
+    path2.resolve(process.cwd(), "../client/public/uploads/menu"),
     path2.resolve(process.cwd(), "public/uploads/menu"),
+    path2.resolve(__dirname2, "../client/public/uploads/menu"),
     path2.resolve(__dirname2, "../../client/public/uploads/menu"),
-    path2.resolve(__dirname2, "../uploads/menu")
+    path2.resolve(__dirname2, "../uploads/menu"),
+    path2.resolve(process.cwd(), "uploads/menu")
   ];
   for (const dir of candidates) {
-    if (fs2.existsSync(path2.dirname(dir))) {
+    if (fs2.existsSync(dir) || fs2.existsSync(path2.dirname(dir))) {
       return dir;
     }
   }
@@ -1949,10 +1952,13 @@ app.use(cors());
 app.use(express.json());
 var uploadsStaticPath = [
   path3.resolve(process.cwd(), "client/public/uploads"),
+  path3.resolve(process.cwd(), "../client/public/uploads"),
   path3.resolve(process.cwd(), "public/uploads"),
+  path3.resolve(__dirname3, "../client/public/uploads"),
   path3.resolve(__dirname3, "../../client/public/uploads"),
-  path3.resolve(__dirname3, "../uploads")
-].find((p) => fs3.existsSync(p)) || path3.resolve(process.cwd(), "public/uploads");
+  path3.resolve(__dirname3, "../uploads"),
+  path3.resolve(process.cwd(), "uploads")
+].find((p) => fs3.existsSync(p)) || path3.resolve(process.cwd(), "client/public/uploads");
 app.use("/uploads", express.static(uploadsStaticPath));
 app.use("/api/menu", menu_default);
 app.use("/api/admin", admin_default);

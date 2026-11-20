@@ -4,8 +4,8 @@
 
 Navigate to `/admin` in your browser.
 
-- **Email:** `admin@pillaiyarappa.com`
-- **Password:** `Pillaiyarappa@2026`
+- **Email:** Authorized restaurant administrator email (configured via `ADMIN_EMAIL` environment variable)
+- **Password:** Secure admin password (configured via `ADMIN_PASSWORD` environment variable)
 
 ## 2. Managing Menu Availability
 

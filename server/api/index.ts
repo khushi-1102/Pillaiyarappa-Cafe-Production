@@ -20,10 +20,13 @@ app.use(express.json());
 // Resolve public uploads directory (supports both client/public/uploads and root public/uploads)
 const uploadsStaticPath = [
   path.resolve(process.cwd(), 'client/public/uploads'),
+  path.resolve(process.cwd(), '../client/public/uploads'),
   path.resolve(process.cwd(), 'public/uploads'),
+  path.resolve(__dirname, '../client/public/uploads'),
   path.resolve(__dirname, '../../client/public/uploads'),
   path.resolve(__dirname, '../uploads'),
-].find((p) => fs.existsSync(p)) || path.resolve(process.cwd(), 'public/uploads');
+  path.resolve(process.cwd(), 'uploads'),
+].find((p) => fs.existsSync(p)) || path.resolve(process.cwd(), 'client/public/uploads');
 
 // Serve static uploaded media files
 app.use('/uploads', express.static(uploadsStaticPath));

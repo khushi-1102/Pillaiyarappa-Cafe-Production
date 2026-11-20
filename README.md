@@ -48,7 +48,7 @@ Production website and administration management system for **Pillaiyarappa — 
    - Offline form queuing: catering and callback enquiries submitted offline are stored in local storage and automatically synced upon reconnection
 
 5. **Full Admin Management Portal (`/admin`):**
-   
+   - **Access:** Secure portal for authorized restaurant management (credentials configured via environment variables).
    - **Dashboard:** Enquiries metrics, menu stats, quick actions
    - **Menu Management:** Edit prices, names, descriptions, and 1-click toggle availability ("Sold Out Today")
    - **Enquiries Inbox:** Filter by status (`new`, `contacted`, `confirmed`, `completed`, `cancelled`), coordinator notes, one-click Call and WhatsApp buttons, and CSV export

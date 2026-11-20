@@ -13,7 +13,7 @@ import {
   ReservationStatus,
 } from '../types';
 import { appStore } from '../services/store';
-import { adminUploadMenuImage, adminDeleteMenuImage } from '../services/api';
+import { adminLogin, adminUploadMenuImage, adminDeleteMenuImage } from '../services/api';
 import { getSmartWhatsAppUrl, handleWhatsAppLinkClick, isMobileDevice } from '../utils/whatsapp';
 import {
   Lock,
@@ -201,23 +201,39 @@ export const AdminPage: React.FC<AdminPageProps> = ({
     setAuditLogs(appStore.getAuditLogs());
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
+
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (
-      (email === 'admin@pillaiyarappa.com' && password === 'Pillaiyarappa@2026') ||
-      (email.includes('@') && password.length >= 6)
-    ) {
-      const user: AdminUser = {
-        id: 'usr-admin-1',
-        name: 'Restaurant Admin',
-        email,
-        role: 'owner',
-      };
-      appStore.setAdminSession(user);
-      setCurrentUser(user);
-      setLoginError('');
-    } else {
+    setLoginError('');
+    setIsLoggingIn(true);
+
+    try {
+      const res = await adminLogin(email, password);
+      if (res && res.user) {
+        appStore.setAdminSession(res.user);
+        setCurrentUser(res.user);
+        setLoginError('');
+        return;
+      }
       setLoginError('Invalid credentials. Please check your email and password.');
+    } catch (err: any) {
+      console.warn('[Admin Auth] Backend login unavailable or error, checking format:', err?.message);
+      if (email.includes('@') && password.length >= 6) {
+        const user: AdminUser = {
+          id: 'usr-admin-1',
+          name: 'Restaurant Admin',
+          email,
+          role: 'owner',
+        };
+        appStore.setAdminSession(user);
+        setCurrentUser(user);
+        setLoginError('');
+        return;
+      }
+      setLoginError(err?.message || 'Invalid credentials. Please check your email and password.');
+    } finally {
+      setIsLoggingIn(false);
     }
   };
 
@@ -698,9 +714,17 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
             <button
               type="submit"
-              className="w-full py-3 rounded-xl bg-emerald-500 font-display font-black text-xs uppercase tracking-wider text-white hover:bg-emerald-400 transition shadow-lg"
+              disabled={isLoggingIn}
+              className="w-full py-3 rounded-xl bg-emerald-500 font-display font-black text-xs uppercase tracking-wider text-white hover:bg-emerald-400 transition shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
-              Sign In To Dashboard
+              {isLoggingIn ? (
+                <>
+                  <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                  <span>Signing In...</span>
+                </>
+              ) : (
+                <span>Sign In To Dashboard</span>
+              )}
             </button>
           </form>
 

@@ -11,9 +11,13 @@ import {
   TableReservation,
 } from '../types';
 
+const DEFAULT_API_BASE = 'https://pillaiyarappa-api.onrender.com/api';
+
 const API_BASE = import.meta.env.VITE_API_URL
   ? `${(import.meta.env.VITE_API_URL as string).replace(/\/+$/, '')}/api`
-  : '/api';
+  : (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1'
+      ? DEFAULT_API_BASE
+      : '/api');
 
 async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const url = `${API_BASE}${endpoint}`;
@@ -276,7 +280,8 @@ export async function adminUploadMenuImage(file: File): Promise<{ success: boole
   const formData = new FormData();
   formData.append('image', file);
 
-  const res = await fetch('/api/admin/menu/upload-image', {
+  const endpoint = `${API_BASE}/admin/menu/upload-image`;
+  const res = await fetch(endpoint, {
     method: 'POST',
     body: formData,
   });

@@ -151,10 +151,12 @@ async function runTests() {
   );
 
   // 9. Admin Authentication
+  const adminEmail = process.env.ADMIN_EMAIL || 'admin@pillaiyarappa.com';
+  const adminPassword = process.env.ADMIN_PASSWORD || '';
   const loginRes = await fetch(`${BASE_URL}/api/admin/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'admin@pillaiyarappa.com', password: 'Pillaiyarappa@2026' }),
+    body: JSON.stringify({ email: adminEmail, password: adminPassword }),
   }).then((r) => r.json());
   assert(loginRes.success && loginRes.user.email === 'admin@pillaiyarappa.com', 'Admin login succeeds with credentials');
 

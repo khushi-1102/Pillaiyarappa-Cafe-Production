@@ -29,6 +29,5 @@ npm run lint
 ## 3. Admin Access
 
 - **URL:** `/admin`
-- **Default Email:** `admin@pillaiyarappa.com`
-- **Default Password:** `Pillaiyarappa@2026`
+- **Authentication:** Admin credentials configured via server environment variables (`ADMIN_EMAIL` and `ADMIN_PASSWORD`).
 - **Capabilities:** Update prices, mark dishes "Sold Out Today", manage catering leads, export enquiries to CSV, and update branch addresses.

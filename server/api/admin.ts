@@ -14,12 +14,15 @@ const router = Router();
 const resolveUploadsDir = () => {
   const candidates = [
     path.resolve(process.cwd(), 'client/public/uploads/menu'),
+    path.resolve(process.cwd(), '../client/public/uploads/menu'),
     path.resolve(process.cwd(), 'public/uploads/menu'),
+    path.resolve(__dirname, '../client/public/uploads/menu'),
     path.resolve(__dirname, '../../client/public/uploads/menu'),
     path.resolve(__dirname, '../uploads/menu'),
+    path.resolve(process.cwd(), 'uploads/menu'),
   ];
   for (const dir of candidates) {
-    if (fs.existsSync(path.dirname(dir))) {
+    if (fs.existsSync(dir) || fs.existsSync(path.dirname(dir))) {
       return dir;
     }
   }
