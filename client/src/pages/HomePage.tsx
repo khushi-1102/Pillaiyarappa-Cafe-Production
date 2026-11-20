@@ -116,8 +116,9 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out transform-gpu"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-3 text-center">
                   <span className="text-xs font-bold text-emerald-300 drop-shadow-md">

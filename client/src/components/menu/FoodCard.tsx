@@ -69,7 +69,7 @@ export const FoodCard: React.FC<FoodCardProps> = ({
           }
         }}
         aria-label={`${item.name} - ₹${item.price}. Click to view details and full photo`}
-        className={`group relative rounded-2xl bg-[#121212]/95 backdrop-blur-md border transition-all duration-300 flex flex-col justify-between overflow-hidden select-none cursor-pointer hover-lift ${
+        className={`group relative rounded-2xl bg-[#121212]/95 border transition-all duration-300 flex flex-col justify-between overflow-hidden select-none cursor-pointer hover-lift content-auto ${
           quantity > 0
             ? 'border-emerald-500/70 shadow-[0_8px_24px_rgba(22,139,79,0.22)] ring-1 ring-emerald-500/30'
             : 'border-white/[0.08] hover:border-emerald-500/40 hover:shadow-[0_12px_28px_rgba(22,139,79,0.18)] hover:-translate-y-0.5'
@@ -83,7 +83,8 @@ export const FoodCard: React.FC<FoodCardProps> = ({
               src={item.image}
               alt={item.name}
               loading="lazy"
-              className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+              decoding="async"
+              className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out transform-gpu"
               onError={(e) => {
                 // If image fails to load, hide broken img tag gracefully
                 (e.currentTarget as HTMLElement).style.display = 'none';

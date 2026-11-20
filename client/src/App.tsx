@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { appStore, subscribeToStore } from './services/store';
 import { Header } from './components/layout/Header';
@@ -11,17 +11,29 @@ import { CartProvider } from './hooks/useCart';
 import { FloatingCartBar } from './components/common/FloatingCartBar';
 import { CartDrawer } from './components/common/CartDrawer';
 
-// Pages
+// Primary Landing Page (Loaded eagerly for instant 0ms first-paint)
 import { HomePage } from './pages/HomePage';
-import { MenuPage } from './pages/MenuPage';
-import { AboutPage } from './pages/AboutPage';
-import { CateringPage } from './pages/CateringPage';
-import { BranchesPage } from './pages/BranchesPage';
-import { ContactPage } from './pages/ContactPage';
-import { GalleryPage } from './pages/GalleryPage';
-import { PrivacyPage } from './pages/PrivacyPage';
-import { TermsPage } from './pages/TermsPage';
-import { AdminPage } from './pages/AdminPage';
+
+// Lazy-loaded routes (Drastically slashes initial bundle size for lightning-fast loads)
+const MenuPage = lazy(() => import('./pages/MenuPage').then((m) => ({ default: m.MenuPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+const CateringPage = lazy(() => import('./pages/CateringPage').then((m) => ({ default: m.CateringPage })));
+const BranchesPage = lazy(() => import('./pages/BranchesPage').then((m) => ({ default: m.BranchesPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })));
+const GalleryPage = lazy(() => import('./pages/GalleryPage').then((m) => ({ default: m.GalleryPage })));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage })));
+const TermsPage = lazy(() => import('./pages/TermsPage').then((m) => ({ default: m.TermsPage })));
+const AdminPage = lazy(() => import('./pages/AdminPage').then((m) => ({ default: m.AdminPage })));
+
+// Ultra-smooth loading transition skeleton
+const PageLoader = () => (
+  <div className="min-h-[50vh] flex flex-col items-center justify-center py-20 select-none">
+    <div className="w-10 h-10 rounded-full border-2 border-emerald-500/20 border-t-emerald-400 animate-spin" />
+    <span className="text-[11px] font-bold text-gray-400 mt-4 tracking-widest uppercase">
+      Pillaiyarappa
+    </span>
+  </div>
+);
 
 export default function App() {
   // Sync state with store
@@ -140,82 +152,84 @@ export default function App() {
 
         {/* Main Content Area */}
         <main id="main-content" className="flex-1 pb-32 sm:pb-0" role="main" tabIndex={-1}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={cleanRoute}
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -14 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {cleanRoute === '/' && (
-                <HomePage
-                  settings={settings}
-                  categories={categories}
-                  items={menuItems}
-                  branches={branches}
-                  gallery={gallery}
-                  offers={offers}
-                  onNavigate={navigate}
-                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
-                />
-              )}
+          <Suspense fallback={<PageLoader />}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={cleanRoute}
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -14 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {cleanRoute === '/' && (
+                  <HomePage
+                    settings={settings}
+                    categories={categories}
+                    items={menuItems}
+                    branches={branches}
+                    gallery={gallery}
+                    offers={offers}
+                    onNavigate={navigate}
+                    onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                  />
+                )}
 
-              {cleanRoute === '/menu' && (
-                <MenuPage
-                  categories={categories}
-                  items={menuItems}
-                  addons={addons}
-                  settings={settings}
-                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
-                  initialCategorySlug={hashSlug}
-                />
-              )}
+                {cleanRoute === '/menu' && (
+                  <MenuPage
+                    categories={categories}
+                    items={menuItems}
+                    addons={addons}
+                    settings={settings}
+                    onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                    initialCategorySlug={hashSlug}
+                  />
+                )}
 
-              {cleanRoute === '/about' && (
-                <AboutPage
-                  settings={settings}
-                  branches={branches}
-                  onNavigate={navigate}
-                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
-                />
-              )}
+                {cleanRoute === '/about' && (
+                  <AboutPage
+                    settings={settings}
+                    branches={branches}
+                    onNavigate={navigate}
+                    onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                  />
+                )}
 
-              {cleanRoute === '/catering' && (
-                <CateringPage settings={settings} branches={branches} />
-              )}
+                {cleanRoute === '/catering' && (
+                  <CateringPage settings={settings} branches={branches} />
+                )}
 
-              {cleanRoute === '/branches' && (
-                <BranchesPage
-                  branches={branches}
-                  settings={settings}
-                  onOpenOrderModal={() => setIsOrderModalOpen(true)}
-                />
-              )}
+                {cleanRoute === '/branches' && (
+                  <BranchesPage
+                    branches={branches}
+                    settings={settings}
+                    onOpenOrderModal={() => setIsOrderModalOpen(true)}
+                  />
+                )}
 
-              {cleanRoute === '/contact' && (
-                <ContactPage settings={settings} branches={branches} />
-              )}
+                {cleanRoute === '/contact' && (
+                  <ContactPage settings={settings} branches={branches} />
+                )}
 
-              {cleanRoute === '/gallery' && <GalleryPage gallery={gallery} />}
+                {cleanRoute === '/gallery' && <GalleryPage gallery={gallery} />}
 
-              {cleanRoute === '/privacy' && <PrivacyPage />}
+                {cleanRoute === '/privacy' && <PrivacyPage />}
 
-              {cleanRoute === '/terms' && <TermsPage />}
+                {cleanRoute === '/terms' && <TermsPage />}
 
-              {cleanRoute === '/admin' && (
-                <AdminPage
-                  settings={settings}
-                  categories={categories}
-                  menuItems={menuItems}
-                  addons={addons}
-                  branches={branches}
-                  offers={offers}
-                  onNavigateHome={() => navigate('/')}
-                />
-              )}
-            </motion.div>
-          </AnimatePresence>
+                {cleanRoute === '/admin' && (
+                  <AdminPage
+                    settings={settings}
+                    categories={categories}
+                    menuItems={menuItems}
+                    addons={addons}
+                    branches={branches}
+                    offers={offers}
+                    onNavigateHome={() => navigate('/')}
+                  />
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </Suspense>
         </main>
 
       {/* Global Footer (Hidden on Admin page) */}

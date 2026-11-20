@@ -1,5 +1,5 @@
 // Service Worker for Pillaiyarappa South Indian Corner PWA
-const CACHE_NAME = 'pillaiyarappa-v1';
+const CACHE_NAME = 'pillaiyarappa-v2';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
@@ -37,6 +37,9 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
+
+  // Bypass service worker cache for dynamic API endpoints
+  if (url.pathname.startsWith('/api/')) return;
 
   // Network-first with cache fallback for navigation / documents
   if (event.request.mode === 'navigate') {

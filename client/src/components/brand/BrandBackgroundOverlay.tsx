@@ -15,13 +15,13 @@ export const BrandBackgroundOverlay: React.FC = () => {
     >
       {/* 1. Primary Drifting Ambient Emerald Glow Orb (Top-Right) */}
       <div
-        className="absolute -top-32 right-1/4 w-[500px] h-[500px] rounded-full bg-emerald-500/10 blur-[130px] animate-orb-1"
+        className="absolute -top-32 right-1/4 w-[480px] h-[480px] rounded-full bg-[radial-gradient(circle,rgba(22,139,79,0.18)_0%,transparent_70%)] blur-2xl animate-orb-1 transform-gpu"
         style={{ willChange: 'transform' }}
       />
 
       {/* 2. Secondary Ambient Warm Forest Glow Orb (Bottom-Left) */}
       <div
-        className="absolute top-1/2 -left-32 w-[600px] h-[600px] rounded-full bg-emerald-600/8 blur-[150px] animate-orb-2"
+        className="absolute top-1/2 -left-32 w-[540px] h-[540px] rounded-full bg-[radial-gradient(circle,rgba(22,139,79,0.14)_0%,transparent_70%)] blur-2xl animate-orb-2 transform-gpu"
         style={{ willChange: 'transform' }}
       />
 

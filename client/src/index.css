@@ -33,6 +33,43 @@
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Ultra-Smooth GPU Compositing & List Optimization ─── */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 320px;
+}
+
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-orb-1 {
+  animation: orbDrift1 22s ease-in-out infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.animate-orb-2 {
+  animation: orbDrift2 26s ease-in-out infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-orb-1,
+  .animate-orb-2,
+  .animate-spin-slow,
+  .animate-float {
+    animation: none !important;
+  }
 }
 
 * {
